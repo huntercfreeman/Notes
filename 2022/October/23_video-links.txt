@@ -1,0 +1,22 @@
+DATE: 2022-10-23
+----------------
+
+# Links
+
+Getting Started Markdown File:
+https://github.com/huntercfreeman/Blazor.Text.Editor/blob/main/Documentation/gettingStarted.md
+
+Blazor.Text.Editor Nuget Package:
+https://www.nuget.org/packages/Blazor.Text.Editor/
+
+Blazor.Text.Editor.Lexer.CSharp Nuget Package:
+https://www.nuget.org/packages/Blazor.Text.Editor.Lexer.CSharp/
+
+Blazor.Text.Editor.Lexer.HTML:
+https://www.nuget.org/packages/Blazor.Text.Editor.Lexer.HTML/
+
+Blazor.Text.Editor Source Code:
+https://github.com/huntercfreeman/Blazor.Text.Editor
+
+BlazorStudio Source Code:
+https://github.com/huntercfreeman/BlazorStudio

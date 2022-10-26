@@ -1,0 +1,36 @@
+DATE: 2022-10-26
+----------------
+
+# Background Information
+{
+BlazorStudio was made first
+https://github.com/huntercfreeman/BlazorStudio
+
+BlazorTextEditor was made second
+https://github.com/huntercfreeman/BlazorTextEditor
+
+Blazor.Text.Editor was made third to be a nuget package 
+containing only the logic for the TextEditorDisplay
+Blazor component. The TextEditorDisplay
+Blazor component comes from what resulting in the
+second repo named, "BlazorTextEditor".
+https://github.com/huntercfreeman/Blazor.Text.Editor
+}
+
+# Goal / Plan
+{
+BlazorTextEditor has a lot of similar functionality to
+that of BlazorStudio.
+
+As well, due to BlazorTextEditor having been made after
+BlazorStudio I feel a lot of those similar functionalities
+were written better the second time around in BlazorTextEditor.
+
+I want to take the "written better the second time around" code
+from BlazorTextEditor and paste it over to BlazorStudio.
+}
+
+# Actions Taken
+{
+
+}

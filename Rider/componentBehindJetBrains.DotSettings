@@ -1,0 +1,44 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1F49925ED48B8C469570C69F06EFD5EF/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1F49925ED48B8C469570C69F06EFD5EF/Description/@EntryValue">ComponentBehind</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1F49925ED48B8C469570C69F06EFD5EF/Text/@EntryValue">&lt;h3&gt;$COMPONENTNAME$&lt;/h3&gt;&#xD;
+&#xD;
+@code {&#xD;
+  $END$&#xD;
+}</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1F49925ED48B8C469570C69F06EFD5EF/UITag/@EntryValue">Blazor Component</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1F49925ED48B8C469570C69F06EFD5EF/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1F49925ED48B8C469570C69F06EFD5EF/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1F49925ED48B8C469570C69F06EFD5EF/Categories/=Imported_00202_002F26_002F2022/@EntryIndexedValue">Imported 2/26/2022</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1F49925ED48B8C469570C69F06EFD5EF/CustomProperties/=Extension/@EntryIndexedValue">razor</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1F49925ED48B8C469570C69F06EFD5EF/CustomProperties/=FileName/@EntryIndexedValue">BlazorComponent</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1F49925ED48B8C469570C69F06EFD5EF/CustomProperties/=ValidateFileName/@EntryIndexedValue">True</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1F49925ED48B8C469570C69F06EFD5EF/Applicability/=File/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1F49925ED48B8C469570C69F06EFD5EF/Scope/=85377F752C3840A792620C7AF485BDD7/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1F49925ED48B8C469570C69F06EFD5EF/Scope/=85377F752C3840A792620C7AF485BDD7/Type/@EntryValue">InBlazorCSharpProject</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1F49925ED48B8C469570C69F06EFD5EF/Field/=COMPONENTNAME/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1F49925ED48B8C469570C69F06EFD5EF/Field/=COMPONENTNAME/Expression/@EntryValue">getAlphaNumericFileNameWithoutExtension()</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1F49925ED48B8C469570C69F06EFD5EF/Field/=COMPONENTNAME/InitialRange/@EntryValue">-1</s:Int64>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1F49925ED48B8C469570C69F06EFD5EF/Field/=COMPONENTNAME/Order/@EntryValue">0</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1F49925ED48B8C469570C69F06EFD5EF/Field/=NAMESPACE/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1F49925ED48B8C469570C69F06EFD5EF/Field/=NAMESPACE/Expression/@EntryValue">fileDefaultNamespace()</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1F49925ED48B8C469570C69F06EFD5EF/Field/=NAMESPACE/Order/@EntryValue">1</s:Int64>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1F49925ED48B8C469570C69F06EFD5EF/Field/=NAMESPACE/InitialSection/@EntryValue">7674AAC4B71E5B46968BFE87E94EFB1D</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1F49925ED48B8C469570C69F06EFD5EF/Field/=NAME/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1F49925ED48B8C469570C69F06EFD5EF/Field/=NAME/Expression/@EntryValue">getAlphaNumericMainFileNameWithoutExtension()</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1F49925ED48B8C469570C69F06EFD5EF/Field/=NAME/InitialRange/@EntryValue">-1</s:Int64>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1F49925ED48B8C469570C69F06EFD5EF/Field/=NAME/Order/@EntryValue">2</s:Int64>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1F49925ED48B8C469570C69F06EFD5EF/Field/=NAME/InitialSection/@EntryValue">7674AAC4B71E5B46968BFE87E94EFB1D</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1F49925ED48B8C469570C69F06EFD5EF/Section/=7674AAC4B71E5B46968BFE87E94EFB1D/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1F49925ED48B8C469570C69F06EFD5EF/Section/=7674AAC4B71E5B46968BFE87E94EFB1D/LocationSelectorName/@EntryValue">manual</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1F49925ED48B8C469570C69F06EFD5EF/Section/=7674AAC4B71E5B46968BFE87E94EFB1D/LocationSelectorConfig/@EntryValue">&lt;RelativeConfig File="$NAME$.razor.cs" /&gt;</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1F49925ED48B8C469570C69F06EFD5EF/Section/=7674AAC4B71E5B46968BFE87E94EFB1D/Order/@EntryValue">0</s:Int64>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1F49925ED48B8C469570C69F06EFD5EF/Section/=7674AAC4B71E5B46968BFE87E94EFB1D/SectionPlain/Text/@EntryValue">using Microsoft.AspNetCore.Components;&#xD;
+&#xD;
+namespace $NAMESPACE$;&#xD;
+&#xD;
+public partial class $NAME$ : ComponentBase&#xD;
+{&#xD;
+	&#xD;
+}&#xD;
+</s:String></wpf:ResourceDictionary>

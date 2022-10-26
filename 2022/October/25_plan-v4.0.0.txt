@@ -1,0 +1,216 @@
+DATE: 2022-10-25
+----------------
+
+
+
+What follows is the plan for Blazor.Text.Editor v4.0.0
+
+(Blazor.Text.Editor is a Nuget Package for .NET)
+
+# Keyboard Features
+{
+	#BugsToFix
+	{
+		[]If one is to select all of the text in a file
+			and hit the ArrowRight key they will have the
+			PrimaryCursor go out of bounds.
+			[]If they furthermore try to move with their
+				keyboard an exception is thrown and it crashes.
+	}
+	[]Input of
+		[]"Ctrl + a" -> Select All
+		[]"Ctrl + w" -> expand selection
+		[]"Ctrl + ArrowDown" -> ScrollLineDown
+		[]"Ctrl + ArrowUp" -> ScrollLineUp
+		[]"PageDown" -> Try scroll down the height of the view for the TextEditorDisplay
+		[]"PageUp" -> Try scroll up the height of the view for the TextEditorDisplay
+		[]"Ctrl + PageDown" -> Move PrimaryCursor to the last line visible in the height 
+			of the view for the TextEditorDisplay
+		[]"Ctrl + PageUp" -> Move PrimaryCursor to the first line visible in the height 
+			of the view for the TextEditorDisplay
+		[]"Home"
+			[]if PrimaryCursor is at column 0
+				-> Move PrimaryCursor to the first non whitespace character on that line
+			[]else if PrimaryCursor is at column 0 IS NOT at the first non 
+				whitespace character on that line
+					-> Move PrimaryCursor to the first non whitespace character on that line
+			[]else
+				-> Move PrimaryCursor to column 0 on that line
+		[]"Ctrl + 5"
+			[]if PrimaryCursor is at a matchable character
+				-> Move to the characters match (i.e. brace-matching)
+		[]"Ctrl + ("
+			-> Move PrimaryCursor to the closest '(' character BEFORE the current position.
+		[]"Ctrl + )"
+			-> Move PrimaryCursor to the closest ')' character AFTER the current position.
+		[]"Ctrl + ]"
+			-> Move PrimaryCursor to the closest ']' character AFTER the current position.
+		[]"Ctrl + ["
+			-> Move PrimaryCursor to the closest '[' character BEFORE the current position.
+		[]"Ctrl + ]"
+			-> Move PrimaryCursor to the closest ']' character AFTER the current position.
+		[]"Ctrl + Alt + ["
+			-> Move PrimaryCursor to the closest '{' character BEFORE the current position.
+		[]"Ctrl + Alt + ]"
+			-> Move PrimaryCursor to the closest '}' character AFTER the current position.
+		[]"Ctrl + '"
+			[]if PrimaryCursor is not at a ''' character
+				-> Move PrimaryCursor to the closest ''' character BEFORE the current position.
+			[]else if PrimaryCursor is at '''
+				-> Move PrimaryCursor to the matching ''' character.
+		[]"Ctrl + Alt + '"
+			[]if PrimaryCursor is not at a '"' character
+				-> Move PrimaryCursor to the closest '"' character BEFORE the current position.
+			[]else if PrimaryCursor is at '"'
+				-> Move PrimaryCursor to the matching '"' character.
+		[]"Escape"
+			[]if cursor has selection
+				-> clear selection
+			[]else if menu is open (i.e. like Autocomplete or ContextMenu)
+				->close that menu
+		[]"Ctrl + Z"
+			-> Undo
+		[]"Ctrl + Y"
+			-> Redo
+		[]"Ctrl + F"
+			-> Open "Find" widget
+		[]"Ctrl + H"
+			-> Open "Find and Replace" widget
+		[]"Ctrl + C" no selection
+			-> Copy the entire line that the cursor is currently on.
+		[]"Ctrl + X" no selection
+			-> Cut the entire line that the cursor is currently on.
+		[]"Ctrl + D" no selection
+			-> Duplicate the entire line that the cursor is currently on.
+		[]"Ctrl + D" WITH A selection
+			-> Duplicate the selection AS IS
+				[]DO NOT insert a newline just duplicate exactly what they select.
+		[]"Ctrl + V" WITH A selection 
+			-> Delete the selected text before pasting.
+		[]"Tab" WITH A selection 
+			-> Insert a tab key at the start of every row that has ANY amount of text selected
+	[]When the cursor has selected text, typing a character to insert it into the document
+		should delete the selected text prior to inserting that character into the document.
+	[]Allow the consumer of the TextEditorDisplay to hook up custom keybinds / override the default ones.
+}
+
+# Mouse Features
+{
+	#BugsToFix
+	{
+		[]On Windows I find that if my PrimaryCursor is out of view
+			and I click on the TextEditorDisplay.
+			[]Instead of moving the PrimaryCursor to where I clicked
+				the scroll bar jumps to where the PrimaryCursor currently is.
+				[]This is unexpected behavior, annoying, and needs to be fixed.
+	}
+	[]Double click expand selection (select a word
+		by double clicking it, select a line
+		by triple clicking it, etc...)
+}
+
+# QualityOfLife Features
+{
+	#Settings
+	{
+		[]Set tab-width
+	}
+	#Multi Cursor / Vertical Editing
+	{
+		[]TODO: ...
+	}
+	#Folding
+	{
+		[]TODO: ...
+	}
+	#(Syntax Highlighting / ILexer) Nuget Packages
+	{
+		[]Create a powershell script that will publish the nuget packages
+			[]A script is needed because the individual ILexer nuget packages
+				have a references to a common .csproj
+				[]When publishing a nuget package I do not know how to publish
+					more than one .csproj
+					[]Therefore I have to copy and paste over the common .csproj
+						source code to the individual nuget packages in order to
+						publish them.
+						[]The script should read the .csproj I want to publish as a nuget package
+							and find any references to other .csproj
+							[]Then the script should copy the entirety of the to be published .csproj
+								over to a quarantined directory on the file system.
+								[]Then copy the source code for the various .csproj that are referenced
+									but not the referenced .csproj file itself just the source code.
+									[]Then remove the .csproj reference for the quarantined .csproj to be
+										published.
+										[]Then publish the quarantined singular .csproj as a nuget package.
+	}
+	[]Match indentation level upon enter key stroke
+	[]If the opened file has mixed line endings such "\r\n" and "\n"
+		provide a way for the user to reformat the file with uniform line
+		endings of their choice.
+	[]Variable-Width fonts
+	[]Arbitrary insertion of non-text content (above or below) any line
+		[]If a consumer of the Blazor TextEditorDisplay is to make use of this
+			feature they will need to specify the { RowIndex, RenderFragment, RenderFragmentHeight }
+	[]Arbitrary insertion of non-text content horizontally on any line
+		[]If a consumer of the Blazor TextEditorDisplay is to make use of this
+			feature they will need to specify the { RowIndex, ColumnIndex, RenderFragment, RenderFragmentWidth }
+			[]The RenderFragmentWidth must be == the height of a row
+				[]After completion of this feature perhaps it would be useful to extend this feature
+					such that you can specify a height different to that of a row
+					{ RowIndex, ColumnIndex, RenderFragment, RenderFragmentWidth, RenderFragmentHeight }
+	[]Match-brace logic
+		[]For example, if the user's PrimaryCursor is on a curly brace. The corresponding curly brace
+			whether it be opening or closing will be highlighted.
+			[]This should be done for all matchable characters.
+}
+
+# UserInterface Features
+{
+	# Optional supporting Blazor Components
+	  for the TextEditorDisplay
+	{
+		[]TextEditorFooterDisplay.razor should come with
+			the nuget package and show.
+			[]Extension of the file (if applicable)
+			[]The length of the file
+			[]The amount of lines in the file
+			[]The PrimaryCursor's line number
+			[]The PrimaryCursor's column number
+			[]The PrimaryCursor's position number
+			[]If the line ending used is consistent
+				it should be displayed.
+				[]Meaning, if the line ending (CR LF) is used
+					all throughout the file then it should be displayed
+					that (CR LF) is the line ending being used in the file.
+			[]A select dropdown that allows the user to:
+				[]See what line ending they will type by hitting the 'Enter' key
+				[]Choose the line ending they want to type.
+			[](Insert / Overtype) modes?
+		[]Extemely specific individual Blazor Components should be made
+			for every possible setting that can be configured.
+			[]This would allow the consumer of the TextEditorDisplay to
+				pick and choose "out of the box" settings they want to allow
+				their end users to configure.
+				[]As well having the Blazor Components be individualized per setting
+					allows for the consumer of the TextEditorDisplay to place
+					the "out of the box" UI where they want and how they want.
+	}
+}
+
+# Category Undecided Yet for what follows
+[]When clicking on the TextEditorDisplay
+	and the PrimaryCursor is out of view
+	the PrimaryCursor will be brought into focus.
+	[]SHOULD: move the PrimaryCursor and keep
+		the scroll position.
+		
+[]When a keyboard event on the TextEditorDisplay
+	moves the PrimaryCursor out of view
+	the PrimaryCursor should be brought into view
+	[]ERRONEOUSLY: will do nothing on the keyboard
+		event that put the PrimaryCursor out of view.
+		[]Instead it needs a second keyboard event
+			as the first marks the PrimaryCursor
+			as out of view then the second sees
+			the PrimaryCursor is marked out of view
+			so it scrolls it into view.

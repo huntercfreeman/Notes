@@ -1,0 +1,5 @@
+DATE: 2022-10-24
+----------------
+
+Cursor maybe needs 1 pixel moved left (so that would
+be in terms of a right value -> right = right + 1)

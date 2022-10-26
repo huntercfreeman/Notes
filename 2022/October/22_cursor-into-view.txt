@@ -1,0 +1,45 @@
+DATE: 2022-10-22
+----------------
+
+Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at BlazorTextEditor.RazorLib.TextEditor.TextEditorBase.PerformDeletions(EditTextEditorBaseAction editTextEditorBaseAction) in C:\Users\hunte\RiderProjects\Blazor.Text.Editor\BlazorTextEditor.RazorLib\TextEditor\TextEditorBase.cs:line 503
+   at BlazorTextEditor.RazorLib.TextEditor.TextEditorBase.PerformEditTextEditorAction(EditTextEditorBaseAction editTextEditorBaseAction) in C:\Users\hunte\RiderProjects\Blazor.Text.Editor\BlazorTextEditor.RazorLib\TextEditor\TextEditorBase.cs:line 236
+   at BlazorTextEditor.RazorLib.Store.TextEditorCase.TextEditorStatesReducer.ReduceEditTextEditorBaseAction(TextEditorStates previousTextEditorStates, EditTextEditorBaseAction editTextEditorBaseAction) in C:\Users\hunte\RiderProjects\Blazor.Text.Editor\BlazorTextEditor.RazorLib\Store\TextEditorCase\TextEditorStatesReducer.cs:line 33
+   at Fluxor.Feature`1.ReceiveDispatchNotificationFromStore(Object action)
+   at Fluxor.Store.DequeueActions()
+   at Fluxor.Store.ActionDispatched(Object sender, ActionDispatchedEventArgs e)
+   at Fluxor.Dispatcher.Dispatch(Object action)
+   at BlazorTextEditor.RazorLib.TextEditorDisplay.HandleOnKeyDownAsync(KeyboardEventArgs keyboardEventArgs) in C:\Users\hunte\RiderProjects\Blazor.Text.Editor\BlazorTextEditor.RazorLib\TextEditorDisplay.razor.cs:line 271
+   at Microsoft.AspNetCore.Components.ComponentBase.CallStateHasChangedOnAsyncCompletion(Task task)
+   at Microsoft.AspNetCore.Components.RenderTree.Renderer.GetErrorHandledTask(Task taskToHandle, ComponentState owningComponentState)
+
+
+[]Text Selection
+	[]When text is selected
+		[]Always the selection is to be cleared.
+		[X]ArrowLeft puts the cursor at the Min()
+		[X]ArrowRight puts the cursor at the Max()
+		[]Backspace and Delete should delete
+			the selected text and move the cursor
+			to the Min()
+		[]Typing over a selection should delete
+			the selection as well as insert the
+			letter typed.
+
+[]When clicking on the TextEditorDisplay
+	and the PrimaryCursor is out of view
+	the PrimaryCursor will be brought into focus.
+	[]SHOULD: move the PrimaryCursor and keep
+		the scroll position.
+		
+[]When a keyboard event on the TextEditorDisplay
+	moves the PrimaryCursor out of view
+	the PrimaryCursor should be brought into view
+	[]ERRONEOUSLY: will do nothing on the keyboard
+		event that put the PrimaryCursor out of view.
+		[]Instead it needs a second keyboard event
+			as the first marks the PrimaryCursor
+			as out of view then the second sees
+			the PrimaryCursor is marked out of view
+			so it scrolls it into view.

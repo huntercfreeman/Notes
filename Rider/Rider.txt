@@ -1,0 +1,29 @@
+When Filming:
+{
+	Appearance:
+	{
+		Font-Family: Segoe UI;
+		Font-Size: 22px;
+	}
+	Editor:
+	{
+		Font-Family: Consolas;
+		Font-Size: 30px;
+		Line Height: 1.1;
+	}
+}
+
+When Just Myself:
+{
+	Appearance:
+	{
+		Font-Family: Segoe UI;
+		Font-Size: 18px;
+	}
+	Editor:
+	{
+		Font-Family: Consolas;
+		Font-Size: 24px;
+		Line Height: 1.1;
+	}
+}
