@@ -3,7 +3,7 @@ When Filming:
 	Appearance:
 	{
 		Font-Family: Segoe UI;
-		Font-Size: 22px;
+		Font-Size: 24px;
 	}
 	Editor:
 	{
