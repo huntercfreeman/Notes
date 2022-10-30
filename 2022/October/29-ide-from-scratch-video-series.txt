@@ -1,0 +1,15 @@
+DATE: 2022-10-29
+----------------
+
+# Goal
+{
+Make a video series for making an 
+IDE from scratch using Blazor.
+}
+
+
+
+# Actions Taken
+{
+
+}
