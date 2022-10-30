@@ -9,6 +9,8 @@ IDE from scratch using Blazor.
 
 # Plan Purpose - why do I want to add a feature is it justified
 {
+[]When text is selected the user typing a character out
+    should delete the selected text prior to typing out the character.
 []Allow user to debug any language of their choosing.
     []The requirement is the user must implement an IDebugger
         interface that makes calls to the debugger of their choice.
@@ -45,7 +47,8 @@ IDE from scratch using Blazor.
 []Click and drag any dialog window - whether it be an editor or a 
     settings dialog - and use the editor tab html bar as a dropzone
     to dock that dialog amongst the editor tabs.
-[]The IDE should run in a browser.
+[]The IDE should be runnable in a browser.
+[]The IDE should be runnable on Windows, Mac, Linux (as of 2022/19/28 this is true)
 []The user should be able to host their own cloud service using the IDE
 []A cloud service that is using the IDE source code should be able to have
     multiple individuals connect in and use the IDE like google docs.
@@ -55,10 +58,9 @@ IDE from scratch using Blazor.
     such that they can use their own.
 []Consider trying to use Kubernetes to make a proof of concept "Visual Studio in the Cloud"
     []If the user connects through webassembly and communicates through API calls
-        []When the application is ran if it were Blazor WebAssembly for Example
-            []Could the Blazor WebAssembly dll be sent from the server to the user
-                and the user embed the blazor webassembly into their browser's
-                webpage somewhere?
+        []When the application is ran could a Blazor WebAssembly dll be sent from
+                the server to the user and the user embed the blazor 
+                webassembly into their browser's webpage somewhere?
 []Support various natural languages
     []English, Chinese, etc... and so on
 []Markdown editor (.md)
@@ -70,7 +72,27 @@ IDE from scratch using Blazor.
     []Probably just C#
     []Like scratch but C#
         []Toggle between the drag and drop and text based version
-[]Option to 
+[]Can a videogame be made that takes source code as input
+    and outputs a 3d world that one can traverse and see
+    personifications of the source code and personifications
+    of the execution of such source code.
+[]Profiling tools
+[]Refactoring
+[]UnitTest Explorer
+    []IUnitTester interface
+        []Support for any programming language is to be
+            aimed at as a goal.
+            []Therefore IUnitTester interface.
+                []Then the "support for any programming language"
+                    []Would come in the form of plugins where the C# plugin is
+                        already written at launch of the IDE
+[]Attempt to make a clone of Microsoft SQL Server Management Studio
+    and have it work for any database implementation provided all interfaces are implemented.
+[]Attempt to write a C# compiler just for fun not for actual use
+[]Attempt to write a database server and SQL language just for fun not for actual use
+[]Attempt to write a programming language that compiles into microsoft intermediate language just for fun not for actual use
+    []Wondering to myself if that is even legal
+
 }
 
 # Plan High Level - black box ideas just work without having to implement them
