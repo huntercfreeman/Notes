@@ -7,7 +7,84 @@ Make a video series for making an
 IDE from scratch using Blazor.
 }
 
+# Plan Purpose - why do I want to add a feature is it justified
+{
+[]Allow user to debug any language of their choosing.
+    []The requirement is the user must implement an IDebugger
+        interface that makes calls to the debugger of their choice.
+[]Allow the user to fill out a settings dialog upon
+    initial installation of the IDE.
+    []This settings dialog is to allow the user to select
+        all languages they wish to have the IDE support.
+        []Thereby the user installs the IDE and it can be used
+            for any language the user desires and only what is
+            desired needs to be downloaded.
+            []Likely this will use MEF to get various plugin DLL(s) that
+                the user can download from the plugins dialog.
+[]Variable width font
+    []Perhaps this can be done using an initial approximation
+        followed by a binary search for the exact pixels.
+[]Bold text
+    []Check whether bold text impacts character width
+        []If bold text impacts character width see 'Variable width font'
+[]API to lint text editor (error squigglys)
+[]Undo / Redo logic
+[]Multicursor logic
+[]Keymap emulation
+    []Like vim or whatever someone wants
+        they should be able to write their own emulator
+        of whatever they want.
+[]Autocomplete menu when typing
+[]Various out of the box blazor components that act as
+    miscellaneous common functionality - but not something that should be forced on the user.
+    []Example is a TextEditorFooter.razor likely one would want this but it should be optional.
+[]Folding of text
+[]Version control integration of any kind (git or any other)
+[]Editor tabs for when the user has many files opened.
+[]Click and drag editor tab to undock it and make a floating dialog window.
+[]Click and drag any dialog window - whether it be an editor or a 
+    settings dialog - and use the editor tab html bar as a dropzone
+    to dock that dialog amongst the editor tabs.
+[]The IDE should run in a browser.
+[]The user should be able to host their own cloud service using the IDE
+[]A cloud service that is using the IDE source code should be able to have
+    multiple individuals connect in and use the IDE like google docs.
+    []Likely a roles system is needed so only certain people
+        are allowed to build the source code and such.
+[]Nuget Package servers are to be configurable by the user
+    such that they can use their own.
+[]Consider trying to use Kubernetes to make a proof of concept "Visual Studio in the Cloud"
+    []If the user connects through webassembly and communicates through API calls
+        []When the application is ran if it were Blazor WebAssembly for Example
+            []Could the Blazor WebAssembly dll be sent from the server to the user
+                and the user embed the blazor webassembly into their browser's
+                webpage somewhere?
+[]Support various natural languages
+    []English, Chinese, etc... and so on
+[]Markdown editor (.md)
+[]RichTextEditor (perhaps rich text format rtf?)
+[]IDecompiler interface?
+    []Perhaps decompilers for various languages are available as plugins.
+[]IL viewer for dotnet
+[]Drag and drop editor for dotnet language
+    []Probably just C#
+    []Like scratch but C#
+        []Toggle between the drag and drop and text based version
+[]Option to 
+}
 
+# Plan High Level - black box ideas just work without having to implement them
+{
+[]IDebugger interface
+[]Variable width font
+[]Bold text
+[]API to lint text editor (error squigglys)
+[]
+}
+
+# Plan Low Level - how will the ideas actually be made into reality?
+{
+}
 
 # Actions Taken
 {
