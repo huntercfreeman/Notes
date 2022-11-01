@@ -46,6 +46,11 @@ DATE: 2022-11-01
 
 }
 
+# Youtube title ideas
+{
+Minimum Code Project Template and v4.1.0 | Blazor Text Editor
+}
+
 # Youtube video description
 {
 Email Me:
