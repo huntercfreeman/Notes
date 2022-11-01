@@ -9,7 +9,28 @@ DATE: 2022-11-01
 
 # Plan
 {
-[]
+[]Blazor.Text.Editor nuget package will be used as the 
+    text editor and the nuget package will be updated throughout
+    the making of the IDE
+[]Make aware of
+    []Text Editor from scratch with Blazor and C# youtube playlist
+    []Web links in the youtube video description
+[]Go through the initial features as to define
+    a starting point for the series.
+    []Make clear that the starting point is code added
+        to the result of the text editor from scratch youtube series
+[]Initial features
+    []InputFile dialog to select solution
+    []SolutionExplorer to view Solution and Project structure
+    []TextEditor to edit files
+    []Syntax highlighting within the TextEditor
+    []Editor has tabs to allow editing of many files
+    []After selecting a Solution the MSBuild version is found
+        []Setting a startup project will show green play button
+        []After clicking the green play button
+            []dotnet run --project '{startupProject}'
+    []Results of commands are shown in the terminal display
+
 }
 
 # Youtube thumbnail ideas
@@ -22,6 +43,9 @@ DATE: 2022-11-01
 Email Me:
     -hunterfreemandev@gmail.com
 
+Text Editor from scratch with Blazor and C# youtube playlist:
+    -https://youtube.com/playlist?list=PLG4PTDe2qc0i0COivTxn_rjSN96Xq-_K1
+
 GitHub repos
     -BlazorStudio: https://github.com/huntercfreeman/BlazorStudio
     -Blazor.Text.Editor: https://github.com/huntercfreeman/Blazor.Text.Editor
@@ -31,6 +55,9 @@ GitHub repos
 
 # Web Links
 {
+[]Text Editor from scratch with Blazor and C# youtube playlist
+    []https://youtube.com/playlist?list=PLG4PTDe2qc0i0COivTxn_rjSN96Xq-_K1
+
 []BlazorStudio repo on GitHub
     []https://github.com/huntercfreeman/BlazorStudio
 []Blazor.Text.Editor repo on GitHub
