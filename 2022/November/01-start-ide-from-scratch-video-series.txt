@@ -30,7 +30,15 @@ DATE: 2022-11-01
         []After clicking the green play button
             []dotnet run --project '{startupProject}'
     []Results of commands are shown in the terminal display
-
+[]Explain the plan for the video series
+    []Plan is to do shorter videos around 15 minutes long
+        (no longer than 30 minutes)
+    []I am going to program a feature myself off camera
+        and then go through the code on camera after the fact.
+    []There will likely be 'side' videos that are made
+        as an entirely separate adhoc C# project
+        to showcase a general Blazor / C# concept I found interesting
+        while implementing a feature.
 }
 
 # Youtube thumbnail ideas
