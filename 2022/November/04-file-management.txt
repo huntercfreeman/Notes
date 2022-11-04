@@ -19,6 +19,15 @@ DATE: 2022-11-04
         -Cut
         -Rename
         -Paste
+[]Add the following file templates
+[]Add the ability for one to create custom file templates
+[]Add ability to define nesting rules for arbitrary files
+    []In otherwords codebehinds
+    []Example: 
+        [].razor and .razor.cs
+            []{match-filename}.{matched-extension}.{other}
+        []appsettings.json and appsettings.development.json
+            []{match-filename}.{other}.{matched-extension}
 }
 
 # Plan
