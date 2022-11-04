@@ -1,0 +1,122 @@
+DATE: 2022-11-04
+----------------
+
+# Goal
+{
+[]Add the following menu options
+    -New
+        -Empty File
+        -Templated File
+            -Add a Codebehind Prompt when applicable
+    -Base file operations
+        -Copy
+        -Delete
+        -Cut
+        -Rename
+    -Base directory operations
+        -Copy
+        -Delete
+        -Cut
+        -Rename
+        -Paste
+}
+
+# Plan
+{
+[]Blazor.Text.Editor nuget package will be used as the 
+    text editor and the nuget package will be updated throughout
+    the making of the IDE
+[]Make aware of
+    []Text Editor from scratch with Blazor and C# youtube playlist
+    []Web links in the youtube video description
+[]Go through the initial features as to define
+    a starting point for the series.
+    []Make clear that the starting point is code added
+        to the result of the text editor from scratch youtube series
+[]Initial features
+    []InputFile dialog to select solution
+    []SolutionExplorer to view Solution and Project structure
+    []TextEditor to edit files
+    []Syntax highlighting within the TextEditor
+    []Editor has tabs to allow editing of many files
+    []After selecting a Solution the MSBuild version is found
+        []Setting a startup project will show green play button
+        []After clicking the green play button
+            []dotnet run --project '{startupProject}'
+    []Results of commands are shown in the terminal display
+[]Explain the plan for the video series
+    []Plan is to do shorter videos around 15 minutes long
+        (no longer than 30 minutes)
+    []I am going to program a feature myself off camera
+        and then go through the code on camera after the fact.
+    []There will likely be 'side' videos that are made
+        as an entirely separate adhoc C# project
+        to showcase a general Blazor / C# concept I found interesting
+        while implementing a feature.
+}
+
+# Youtube thumbnail ideas
+{
+
+}
+
+# Youtube title ideas
+{
+Minimum Code Project Template and v4.1.0 | Blazor Text Editor
+}
+
+# Youtube video description
+{
+Email Me:
+    -hunterfreemandev@gmail.com
+
+Text Editor from scratch with Blazor and C# youtube playlist:
+    -https://youtube.com/playlist?list=PLG4PTDe2qc0i0COivTxn_rjSN96Xq-_K1
+
+GitHub repos
+    -BlazorStudio: https://github.com/huntercfreeman/BlazorStudio
+    -Blazor.Text.Editor: https://github.com/huntercfreeman/Blazor.Text.Editor
+    -Blazor.Text.Editor-Template: https://github.com/huntercfreeman/Blazor.Text.Editor-Template
+    -Blazor.Text.Editor.Analysis: https://github.com/huntercfreeman/Blazor.Text.Editor.Analysis
+}
+
+# Web Links
+{
+[]Text Editor from scratch with Blazor and C# youtube playlist
+    []https://youtube.com/playlist?list=PLG4PTDe2qc0i0COivTxn_rjSN96Xq-_K1
+
+[]BlazorStudio repo on GitHub
+    []https://github.com/huntercfreeman/BlazorStudio
+[]Blazor.Text.Editor repo on GitHub
+    []https://github.com/huntercfreeman/Blazor.Text.Editor
+[]Blazor.Text.Editor-Template repo on GitHub
+    []https://github.com/huntercfreeman/Blazor.Text.Editor-Template
+[]Blazor.Text.Editor.Analysis repo on GitHub
+    []https://github.com/huntercfreeman/Blazor.Text.Editor.Analysis
+}
+
+# Before this video specifically checklist
+{
+[]See in general checklist
+}
+
+# Checklist before recording a video in general
+{
+[]Font-size
+    []Rider
+        []Appearance
+            []Font-Family: Segoe UI;
+		    []Font-Size: 24px;
+        []Editor
+            []Font-Family: Consolas;
+		    []Font-Size: 30px;
+		    []Line Height: 1.1;
+    []Operating system
+        []Windows
+            []Settings > Accessibility > Text size
+                []Text size slider
+                    []150%
+    []Web Browser
+    []BlazorStudio itself
+    []Visual Studio Code
+}
