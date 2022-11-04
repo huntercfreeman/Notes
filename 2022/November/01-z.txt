@@ -1,0 +1,26 @@
+DATE: 2022-11-01
+----------------
+
+# Goal
+{
+[]
+}
+
+# Plan
+{
+}
+
+# Web Links
+{
+[]Text Editor from scratch with Blazor and C# youtube playlist
+    []https://youtube.com/playlist?list=PLG4PTDe2qc0i0COivTxn_rjSN96Xq-_K1
+
+[]BlazorStudio repo on GitHub
+    []https://github.com/huntercfreeman/BlazorStudio
+[]Blazor.Text.Editor repo on GitHub
+    []https://github.com/huntercfreeman/Blazor.Text.Editor
+[]Blazor.Text.Editor-Template repo on GitHub
+    []https://github.com/huntercfreeman/Blazor.Text.Editor-Template
+[]Blazor.Text.Editor.Analysis repo on GitHub
+    []https://github.com/huntercfreeman/Blazor.Text.Editor.Analysis
+}

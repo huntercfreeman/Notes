@@ -1,0 +1,65 @@
+DATE: 2022-11-03
+----------------
+
+# Goal
+{
+[]Currently the Blazor.Text.Editor has a light theme
+which is using the color red for various css variables.
+    []This was done as a TODO in a sense and the goal is to
+        set values that match for the light theme instead of red.
+}
+
+# Plan
+{
+[]Perhaps a similarity between the Light and Dark theme colors
+    is a good idea.
+    []So, I will give the similar color idea a try.
+        []That is to say, if dark theme has keywords colored pink.
+            []Then perhaps it is a good idea to make the keywords
+                pink in the light theme albeit a different shade.
+    []Try to keep the colors similar to the respective Visual Studio
+        themes as to have a sense of familiarity and not feel
+        like the colors are out of place.
+    []The Dark theme is likely finalized at this point in time
+        and so I want the light theme to mimic the concepts
+        involved in the dark theme as to match the "similarity between
+        themes" idea.
+
+[]Blazor.Text.Editor DARK THEME:
+    []keyword: "D88FD7" (pink)
+    []number: "B5CEA8" (very white / green)
+    []String text: "D69D85" (orange / peach)
+    []Markup:
+        []Attribute: "569CD6" (dark blue)
+    []Function: "DADA89" (kind of white / yellow)
+    []Variable: "9CDCFE" (light blue)
+    []Comments: "57A64A" (dark green)
+    []Type: "4EC9B0" (turquoise / green and blue)
+    []Matched brace: "804B0D" (very dark orange)
+    []Html tag: "E8BF6A"
+    []Injected language tag: "BA09E2" (dark purple)
+}
+
+[]Visual Studio LIGHT THEME (from Rider's clone of it):
+    []keyword: "0000FF" (literally blue)
+    []number: "000000" (literally black)
+    []String text: "A31515" (dark red / brick)
+    []Markup:
+        []Attribute: "0000FF" (literally blue)
+    []Function: "74531F" (dark brown)
+    []Variable: "1F377F" (dark blue black)
+    []Comments: "007F00" (dark green)
+    []Type: "2B91AF" (light blue with some green mixed in)
+    []Matched brace: "DBE0CC" (yellow gray)
+    []Html tag: "0000FF" (literally blue)
+    []Injected language tag: "000000" (literally black)
+
+    ------ Other colors come after
+
+    []Selection background: "ADD6FF" (light blue)
+    []Injected language tag background: "FBFB64" (yellow)
+}
+
+# Web Links
+{
+}
