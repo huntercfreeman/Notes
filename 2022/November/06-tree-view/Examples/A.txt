@@ -14,15 +14,20 @@
                             -css (DirectoryTreeView)
                                 -open-iconic-bootstrap.min.css (FileTreeView)
                             -fonts (DirectoryTreeView)
-                                -open-iconic.eot
-                                -open-iconic.otf
-                                -open-iconic.svg
-                                -open-iconic.ttf
-                                -open-iconic.woff
-                            -FONT-LICENSE
-                            -ICON-LICENSE
-                            -README.md
-
+                                -open-iconic.eot (FileTreeView)
+                                -open-iconic.otf (FileTreeView)
+                                -open-iconic.svg (FileTreeView)
+                                -open-iconic.ttf (FileTreeView)
+                                -open-iconic.woff (FileTreeView)
+                        -FONT-LICENSE (FileTreeView)
+                        -ICON-LICENSE (FileTreeView)
+                        -README.md (FileTreeView)
+                    -site.css (FileTreeView)
+                -index.html (FileTreeView)
+            _Imports.razor (FileTreeView)
+            App.razor (FileTreeView)
+            favicon.ico (FileTreeView)
+            Program.cs (FileTreeView)
     -BlazorStudio (DotNetSolutionFolderTreeView)
         -BlazorStudio.ClassLib.csproj (CSharpProjectTreeView)
         -BlazorStudio.RazorLib.csproj (CSharpProjectTreeView)
