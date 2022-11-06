@@ -28,3 +28,24 @@ DATE: 2022-11-06
         []See: ".razor" when the DirectoryTreeView also 
             contains ".razor.cs"
 }
+
+# What is the naive approach to get the children
+    foreach of the different TreeView types in an
+    isolated manner such that every TreeView loads
+    their own children in isolation from one another.
+
+    *NOTE* every TreeView loads
+    their own children in isolation from one another
+    is to say, a FileTreeView must not depend on
+    its parent DirectoryTreeView having been loaded
+    in order to load itself.
+{
+    []DotNetSolutionTreeView
+    []DotNetSolutionFolderTreeView
+    []CSharpProjectTreeView
+    []ProjectDependenciesTreeView
+    []ProjectReferencesTreeView
+    []ProjectNugetPackagesTreeView
+    []DirectoryTreeView
+    []FileTreeView
+}
