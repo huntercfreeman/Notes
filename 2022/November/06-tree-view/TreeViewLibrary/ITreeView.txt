@@ -1,0 +1,16 @@
+﻿GOAL OF THIS DATATYPE:
+
+The goal of this datatype is to allow for storage of
+TreeViewBase<T> implementation instances within a centralized
+store.
+
+Without this datatype one cannot for example
+hold all their TreeViewBase<T> in a List<TreeViewBase<T>> unless
+all implementation instances share the same generic argument type.
+------------------------------------------------------------------
+
+public interface ITreeView
+{
+    public object UntypedItem { get; }
+    public Type ItemType { get; }
+}
