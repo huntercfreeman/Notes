@@ -18,5 +18,13 @@ DATE: 2022-11-06
     []ProjectNugetPackagesTreeView
     []DirectoryTreeView
     []FileTreeView
-[]
+[]What irregular occurrences were there.
+    []Irregularly a FileTreeView would
+        have a child FileTreeView.
+        []See: ".razor" when the parent directory also 
+            contains ".razor.cs"
+    []Irregularly a DirectoryTreeView would
+        not include a file system entry.
+        []See: ".razor" when the DirectoryTreeView also 
+            contains ".razor.cs"
 }
