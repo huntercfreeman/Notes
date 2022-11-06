@@ -40,12 +40,110 @@ DATE: 2022-11-06
     its parent DirectoryTreeView having been loaded
     in order to load itself.
 {
-    []DotNetSolutionTreeView
-    []DotNetSolutionFolderTreeView
-    []CSharpProjectTreeView
-    []ProjectDependenciesTreeView
-    []ProjectReferencesTreeView
-    []ProjectNugetPackagesTreeView
-    []DirectoryTreeView
-    []FileTreeView
+[]DotNetSolutionTreeView
+    []Read from the Roslyn Workspaces 'Solution'
+        datatype the .csproj files
+    []TODO: How does one use Roslyn Workspaces to
+        get the solution folders?
+[]DotNetSolutionFolderTreeView
+    []TODO: Solve DotNetSolutionTreeView TODO case(s) first
+[]CSharpProjectTreeView
+    []Read all the files and directories
+        in the directory above the .csproj file.
+[]ProjectDependenciesTreeView
+    []Display two children.
+        []ProjectReferencesTreeView
+        []ProjectNugetPackagesTreeView
+[]ProjectReferencesTreeView
+    []TODO: How does one use Roslyn Workspaces to get
+        the projects being referenced by a project
+[]ProjectNugetPackagesTreeView
+    []TODO: How does one use Roslyn Workspaces to get
+        the nuget packages being referenced by a project
+[]DirectoryTreeView
+    []Read all the files and directories
+        in the directory.
+    []What happens when the directory contains a file
+        that found a matching 'codebehind-like' file such as
+        a ".razor" and ".razor.cs" match.
+        []In this situation the ".razor" file should nested
+            the ".razor.cs" match.
+        []As well the directory should not display the 
+            ".razor.cs" file.
+            []This presents a problem as now it appears that
+                there is a dependency between the 
+                DirectoryTreeView.children and the
+                FileTreeView.children.
+                []Such that the FileTreeView.children must
+                    read from DirectoryTreeView.children and
+                    'take' any nestable files.
+                    []That is to say remove the nestable file
+                        from the parent 
+                        DirectoryTreeView.children and then 
+                        add it to its FileTreeView.children.
+        []The previous bullet goes on to describe a
+            situation that when I went down it was a
+            nightmare to contain the complexity.
+            []Instead of FileTreeView.children being
+                dependent on the parent
+                DirectoryTreeView.children
+                []When finished loading 
+                    DirectoryTreeView.children one can
+                    perform a foreach loop over all the
+                    loaded children. Offer each child an
+                    opportunity to mark any of their siblings
+                    as a nestable file.
+                    []After all children have had their chance
+                        to mark a sibling as nestable.
+                        Remove all nestable children from
+                        DirectoryTreeView.children.
+                        []Now a ".razor" and ".razor.cs" file
+                            existing in the same directory.
+                            Will result in the ".razor" file
+                            marking the ".razor.cs" file
+                            as nestable (nestable is a boolean).
+                            The directory will then see that
+                            ".razor.cs" is nestable and
+                            remove that child from its list.
+                            []Note: the nestable files were
+                                not transferred from the
+                                parent directory's children
+                                to its sibling's children.
+                                Doing so would mean there is a
+                                dependency on loading the children
+                                of a ".razor" file such that one
+                                must load the children for the
+                                DirectoryTreeView that ".razor" is
+                                contained in.
+                                []Instead perform two similar steps
+                                    independent from one another.
+                                    []DirectoryTreeView needs to iterate
+                                        over its children and allow the children 
+                                        to mark nestable siblings such that the
+                                        DirectoryTreeView can remove them from
+                                        its DirectoryTreeView.Children list.
+                                    []FileTreeView needs to read the files that
+                                        exist in the directory the file is contained in.
+                                        []Note that "directory" is referring to the filesystem
+                                            entry NOT a dependency to a DirectoryTreeView.
+                                        []FileTreeView can then perform its regular expression
+                                            matching on all its siblings (make sure exclude the
+                                            file itself from the list of siblings).
+                                            []Any matches can be added as children to
+                                                FileTreeView.Children.
+                                    []The two previous steps showcase that one can
+                                        independently load the TreeView.Children for a
+                                        DirectoryTreeView and a FileTreeView.
+                                        []It feels rather redundant to have two separate steps
+                                            however, attempted to perform some optimization by
+                                            way of dependency in this case introduces
+                                            unmanagable complexity.
+
+[]FileTreeView
+    []Read all the files and directories
+        in the directory above the file.
+        []Perform a regular expression match on all the
+            files and directories from previous step.
+            []Any matches are 'codebehind-like' and
+                should be nested behind the file.
 }
