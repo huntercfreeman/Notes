@@ -5,3 +5,18 @@ DATE: 2022-11-06
 {
 []Rewrite the TreeView logic
 }
+
+# Observations about the tree view example made
+    from BlazorStudio's source code.
+{
+[]What unique datatypes were necessary?
+    []DotNetSolutionTreeView
+    []DotNetSolutionFolderTreeView
+    []CSharpProjectTreeView
+    []ProjectDependenciesTreeView
+    []ProjectReferencesTreeView
+    []ProjectNugetPackagesTreeView
+    []DirectoryTreeView
+    []FileTreeView
+[]
+}
