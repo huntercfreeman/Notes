@@ -138,7 +138,6 @@ DATE: 2022-11-06
                                             however, attempted to perform some optimization by
                                             way of dependency in this case introduces
                                             unmanagable complexity.
-
 []FileTreeView
     []Read all the files and directories
         in the directory above the file.
@@ -147,3 +146,43 @@ DATE: 2022-11-06
             []Any matches are 'codebehind-like' and
                 should be nested behind the file.
 }
+
+# Observations about the naive approach to loading
+    all the various TreeView DataTypes.
+{
+[]Was there any overlap?
+    []DirectoryTreeView and CSharpProjectTreeView
+        []In this case CSharpProjectTreeView seems to
+            find its parent filesystem directory and
+            load its TreeView.Children by doing the same
+            logic as would've been done for a DirectoryTreeView.
+            []Can the CSharpProjectTreeView.Load() find the
+                parent filesystem directory of the C# Project
+                and then invoke DirectoryTreeView.Load() on the
+                parent filesystem directory of the C# Project?
+                []If this is found to be the case what are the
+                    differences between DirectoryTreeView and CSharpProjectTreeView
+                    that must be accounted for.
+                    []The CSharpProjectTreeView is to not include as a CSharpProjectTreeView
+                        itself (or even a FileTreeView datatype with its filename). When
+                        reading the parent filesystem directory of the C# Project one will encounter
+                        the C# Project source file itself. That is what this bullet point refers to.
+                        It must be excluded.
+                    []The CSharpProjectTreeView has an extra 
+                        child, that is forced to be the first child,
+                        named Dependencies and of type ProjectDependenciesTreeView.
+                        []Dependencies contains:
+                            []Project References (ProjectReferencesTreeView)
+                            []Nuget Package References (ProjectNugetPackagesTreeView)
+                    []The CSharpProjectTreeView has certain directories that receive special treatment.
+                        []wwwroot gets its own icon (it looks like a globe)
+                        []Properties gets it own icon (it looks like a settings cog)
+                        []Both Properties and wwwroot are to be sorted as their own group
+                            separate from the other filesystem directories that are shown in
+                            the treeview. 
+                                []Amongst the special directories they are to be sorted alphabetically.
+                    []ProjectDependenciesTreeView is to come first
+                    []Then the special directories
+}
+
+
