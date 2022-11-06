@@ -1,0 +1,39 @@
+﻿-BlazorStudio.sln (DotNetSolutionTreeView)
+    -AppHosts (DotNetSolutionFolderTreeView)
+        -BlazorStudio.Photino (CSharpProjectTreeView)
+            -Dependencies (ProjectDependenciesTreeView)
+                -Project References (ProjectReferencesTreeView)
+                -Nuget Package References (ProjectNugetPackagesTreeView)
+            -wwwroot (DirectoryTreeView)
+                -css (DirectoryTreeView)
+                    -bootstrap (DirectoryTreeView)
+                        -bootstrap.min.css (DirectoryTreeView)
+                        -bootstrap.min.css.map (DirectoryTreeView)
+                    -open-iconic (DirectoryTreeView)
+                        -font (DirectoryTreeView)
+                            -css (DirectoryTreeView)
+                                -open-iconic-bootstrap.min.css (FileTreeView)
+                            -fonts (DirectoryTreeView)
+                                -open-iconic.eot
+                                -open-iconic.otf
+                                -open-iconic.svg
+                                -open-iconic.ttf
+                                -open-iconic.woff
+                            -FONT-LICENSE
+                            -ICON-LICENSE
+                            -README.md
+
+    -BlazorStudio (DotNetSolutionFolderTreeView)
+        -BlazorStudio.ClassLib.csproj (CSharpProjectTreeView)
+        -BlazorStudio.RazorLib.csproj (CSharpProjectTreeView)
+        -BlazorStudio.Tests.csproj (CSharpProjectTreeView)
+    -Libs (DotNetSolutionFolderTreeView)
+        -Analysis (DotNetSolutionFolderTreeView)
+            -Blazor.Text.Editor.Analysis.CSharp.ClassLib (CSharpProjectTreeView)
+            -Blazor.Text.Editor.Analysis.Html.ClassLib (CSharpProjectTreeView)
+            -Blazor.Text.Editor.Analysis.JavaScript.ClassLib (CSharpProjectTreeView)
+            -Blazor.Text.Editor.Analysis.Razor.ClassLib (CSharpProjectTreeView)
+            -Blazor.Text.Editor.Analysis.Shared (CSharpProjectTreeView)
+            -Blazor.Text.Editor.Analysis.TypeScript.ClassLib (CSharpProjectTreeView)
+        -BlazorTextEditor.RazorLib (CSharpProjectTreeView)
+        -Photino.Blazor (CSharpProjectTreeView)

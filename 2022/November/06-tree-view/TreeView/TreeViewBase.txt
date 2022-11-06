@@ -1,0 +1,15 @@
+﻿public abstract class TreeViewBase<T> : ITreeView
+{
+    public TreeViewBase(T item)
+    {
+        Item = item;
+    }
+
+    public object UntypedItem { get; }
+    public Type ItemType { get; }
+    
+    public T Item { get; }
+    
+    public ITreeView Parent { get; }
+    public int IndexAmongSiblings { get; }
+}
