@@ -45,7 +45,25 @@ DATE: 2022-11-09
 
 ## Medium priority
 {
-[]TODO: Fill out this section
+[]Add to the SolutionExplorerDisplay ITreeViewKeymap the following keybinds.
+    []{ 'Space' } -> // Peek File Command
+        []If file is already opened in the EditorDisplay then set its
+            tab as the Active Tab.
+        []Else if the file is NOT opened, then open it in a wellknown tab named
+            the 'Peek Tab' within the EditorDisplay then set its
+            tab as the Active Tab.
+            []Only one file can be in the 'Peek Tab' and setting a new 'Peek Tab' target
+                is to remove any currently peeked file from the peek tab.
+            []The moment the user makes an edit to a file in the 'Peek Tab' that file
+                is to be opened using the "Open File Command"
+                []The 'Peek Tab' immediately after this would thereby be empty
+                    and not display.
+    []{ 'Enter' } -> // Open File Command
+        []If file is already opened in the EditorDisplay then set its
+            tab as the Active Tab.
+        []Else if the file is NOT opened, then open it in the EditorDisplay then set its
+            tab as the Active Tab.
+        []FINALLY: set the user's focus to the TextEditor.
 }
 
 ## Low priority
