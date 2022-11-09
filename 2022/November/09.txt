@@ -1,0 +1,72 @@
+DATE: 2022-11-09
+----------------
+
+# Goal
+{
+## High priority
+{
+[]BlazorTreeView library needs to accept
+    as a parameter various "state change event callbacks".
+    []Should these "state change event callbacks" be
+        asynchronous?
+        []Func<TreeViewStateChangeEvent, Task>
+    []What "state change event callbacks" should be
+        provided?
+        []With Fluxor one can use IStateSelection<FeatureState, TSubstate>
+            FeatureStateSelection
+            []Then in override OnInitialized one can
+                FeatureStateSelection.Select(x => x[Key]) to get a specific
+                TSubstate of a FeatureState.
+                []In specific what I am referring to the issue that
+                    currently the TreeViewService abstraction does not
+                    have similar functionality.
+                    []It would be useful if one could use the TreeViewService
+                        and subscribe to changes to a specific TreeView
+                        as opposed to any TreeView changing.
+[]BlazorTreeView library needs to accept
+    as a parameter various "mouse event callbacks".
+    []Should these "mouse event callbacks" be
+        asynchronous?
+        []Func<TreeViewMouseEvent, Task>
+    []Should these "mouse event callbacks" be encapsulated
+        in a single object data type?
+        []In otherwords instead of passing a Blazor parameter
+            foreach mouse event would it be better to
+            have a data type named, 'TreeViewMouseEventRegistrar'
+            with a set only property foreach mouse event.
+            []This would result in only having to pass in
+            one Blazor parameter.
+    []What "mouse event callbacks" should be
+        provided?
+        []OnClick
+        []OnDoubleClick
+        []OnMouseDown
+}
+
+## Medium priority
+{
+[]TODO: Fill out this section
+}
+
+## Low priority
+{
+[]The SolutionExplorerDisplay Blazor component
+    makes use of both a ContextMenu and an ITreeViewKeymap
+    []The ContextMenu and ITreeViewKeymap have a large amount
+        of duplicated code. This should be remedied.
+        []Consider the idea that the BlazorTextEditor
+            has ITextEditorCommandParameter and
+            BlazorTreeView has ITreeViewCommandParameter.
+            []Can these types inherit a common interface
+                of 'ICommand' and all command logic
+                be centralized in one location?
+[]It would be useful if one could use the TextEditorService
+    and subscribe to changes to a specific TextEditor
+    as opposed to any TextEditor changing.
+}
+}
+
+# Plan
+{
+
+}
