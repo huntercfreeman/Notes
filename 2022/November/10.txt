@@ -1,0 +1,25 @@
+DATE: 2022-11-10
+----------------
+
+font-size: 24px
+icon-size: 32px
+
+# Goal
+{
+[]Fix that the fonts and icons look about 40% smaller 
+    when I run BlazorStudio on Linux.
+    []Add in SettingsDisplay.razor
+        []A new Blazor component
+            []IconSettingsDisplay.razor
+                []Allows user to change an input of type number
+                    and modify the size of icons.
+            []TextEditorSettingsDisplay.razor
+                []Allows user to change the font-size of the TextEditor
+                    Blazor component.
+    []Add local storage so the user's settings are stored when closing and reopening.
+}
+
+# Plan
+{
+
+}
