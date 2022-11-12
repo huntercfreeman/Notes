@@ -38,24 +38,32 @@ DATE: 2022-11-12
     []TextEditorInputShowWhitespace.razor
     []TextEditorInputTheme.razor
 []Text Manipulation
-    []When text is selected
-        []Typing a character will
-            delete the selection before inserting the
-            character.
-        []{ Shift + LeftClick } will move the
-            text selection ending position index
-            to the clicked position.
-            []If the user does not have a text
-                selection anchor set, the text
-                selection anchor is set to where the
-                cursor is prior to the movement.
-                Then the text selecting ending position
-                is the clicked position and
-                in between the two points gets selected.
-        []DoubleClick will expand select at the
-            double-clicked position. In otherwords
-            double clicking a word will now select that
-            word.
+    []When text is selected typing a character will
+        delete the selection before inserting the
+        character.
+    []{ Shift + LeftClick } will move the
+        text selection ending position index
+        to the clicked position.
+        []If the user does not have a text
+            selection anchor set, the text
+            selection anchor is set to where the
+            cursor is prior to the movement.
+            Then the text selecting ending position
+            is the clicked position and
+            in between the two points gets selected.
+    []DoubleClick will expand select at the
+        double-clicked position. In otherwords
+        double clicking a word will now select that
+        word.
+[]Cursor movement
+    []If the cursor is not in the viewable area
+        upon an OnMouseDown event, the
+        TextEditorDisplay will no longer do a jarring
+        scroll to a midpoint of where the cursor is
+        and where the user clicked.
+        []That is to say this bug is fixed and no
+            scroll occurs when the user clicks.
+[]Fix the JavaScript disposing of IntersectionObservers
 []Keymap
     []Ctrl + X -> cut
     []Ctrl + Z -> undo
@@ -70,6 +78,11 @@ DATE: 2022-11-12
             one had to ensure the TextEditorBase
             existed before trying to render it.
             Now this is being done internally.
+[]Theme changes
+    []The 'Unset' theme is now a Visual Studio Dark Clone
+        this theme is at the :root {} level in css
+        and no .css class needs to be applied to a parent
+        element of the text editor to use it.
 }
 
 # Youtube thumbnail ideas
