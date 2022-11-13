@@ -1,0 +1,126 @@
+DATE: 2022-11-13
+----------------
+
+https://www.scintilla.org/ScintillaDoc.html
+
+Scintilla has the following features
+listed under their 'Contents'
+section. BlazorTextEditor is to do all of these
+listed features and do them correctly.
+
+There is no excuse not to have a feature implemented.
+
+I will be sure that throughout the process of implementing
+these features:
+[]Reflect on what I appear to have done right
+    and what I appear to have done wrong.
+    []The outcome of a situation does not directly
+        correlate with it being the right or wrong decision.
+        []If one were to say to me, "I will give you $100 if you
+            can land on heads". Then they show me two different coins I can
+            choose from. One is heads and tails either side. The other
+            is heads on both sides. To pick the coin with heads and
+            tails on either side and win the $100 dollars is the wrong
+            decision - even though I won.
+[]Metacognition combined with reflecting on experience
+    is the key to solving any problem.
+    []I must not attempt to program any of the Scintilla features
+        by banging my head against the keyboard.
+        []If there is to be a feature of BlazorTextEditor 
+            that is deemed to function correctly.
+            []Remember that you had no idea what you were doing
+                initially but that you broke the problem down
+                into smaller and smaller problems that were
+                managible given my level of programming experience.
+                []Then almost like a recursive function you bubbled
+                    up the results from the smaller questions
+                    and ended up with the answer to the larger one.
+                    []Even now I look at what BlazorTextEditor is today
+                        and doubt to myself that I even was the one
+                        who wrote it up to this point.
+                        []The point is I've shown myself that I have
+                            a constant sense of self doubt even on
+                            accomplishments and I cannot let my
+                            doubtful thoughts to get me.
+[]Do not think of the individuals that worked on Scintilla
+    as being more intelligent than I am.
+    []Perhaps there is a concept of intellegence
+        but from the perspective of the average
+        person - not a neuroscientist it is irrelevant.
+        []I am not to justify my failure to make this text editor
+            by throwing my hands up in the air and saying,
+            "well they are just smarter than I am".
+            []Minor differences in the conducitivity of
+                one individuals myelin sheath from
+                another to are irrelevant in the grand scheme of things.
+                []What matters is that I approach intellegence
+                    from the persepctive of it being a threshold
+                    of 'not able to learn' vs 'able to learn'.
+                    []I must not believe the idea that some individuals are
+                        naturally skilled at certain activities.
+                        []I am a horrible artist but its because I don't enjoy it,
+                            and thereby do not practice that skill. If I truly wanted to
+                            I could become one of the best artists in the world.
+                            []The requirement for this would be a combination
+                                of reflecting on experience, metacognition, and
+                                my brain releasing the chemicals necessary
+                                for one to be able to focus.
+                                []At the end of the day my brain does not reward me
+                                    when I draw. It does however feel rewarding
+                                    to program and with every day I can get better.
+
+○ Text retrieval and modification	
+○ Searching and replacing	
+○ Overtype
+○ Cut, copy and paste	
+○ Error handling	
+○ Undo and Redo
+○ Change history	
+○ Selection and information	
+○ By character or UTF-16 code unit
+○ Multiple Selection and Virtual Space	
+○ Scrolling and automatic scrolling	
+○ White space
+○ Cursor	
+○ Mouse capture	
+○ Line endings
+○ Words	
+○ Styling	
+○ Style definition
+○ Element colours	
+○ Selection, caret, and hotspot styles	
+○ Character representations
+○ Margins	
+○ Annotations	
+○ Other settings
+○ Brace highlighting	
+○ Tabs and Indentation Guides	
+○ Markers
+○ Indicators	
+○ Autocompletion	
+○ User lists
+○ Call tips	
+○ Keyboard commands	
+○ Key bindings
+○ Popup edit menu	
+○ Macro recording	
+○ Printing
+○ Direct access	
+○ Multiple views	
+○ Background loading and saving
+○ Folding	
+○ Line wrapping	
+○ Zooming
+○ Long lines	
+○ Accessibility	
+○ Lexer
+○ Lexer objects	
+○ Notifications	
+○ Images
+○ GTK	
+○ Provisional messages	
+○ Deprecated messages
+○ Edit messages never supported by Scintilla	
+○ Removed features	
+○ Building Scintilla
+○ End of Line Annotations

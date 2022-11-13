@@ -1,0 +1,216 @@
+DATE: 2022-11-13
+----------------
+
+# Goal
+{
+[]Unit Test EVERYTHING
+[]After Unit Testing manually run the Blazor Text Editor
+    take time to purposely do everything possible
+    to break the app and document what needs fixing.
+[]Look through the entirety of the source code with the mindset
+    that it is the worst code imaginable and every line in wrong.
+    []Document the flaws
+        []Fix the flaws
+[]Nothing should be modified within the UI layer.
+    []All modifications to the Editor must be done
+        through the Logic layer.
+    []All modifications are to return a new instance of
+        whatever class wraps the state needed by
+        the TextEditor UserInterface.
+        []Various substate parts of the state being instantiated
+            every edit likely need to be mutable
+            in order to make the Editor not incredibly
+            slow.
+            []In this case of needing mutability for performance
+                the private field may be mutable but ensure
+                if exposing that field publically that the
+                public version maps to a top down immutable type.
+                []List<MyImmutableObject> is not allowed it must be
+                    ImmutableList<MyImmutableObject> as to be top down
+                    immutable.
+                    []The actual container kind is on a case by case basis
+                        perhaps one case needs a List and one an Array.
+        []All modifications to the Editor must be done
+            through a single thread which accesses
+            a concurrent queue of modification requests.
+            []Thereby, Fluxor will be used to mediate the edits.
+    []All TextEditor UserInterfaces are to use dependency
+        injection to access their respective states.
+        []This is done by receiving a 'TextEditorKey'
+            as a Blazor parameter.
+            []All other Blazor parameters are to be
+                customization options not requirements.
+            []If a TextEditorKey is given to a UserInterface
+                component. Should it be the case that
+                there is no registered TextEditorBase with the
+                provided TextEditorKey. The app must not crash.
+                []Furthermore, the component is to re-render
+                    should the TextEditorKey ever get registered.
+                    This re-render is to be done via an event
+                    based logic and is to require no re-render 
+                    action by the consumer of the component.
+                    The re-render is to happen on its own.
+    []The rerendering of the TextEditor UserInterface
+        is to occur via an event system where
+        the TextEditor UserInterface uses receives a TextEditorKey
+        as a Blazor parameter and performs all re-rerendering
+        automatically without the need for the consumer to
+        invoke a re-render themselves.
+        []Thereby, Fluxor will be used for the UI layer.
+[]List out the next 3 updates that are planned
+    as to ensure you do not waste anytime doing
+    a feature that is unrelated to this update.
+    []5.1.0 (No later than: 2022-11-25)
+        []Every lexer is to be finished and correct
+            []That is to say
+                []C#
+                []HTML
+                []Razor
+                []JavaScript
+                []TypeScript
+    []5.2.0 (No later than: 2022-12-2)
+        []Autocomplete is to be finished
+    []5.3.0 (No later than: 2022-12-9)
+    
+
+}
+
+# Plan
+{
+[]Automatic LocalStorage integration (Optional)
+    []Exposes ITextEditorService
+        .SetTextEditorOptionsFromLocalStorageAsync()
+        so one can decide when to read in the stored state.
+    []Will store the following if enabled
+        []int? FontSizeInPixels
+        []Theme? Theme
+        []bool? ShowWhitespace
+        []bool? ShowNewlines
+    []Usage in Program.cs
+        []builder.Services
+            .AddTextEditorRazorLibServices(options =>
+            {
+                options.UseLocalStorageForSettings = true;
+            });
+[]Helper Components
+    []TreeViewFooter.razor
+    []TextEditorInputFontSize.razor
+    []TextEditorInputShowNewLines.razor
+    []TextEditorInputShowWhitespace.razor
+    []TextEditorInputTheme.razor
+[]Text Manipulation
+    []When text is selected typing a character will
+        delete the selection before inserting the
+        character.
+    []{ Shift + LeftClick } will move the
+        text selection ending position index
+        to the clicked position.
+        []If the user does not have a text
+            selection anchor set, the text
+            selection anchor is set to where the
+            cursor is prior to the movement.
+            Then the text selecting ending position
+            is the clicked position and
+            in between the two points gets selected.
+    []DoubleClick will expand select at the
+        double-clicked position. In otherwords
+        double clicking a word will now select that
+        word.
+[]Cursor movement
+    []If the cursor is not in the viewable area
+        upon an OnMouseDown event, the
+        TextEditorDisplay will no longer do a jarring
+        scroll to a midpoint of where the cursor is
+        and where the user clicked.
+        []That is to say this bug is fixed and no
+            scroll occurs when the user clicks.
+[]Fix the JavaScript disposing of IntersectionObservers
+[]Keymap
+    []Ctrl + X -> cut
+    []Ctrl + Z -> undo
+    []Ctrl + Y -> redo
+[]ILexer
+    []Added separate Razor file lexer nuget package
+[]Visual Indicator whether TextEditorDisplay has focus
+[]Blazor Component Parameter changes
+    []TextEditorDisplay can be given
+        the TextEditorKey of a yet to be registered
+        TextEditorBase.
+        []This is quite substantial as before
+            one had to ensure the TextEditorBase
+            existed before trying to render it.
+            Now this is being done internally.
+[]Theme changes
+    []The 'Unset' theme is now a Visual Studio Dark Clone
+        this theme is at the :root {} level in css
+        and no .css class needs to be applied to a parent
+        element of the text editor to use it.
+}
+
+# Youtube thumbnail ideas
+{
+[]Could a thumnail of the changes listed be possible?
+[]Leveling up meme (The "level 1 Gangster vs level 100 Boss" meme)
+}
+
+# Youtube title ideas
+{
+[]v5.0.0 Blazor Text Editor : Large update
+}
+
+# Youtube video description
+{
+Email Me:
+    -hunterfreemandev@gmail.com
+
+Text Editor from scratch with Blazor and C# youtube playlist:
+    -https://youtube.com/playlist?list=PLG4PTDe2qc0i0COivTxn_rjSN96Xq-_K1
+
+GitHub repos
+    -BlazorStudio: https://github.com/huntercfreeman/BlazorStudio
+    -Blazor.Text.Editor: https://github.com/huntercfreeman/Blazor.Text.Editor
+    -Blazor.Text.Editor-Template: https://github.com/huntercfreeman/Blazor.Text.Editor-Template
+    -Blazor.Text.Editor.Analysis: https://github.com/huntercfreeman/Blazor.Text.Editor.Analysis
+    -BlazorTreeView: https://github.com/huntercfreeman/BlazorTreeView
+
+NuGet Packages
+    -Blazor.Text.Editor: https://www.nuget.org/packages/Blazor.Text.Editor/
+    -Blazor.Text.Editor.Lexer.HTML: https://www.nuget.org/packages/Blazor.Text.Editor.Lexer.HTML
+    -Blazor.Text.Editor.Lexer.CSharp: https://www.nuget.org/packages/Blazor.Text.Editor.Lexer.CSharp
+}
+
+# Before this video specifically checklist
+{
+[]See in general checklist
+}
+
+# Checklist before recording a video in general
+{
+[]Font-size
+    []Rider
+        []Appearance
+            []Font-Family: Segoe UI;
+		    []Font-Size: 24px;
+        []Editor
+            []Font-Family: Consolas;
+		    []Font-Size: 30px;
+		    []Line Height: 1.1;
+    []Operating system
+        []Windows
+            []Settings > Accessibility > Text size
+                []Text size slider
+                    []150%
+    []Web Browser
+    []BlazorStudio itself
+    []Visual Studio Code
+}
+
+# Web Links
+{
+    My Website: https://github.com/huntercfreeman/Blazor.Text.Editor.Demo
+    The demo source code: https://github.com/huntercfreeman/Blazor.Text.Editor.Demo
+    BlazorStudio source code: https://github.com/huntercfreeman/BlazorStudio
+    Blazor.Text.Editor source code: https://github.com/huntercfreeman/Blazor.Text.Editor
+
+    As well more repos are on my github.
+}
