@@ -143,3 +143,13 @@ NuGet Packages
     []BlazorStudio itself
     []Visual Studio Code
 }
+
+# Web Links
+{
+    My Website: https://github.com/huntercfreeman/Blazor.Text.Editor.Demo
+    The demo source code: https://github.com/huntercfreeman/Blazor.Text.Editor.Demo
+    BlazorStudio source code: https://github.com/huntercfreeman/BlazorStudio
+    Blazor.Text.Editor source code: https://github.com/huntercfreeman/Blazor.Text.Editor
+
+    As well more repos are on my github.
+}
