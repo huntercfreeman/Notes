@@ -57,6 +57,10 @@ DATE: 2022-11-13
         automatically without the need for the consumer to
         invoke a re-render themselves.
         []Thereby, Fluxor will be used for the UI layer.
+    []Paste is currently done by invoking an insertion
+        foreach character.
+        []There needs to be a bulk insertion option
+            as Pasting large amounts of text is rather slow.
 []List out the next 3 updates that are planned
     as to ensure you do not waste anytime doing
     a feature that is unrelated to this update.
