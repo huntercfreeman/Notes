@@ -115,7 +115,9 @@ DATE: 2022-11-13
                 useful to dedicate a week to making
                 sure EVERYTHING is setup in terms
                 of Accessibility.
-    []5.10.0 ..... TODO
+    []5.10.0 (No later than: 2023-01-27)
+        []Support more natural languages
+            beyond English.
 }
 
 # Plan
