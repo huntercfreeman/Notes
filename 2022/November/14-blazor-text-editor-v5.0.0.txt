@@ -27,6 +27,7 @@ DATE: 2022-11-14
     []OutOfBoundsClick
     []Resize
     []
+[]TextEditorDisplay needs tabs by default
 }
 
 # Plan
