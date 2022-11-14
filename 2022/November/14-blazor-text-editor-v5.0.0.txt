@@ -84,8 +84,14 @@ DATE: 2022-11-14
                 []"Authority"
                 []"ClientId"
                 [].... others depending on the app's IP (Identity Provider)
-                
-
+        []Wasm
+            []Automatically configures default scopes for 
+                []openid
+                []profile                
+            []Will not automatically configure the app to request an access
+                token for a secure API
+                []To add it manually configure AddOidcAuthentication()
+                    []options.ProviderOptions.DefaultScopes.Add("{SCOPE URI}");
 }
 
 # Plan
