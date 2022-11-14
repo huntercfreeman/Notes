@@ -14,6 +14,19 @@ DATE: 2022-11-14
     [X]Save
     [X]Select All
     [X]Refresh
+[]Check the file size of the NugetPackage when finished.
+    []It should be as lightweight as it can be.
+[]Move over all Analysis code (the ILexers and IDecorationMappers) to BlazorTextEditor
+    []Not enough analysis logic exists to warrent installing a separate nuget
+        package it is mostly just an annoying step at this point in time.
+[]Move over some code from BlazorStudio to the BlazorTextEditor
+    []CustomEvents
+    []Dimensions
+    []Dropdown
+    []Menu
+    []OutOfBoundsClick
+    []Resize
+    []
 }
 
 # Plan
