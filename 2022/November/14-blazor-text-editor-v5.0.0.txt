@@ -36,6 +36,7 @@ DATE: 2022-11-14
 []Consider doing what Microsoft.CodeAnalysis did with their nuget packages.
     []They have "Microsoft.CodeAnalysis" include all nuget packages in a single package.
         []The individual components are available as their own nuget packages as well.
+[]Should the sizes be in em instead of rem?
 }
 
 # Plan
