@@ -37,6 +37,8 @@ DATE: 2022-11-14
     []They have "Microsoft.CodeAnalysis" include all nuget packages in a single package.
         []The individual components are available as their own nuget packages as well.
 []Should the sizes be in em instead of rem?
+[]Check every usage of Blazor EditorRequired on a Parameter if it is actually required.
+    []The warnings otherwise are incredibly obnoxious.
 }
 
 # Plan
