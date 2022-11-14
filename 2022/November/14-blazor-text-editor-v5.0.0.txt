@@ -92,6 +92,12 @@ DATE: 2022-11-14
                 token for a secure API
                 []To add it manually configure AddOidcAuthentication()
                     []options.ProviderOptions.DefaultScopes.Add("{SCOPE URI}");
+            [](wwwroot/index.html) page includes a script that defines the 
+                AuthenticationService in JavaScript
+                []AuthenticationService handles the low-level 
+                    details of the OIDC protocol.
+                []The app internally calls methods defined in the script to 
+                    perform the authentication operations
 }
 
 # Plan
