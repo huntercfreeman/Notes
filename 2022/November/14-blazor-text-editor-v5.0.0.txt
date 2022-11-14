@@ -42,6 +42,27 @@ DATE: 2022-11-14
 []Look into how the BlazorTextEditor functions on mobile.
     []If the text editor cannot possibly work on mobile what is the course of action?
         []pseudo: if (mobile) <textarea /> else <TextEditorDisplay />
+[]Demo app
+    []Project Structure
+        []BlazorTextEditor.Demo.ServerSide
+        []BlazorTextEditor.Demo.Wasm
+        []BlazorTextEditor.Demo.ClassLib
+        []BlazorTextEditor.Demo.RazorLib
+        []BlazorTextEditor.Demo.Tests
+    []WebAssembly authentication
+        []Service container
+            []AddOidcAuthentication()
+                []Adds services required for the app to interact 
+                    with the Identity Provider (IP)
+                []OIDC
+                    []oidc-client.js
+                    []Acronymn
+                        []Open
+                        []I (of the ID)
+                        []D (of the ID)
+                        []Connect
+        []
+
 }
 
 # Plan
