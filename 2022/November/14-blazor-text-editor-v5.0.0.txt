@@ -115,6 +115,10 @@ DATE: 2022-11-14
                 []Manages performing the appropriate actions at each 
                     stage of authentication
 []Allow the user to set the initial theme.
+[]Expand selection double click with no content in the TextEditor
+    will crash. 
+    []Index was out of range.
+    []TextEditorBase.PublicMethods.cs:line 329
 }
 
 # Plan
