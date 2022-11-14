@@ -79,6 +79,12 @@ DATE: 2022-11-14
                 to modify the scopes granted to the application 
                 compared to what is requested
                 []Not many examples of services doing this in practice
+        []Configuration
+            []"Local"
+                []"Authority"
+                []"ClientId"
+                [].... others depending on the app's IP (Identity Provider)
+                
 
 }
 
