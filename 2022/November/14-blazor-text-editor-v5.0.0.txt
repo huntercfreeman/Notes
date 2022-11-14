@@ -13,7 +13,7 @@ DATE: 2022-11-14
     [X]Paste
     []Save
     []Select All
-    []Refresh
+    [X]Refresh
 }
 
 # Plan
