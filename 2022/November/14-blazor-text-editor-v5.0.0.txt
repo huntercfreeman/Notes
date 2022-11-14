@@ -61,6 +61,18 @@ DATE: 2022-11-14
                         []I (of the ID)
                         []D (of the ID)
                         []Connect
+                    []Extends the OAuth 2.0 authorization protocol
+        []Tokens
+            []Access tokens (defined in OAuth)
+                []For API
+            []ID tokens (defined in OpenID Connect)
+                []For authentication
+                []Must not be used to make 
+                    requests to the resource server
+            []OAuth Refresh Tokens
+                []Get a new access token without the user's interaction
+                []Must not allow the client to gain any access 
+                    beyond the scope of the original grant
         []
 
 }
