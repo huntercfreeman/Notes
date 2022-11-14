@@ -6,13 +6,13 @@ DATE: 2022-11-14
 []See '13-blazor-text-editor-v5.0.0.txt' for more goals as they
     will not be repeated in this file.
 []Wire up all of the TextEditorHeader.razor Blazor component's buttons.
-    []Undo
-    []Redo
-    []Cut
-    []Copy
+    [X]Undo
+    [X]Redo
+    [X]Cut
+    [X]Copy
     [X]Paste
-    []Save
-    []Select All
+    [X]Save
+    [X]Select All
     [X]Refresh
 }
 
