@@ -73,7 +73,12 @@ DATE: 2022-11-14
                 []Get a new access token without the user's interaction
                 []Must not allow the client to gain any access 
                     beyond the scope of the original grant
-        []
+        []OAuth Scopes
+            []limit an application's access to a user's account
+            []OAuth spec allows the authorization server or user
+                to modify the scopes granted to the application 
+                compared to what is requested
+                []Not many examples of services doing this in practice
 
 }
 
