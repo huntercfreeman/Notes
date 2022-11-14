@@ -114,6 +114,7 @@ DATE: 2022-11-14
             []Authentication component
                 []Manages performing the appropriate actions at each 
                     stage of authentication
+[]Allow the user to set the initial theme.
 }
 
 # Plan
