@@ -128,6 +128,7 @@ DATE: 2022-11-14
     []TextEditorBase.PrivateMethods.cs:line 32
 []Update the Constants for punctuation they seem to be missing some.
 []Fix clicking directly on a tab key puts cursor wrong position.
+[X]Fix height of header and footer
 }
 
 # Plan
