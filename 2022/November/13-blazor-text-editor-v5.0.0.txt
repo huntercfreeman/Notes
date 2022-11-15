@@ -61,7 +61,8 @@ DATE: 2022-11-13
         foreach character.
         []There needs to be a bulk insertion option
             as Pasting large amounts of text is rather slow.
-    []Why does pasting result in one losing focus from the editor?
+    [X]Why does pasting result in one losing focus from the editor?
+        [X]It was copying that was the issue and this is fixed.
 []List out the next 3 updates that are planned
     as to ensure you do not waste anytime doing
     a feature that is unrelated to this update.
