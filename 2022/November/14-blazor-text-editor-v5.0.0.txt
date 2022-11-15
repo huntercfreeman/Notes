@@ -16,7 +16,7 @@ DATE: 2022-11-14
             with the updated cursor position when the cursor moves.
 []Check the file size of the NugetPackage when finished.
     []It should be as lightweight as it can be.
-[]Virtualization move to separate files the many classes in one
+[X]Virtualization move to separate files the many classes in one
 []The getContextMenuFixedPositionRelativeToElement javascript needs to account
     for the scroll position horizontally and vertically.
 []TextEditorDisplay needs tabs by default
