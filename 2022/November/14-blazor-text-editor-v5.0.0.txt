@@ -126,6 +126,8 @@ DATE: 2022-11-14
 []Control + Delete
 []ERROR: Index must be within the bounds of the List
     []TextEditorBase.PrivateMethods.cs:line 32
+[]Update the Constants for punctuation they seem to be missing some.
+[]Fix clicking directly on a tab key puts cursor wrong position.
 }
 
 # Plan
