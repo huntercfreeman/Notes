@@ -121,6 +121,7 @@ DATE: 2022-11-14
     []TextEditorBase.PublicMethods.cs:line 329
 []BUG: Cut selection on content that starts with column index 0 will put cursor at column index -1
 []Remember to remove EBI and EBS (edit block debug UI) from the footer
+[]Options static out of the box settings dialog
 }
 
 # Plan
