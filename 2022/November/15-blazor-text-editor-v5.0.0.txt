@@ -1,0 +1,78 @@
+DATE: 2022-11-14
+----------------
+
+# Goal
+{
+
+# TODO ----------------------------------------------------------------------------
+
+[]Ensure '14-blazor-text-editor-v5.0.0.txt' has its goals met
+    []Copy TODO items from '14-blazor-text-editor-v5.0.0.txt' to this file?
+
+# COMPLETED ----------------------------------------------------------------------------
+[X]Example of a completed item.
+
+}
+
+# Plan
+{
+}
+
+# Youtube thumbnail ideas
+{
+}
+
+# Youtube title ideas
+{
+}
+
+# Youtube video description
+{
+Email Me:
+    -hunterfreemandev@gmail.com
+
+Text Editor from scratch with Blazor and C# youtube playlist:
+    -https://youtube.com/playlist?list=PLG4PTDe2qc0i0COivTxn_rjSN96Xq-_K1
+
+GitHub repos
+    -BlazorStudio: https://github.com/huntercfreeman/BlazorStudio
+    -Blazor.Text.Editor: https://github.com/huntercfreeman/Blazor.Text.Editor
+    -Blazor.Text.Editor-Template: https://github.com/huntercfreeman/Blazor.Text.Editor-Template
+    -Blazor.Text.Editor.Analysis: https://github.com/huntercfreeman/Blazor.Text.Editor.Analysis
+    -BlazorTreeView: https://github.com/huntercfreeman/BlazorTreeView
+
+NuGet Packages
+    -Blazor.Text.Editor: https://www.nuget.org/packages/Blazor.Text.Editor/
+    -Blazor.Text.Editor.Lexer.HTML: https://www.nuget.org/packages/Blazor.Text.Editor.Lexer.HTML
+    -Blazor.Text.Editor.Lexer.CSharp: https://www.nuget.org/packages/Blazor.Text.Editor.Lexer.CSharp
+}
+
+# Before this video specifically checklist
+{
+[]See in general checklist
+}
+
+# Checklist before recording a video in general
+{
+[]Font-size
+    []Rider
+        []Appearance
+            []Font-Family: Segoe UI;
+		    []Font-Size: 24px;
+        []Editor
+            []Font-Family: Consolas;
+		    []Font-Size: 30px;
+		    []Line Height: 1.1;
+    []Operating system
+        []Windows
+            []Settings > Accessibility > Text size
+                []Text size slider
+                    []150%
+    []Web Browser
+    []BlazorStudio itself
+    []Visual Studio Code
+}
+
+# Web Links
+{
+}
