@@ -3,35 +3,24 @@ DATE: 2022-11-14
 
 # Goal
 {
-[]See '13-blazor-text-editor-v5.0.0.txt' for more goals as they
-    will not be repeated in this file.
-[]Wire up all of the TextEditorHeader.razor Blazor component's buttons.
-    [X]Undo
-    [X]Redo
-    [X]Cut
-    [X]Copy
-    [X]Paste
-    [X]Save
-    [X]Select All
-    [X]Refresh
+
+# TODO ----------------------------------------------------------------------------
+[]Ensure '13-blazor-text-editor-v5.0.0.txt' has its goals met
+    []Copy TODO items from '13-blazor-text-editor-v5.0.0.txt' to this file?
+[]Make TextEditorView to be a base class for all Blazor components wanting to
+    be notified of re instantiations of their given TextEditorKey's TextEditorBase
+    []When the TextEditorView subscribes to the re instantiation of its target TextEditorBase
+        there needs to be another state involved that tracks any components
+        that are 'viewing' a TextEditorBase.
+        []This way the cursors can update any Footer that is viewing the same TextEditorBase
+            with the updated cursor position when the cursor moves.
 []Check the file size of the NugetPackage when finished.
     []It should be as lightweight as it can be.
-[]Move over all Analysis code (the ILexers and IDecorationMappers) to BlazorTextEditor
-    []Not enough analysis logic exists to warrent installing a separate nuget
-        package it is mostly just an annoying step at this point in time.
-[]Move over some code from BlazorStudio to the BlazorTextEditor
-    []CustomEvents
-    []Dimensions
-    []Dropdown
-    []Menu
-    []OutOfBoundsClick
-    []Resize
-    []Notifications
 []The getContextMenuFixedPositionRelativeToElement javascript needs to account
     for the scroll position horizontally and vertically.
 []TextEditorDisplay needs tabs by default
 []Ensure all unnecessary CSS is removed.
-[]Ensure none of the css is non namespaces 'bte_...' is required
+[]Ensure all of the css is namespaced: 'bte_...' is required
 []Ensure all CSS values are css variables
 []Consider doing what Microsoft.CodeAnalysis did with their nuget packages.
     []They have "Microsoft.CodeAnalysis" include all nuget packages in a single package.
@@ -41,8 +30,13 @@ DATE: 2022-11-14
     []The warnings otherwise are incredibly obnoxious.
 []Look into how the BlazorTextEditor functions on mobile.
     []If the text editor cannot possibly work on mobile what is the course of action?
-        []pseudo: if (mobile) <textarea /> else <TextEditorDisplay />
-[]Demo app
+        []pseudo code: if (mobile) <textarea /> else <TextEditorDisplay />
+[]Visual Indicator whether TextEditorDisplay has focus
+[]Remember to remove EBI and EBS (edit block debug UI) from the footer
+[]Fix clicking directly on a tab key puts cursor wrong position.
+[]ERROR: Index must be within the bounds of the List
+    []TextEditorBase.PrivateMethods.cs:line 32
+[]Make a Demo app
     []Project Structure
         []BlazorTextEditor.Demo.ServerSide
         []BlazorTextEditor.Demo.Wasm
@@ -114,25 +108,43 @@ DATE: 2022-11-14
             []Authentication component
                 []Manages performing the appropriate actions at each 
                     stage of authentication
+
+# COMPLETED ----------------------------------------------------------------------------
 [X]Allow the user to set the initial theme.
 [X]BUG: Expand selection double click with no content in the TextEditor
     will crash. 
     [X]Index was out of range.
     [X]TextEditorBase.PublicMethods.cs:line 329
 [X]BUG: Cut selection on content that starts with column index 0 will put cursor at column index -1
-[]Remember to remove EBI and EBS (edit block debug UI) from the footer
 [X]Out of the box static settings dialog component
 [X]Control + Backspace
 [X]Control + Delete
-[]ERROR: Index must be within the bounds of the List
-    []TextEditorBase.PrivateMethods.cs:line 32
 [X]Update the Constants for punctuation they seem to be missing some.
-[]Fix clicking directly on a tab key puts cursor wrong position.
 [X]Fix height of header and footer
 [X]Change light theme caret row color
 [X]Fix GetColumnIndexOfCharacterWithDifferingKind() index out of range
 [X]Fix double click expand selection -1 index out of range exception
 [X]Default context menu
+[X]Wire up all of the TextEditorHeader.razor Blazor component's buttons.
+    [X]Undo
+    [X]Redo
+    [X]Cut
+    [X]Copy
+    [X]Paste
+    [X]Save
+    [X]Select All
+    [X]Refresh
+[X]Move over all Analysis code (the ILexers and IDecorationMappers) to BlazorTextEditor
+    [X]Not enough analysis logic exists to warrent installing a separate nuget
+        package it is mostly just an annoying step at this point in time.
+[X]Move over some code from BlazorStudio to the BlazorTextEditor
+    [X]CustomEvents
+    [X]Dimensions
+    [X]Dropdown
+    [X]Menu
+    [X]OutOfBoundsClick
+    [X]Resize
+    [X]Notifications
 }
 
 # Plan

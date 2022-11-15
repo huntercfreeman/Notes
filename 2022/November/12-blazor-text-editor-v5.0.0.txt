@@ -70,7 +70,6 @@ DATE: 2022-11-12
     []Ctrl + Y -> redo
 []ILexer
     []Added separate Razor file lexer nuget package
-[]Visual Indicator whether TextEditorDisplay has focus
 []Blazor Component Parameter changes
     []TextEditorDisplay can be given
         the TextEditorKey of a yet to be registered
