@@ -7,13 +7,6 @@ DATE: 2022-11-14
 # TODO ----------------------------------------------------------------------------
 []Ensure '13-blazor-text-editor-v5.0.0.txt' has its goals met
     []Copy TODO items from '13-blazor-text-editor-v5.0.0.txt' to this file?
-[]Make TextEditorView to be a base class for all Blazor components wanting to
-    be notified of re instantiations of their given TextEditorKey's TextEditorBase
-    []When the TextEditorView subscribes to the re instantiation of its target TextEditorBase
-        there needs to be another state involved that tracks any components
-        that are 'viewing' a TextEditorBase.
-        []This way the cursors can update any Footer that is viewing the same TextEditorBase
-            with the updated cursor position when the cursor moves.
 []Check the file size of the NugetPackage when finished.
     []It should be as lightweight as it can be.
 []The getContextMenuFixedPositionRelativeToElement javascript needs to account
@@ -33,6 +26,13 @@ DATE: 2022-11-14
         []pseudo code: if (mobile) <textarea /> else <TextEditorDisplay />
 []Visual Indicator whether TextEditorDisplay has focus
 []Remember to remove EBI and EBS (edit block debug UI) from the footer
+[]Undo and Redo EditBlocks need to track the cursor as well
+    []There is an exception being thrown because an undo might
+        remove content where the cursor is.
+        []Yet not update the cursor to be within bounds of the text.
+            []Thereby causing an exception the next time the cursor does something.
+    []At the least position the cursor correctly after undo and redo
+        []But preferrably track cursors at undos and redos.
 []Fix clicking directly on a tab key puts cursor wrong position.
 []ERROR: Index must be within the bounds of the List
     []TextEditorBase.PrivateMethods.cs:line 32
@@ -161,6 +161,15 @@ DATE: 2022-11-14
 [X]When cursor accesses out of bounds location return largest available RowIndex 
     and largest available ColumnIndex
 [X]Virtualization move to separate files the many classes in one
+[X]Move rerender logic to the reducer having a replaced value needing
+    rendered. Instead of manually.
+[X]Make TextEditorView to be a base class for all Blazor components wanting to
+    be notified of re instantiations of their given TextEditorKey's TextEditorBase
+    [X]When the TextEditorView subscribes to the re instantiation of its target TextEditorBase
+        there needs to be another state involved that tracks any components
+        that are 'viewing' a TextEditorBase.
+        [X]This way the cursors can update any Footer that is viewing the same TextEditorBase
+            with the updated cursor position when the cursor moves.
 }
 
 # Plan
