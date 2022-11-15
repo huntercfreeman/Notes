@@ -14,6 +14,7 @@ DATE: 2022-11-14
 [X]Adding AutocompleteIndexer.cs
 [X]Index on space, tab, and any punctuation.
 [X]Look for autocomplete results if LetterOrDigit
+[]Show matches in autocomplete menu
 
 # COMPLETED ----------------------------------------------------------------------------
 [X]Example of a completed item.
