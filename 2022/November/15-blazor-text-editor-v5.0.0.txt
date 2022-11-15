@@ -9,6 +9,7 @@ DATE: 2022-11-14
     []Copy TODO items from '14-blazor-text-editor-v5.0.0.txt' to this file?
 []Working on closing autocomplete menu with the appropriate keys only
 []Show matches in autocomplete menu
+[]Autocomplete might be working
 
 # COMPLETED ----------------------------------------------------------------------------
 [X]Example of a completed item.
