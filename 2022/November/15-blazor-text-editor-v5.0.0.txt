@@ -12,6 +12,7 @@ DATE: 2022-11-14
 []Working on closing autocomplete menu with the appropriate keys only
 [X]Disabled button background color change
 []Adding AutocompleteIndexer.cs
+[]Index on space, tab, and any punctuation.
 
 # COMPLETED ----------------------------------------------------------------------------
 [X]Example of a completed item.
