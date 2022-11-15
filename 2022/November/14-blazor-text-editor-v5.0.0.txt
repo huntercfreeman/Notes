@@ -132,6 +132,7 @@ DATE: 2022-11-14
 [X]Change light theme caret row color
 [X]Fix GetColumnIndexOfCharacterWithDifferingKind() index out of range
 [X]Fix double click expand selection -1 index out of range exception
+[X]Default context menu
 }
 
 # Plan
