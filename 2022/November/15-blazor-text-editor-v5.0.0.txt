@@ -10,6 +10,7 @@ DATE: 2022-11-14
 [X]Register methods for common TextEditorBase uses cases like C# and Razor
 [X]On type show autocomplete but need to fix it shouldn't take focus OnAfterRender
 []Working on closing autocomplete menu with the appropriate keys only
+[]Disabled button background color change
 
 # COMPLETED ----------------------------------------------------------------------------
 [X]Example of a completed item.
