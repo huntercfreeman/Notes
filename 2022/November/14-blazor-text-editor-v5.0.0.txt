@@ -130,6 +130,8 @@ DATE: 2022-11-14
 []Fix clicking directly on a tab key puts cursor wrong position.
 [X]Fix height of header and footer
 [X]Change light theme caret row color
+[X]Fix GetColumnIndexOfCharacterWithDifferingKind() index out of range
+
 }
 
 # Plan
