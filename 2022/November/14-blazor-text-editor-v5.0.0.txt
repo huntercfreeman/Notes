@@ -16,17 +16,6 @@ DATE: 2022-11-14
             with the updated cursor position when the cursor moves.
 []Check the file size of the NugetPackage when finished.
     []It should be as lightweight as it can be.
-[]I think the bug with EditBlocks is down to
-    []When undo one writes the pending EditBlock which was at EditBlocks.Count
-        in otherwords an invalid index to read (fine to insert though).
-        []Redo will then put the user at a non pending block.
-            []Yet this block will be the active one and
-                something along these lines is the issue.
-                []I had this realization and needed to writes
-                    down my thoughts before I forgot -- am busy doing other things.
-                []Need to be on a pending block if at EditBlocks.Count?
-                []The pending block needs to be made when they redo all their undos.
-[X]Virtualization move to separate files the many classes in one
 []The getContextMenuFixedPositionRelativeToElement javascript needs to account
     for the scroll position horizontally and vertically.
 []TextEditorDisplay needs tabs by default
@@ -156,6 +145,22 @@ DATE: 2022-11-14
     [X]OutOfBoundsClick
     [X]Resize
     [X]Notifications
+[X]I think the bug with EditBlocks is down to
+    [X]When undo one writes the pending EditBlock which was at EditBlocks.Count
+        in otherwords an invalid index to read (fine to insert though).
+        [X]Redo will then put the user at a non pending block.
+            [X]Yet this block will be the active one and
+                something along these lines is the issue.
+                [X]I had this realization and needed to writes
+                    down my thoughts before I forgot -- am busy doing other things.
+                [X]Need to be on a pending block if at EditBlocks.Count?
+                [X]The pending block needs to be made when they redo all their undos.
+    [X]Fixed the bug
+        [X]It was due to maximum edit block count removing older history
+            and not decrementing the edit block index.
+[X]When cursor accesses out of bounds location return largest available RowIndex 
+    and largest available ColumnIndex
+[X]Virtualization move to separate files the many classes in one
 }
 
 # Plan
