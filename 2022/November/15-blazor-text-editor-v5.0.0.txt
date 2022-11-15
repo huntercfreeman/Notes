@@ -7,8 +7,8 @@ DATE: 2022-11-14
 # TODO ----------------------------------------------------------------------------
 []Ensure '14-blazor-text-editor-v5.0.0.txt' has its goals met
     []Copy TODO items from '14-blazor-text-editor-v5.0.0.txt' to this file?
-[]Register methods for common TextEditorBase uses cases like C# and Razor
-[]On type show autocomplete but need to fix it shouldn't take focus OnAfterRender
+[X]Register methods for common TextEditorBase uses cases like C# and Razor
+[X]On type show autocomplete but need to fix it shouldn't take focus OnAfterRender
 
 # COMPLETED ----------------------------------------------------------------------------
 [X]Example of a completed item.
