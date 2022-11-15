@@ -1,0 +1,67 @@
+<scheme name="Visual Studio Light" version="142" parent_scheme="Visual Studio Light">
+  <metaInfo>
+    <property name="created">2022-11-14T22:15:31</property>
+    <property name="ide">Rider</property>
+    <property name="ideVersion">2022.2.4.0.0</property>
+    <property name="modified">2022-11-14T22:15:53</property>
+    <property name="originalScheme">_@user_Visual Studio Light</property>
+  </metaInfo>
+  <colors>
+    <option name="CARET_ROW_COLOR" value="f3f2e6" />
+    <option name="GUTTER_BACKGROUND" value="f0f0f0" />
+    <option name="SELECTION_BACKGROUND" value="b4dcff" />
+  </colors>
+  <attributes>
+    <option name="DEFAULT_FUNCTION_CALL">
+      <value>
+        <option name="FOREGROUND" value="ca39c5" />
+      </value>
+    </option>
+    <option name="DEFAULT_FUNCTION_DECLARATION">
+      <value>
+        <option name="FOREGROUND" value="ca39c5" />
+      </value>
+    </option>
+    <option name="DEFAULT_INSTANCE_METHOD" baseAttributes="DEFAULT_FUNCTION_DECLARATION" />
+    <option name="DEFAULT_LOCAL_VARIABLE">
+      <value>
+        <option name="FOREGROUND" value="865900" />
+      </value>
+    </option>
+    <option name="DEFAULT_PARAMETER">
+      <value>
+        <option name="FOREGROUND" value="865900" />
+      </value>
+    </option>
+    <option name="DEFAULT_STATIC_METHOD" baseAttributes="DEFAULT_FUNCTION_DECLARATION" />
+    <option name="DEFAULT_TAG">
+      <value />
+    </option>
+    <option name="DEFAULT_VALID_STRING_ESCAPE">
+      <value>
+        <option name="FOREGROUND" value="c52ad6" />
+      </value>
+    </option>
+    <option name="MATCHED_BRACE_ATTRIBUTES">
+      <value>
+        <option name="BACKGROUND" value="e8c194" />
+      </value>
+    </option>
+    <option name="NOT_USED_ELEMENT_ATTRIBUTES">
+      <value>
+        <option name="EFFECT_COLOR" value="a9a9a9" />
+      </value>
+    </option>
+    <option name="ReSharper.CSHARP_ACCESSOR_IDENTIFIER" baseAttributes="ReSharper.CSHARP_METHOD_IDENTIFIER" />
+    <option name="ReSharper.CSHARP_EXTENSION_METHOD_IDENTIFIER" baseAttributes="ReSharper.CSHARP_METHOD_IDENTIFIER" />
+    <option name="TEXT">
+      <value>
+        <option name="FOREGROUND" value="0" />
+        <option name="BACKGROUND" value="fafafa" />
+      </value>
+    </option>
+    <option name="TODO_DEFAULT_ATTRIBUTES">
+      <value />
+    </option>
+  </attributes>
+</scheme>
