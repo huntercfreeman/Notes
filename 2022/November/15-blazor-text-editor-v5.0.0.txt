@@ -14,6 +14,7 @@ DATE: 2022-11-14
 [X]Fix autocomplete
 [X]Tried abc icon in autocomplete looked weird though so removed it
 [X]{ Ctrl + Space } -> bring up auto complete menu
+[]TODO: Focus the autocomplete menu
 
 # COMPLETED ----------------------------------------------------------------------------
 [X]Example of a completed item.
