@@ -12,6 +12,7 @@ DATE: 2022-11-14
 [X]Autocomplete might be working
     [X]Auto complete works on row index 0 but no larger?
 [X]Fix autocomplete
+[X]Tried abc icon in autocomplete looked weird though so removed it
 
 # COMPLETED ----------------------------------------------------------------------------
 [X]Example of a completed item.
