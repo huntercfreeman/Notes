@@ -7,11 +7,12 @@ DATE: 2022-11-16
 # TODO ----------------------------------------------------------------------------
 []Ensure '15-blazor-text-editor-v5.0.0.txt' has its goals met
     []Copy TODO items from '15-blazor-text-editor-v5.0.0.txt' to this file?
-[]BUG: delete all text and try to autocomplete. It wont 
+[X]BUG: delete all text and try to autocomplete. It wont 
     until you are infront of a newline of any kind
-    []Happens more simply "It wont until you are infront of 
+    [X]Happens more simply "It wont until you are infront of 
         a newline of any kind"
-        []That is to say the 'delete all text' part is irrelevant.
+        [X]That is to say the 'delete all text' part is irrelevant.
+    [X]Fixed: issue was check index out of bounds but did length -1 along with >= instead of >
 []Making the Demo app
 []Undo / Redo should track and restore the cursor
     position, and selection.
