@@ -24,8 +24,6 @@ DATE: 2022-11-14
 []Look into how the BlazorTextEditor functions on mobile.
     []If the text editor cannot possibly work on mobile what is the course of action?
         []pseudo code: if (mobile) <textarea /> else <TextEditorDisplay />
-[]Visual Indicator whether TextEditorDisplay has focus
-[]Remember to remove EBI and EBS (edit block debug UI) from the footer
 []Undo and Redo EditBlocks need to track the cursor as well
     []There is an exception being thrown because an undo might
         remove content where the cursor is.
@@ -170,6 +168,8 @@ DATE: 2022-11-14
         that are 'viewing' a TextEditorBase.
         [X]This way the cursors can update any Footer that is viewing the same TextEditorBase
             with the updated cursor position when the cursor moves.
+[X]Visual Indicator whether TextEditorDisplay has focus
+[X]Remember to remove EBI and EBS (edit block debug UI) from the footer
 }
 
 # Plan

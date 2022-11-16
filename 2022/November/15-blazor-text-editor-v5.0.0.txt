@@ -13,10 +13,9 @@ DATE: 2022-11-15
 
 
 # COMPLETED ----------------------------------------------------------------------------
-[X]Example of a completed item.
 [X]Disabled button background color change
 [X]Adding AutocompleteIndexer.cs
-[X]Index on space, tab, and any punctuation.
+[X]Index on whitespace, and punctuation.
 [X]Look for autocomplete results if LetterOrDigit
 [X]Register methods for common TextEditorBase uses cases like C# and Razor
 [X]On type show autocomplete but need to fix it shouldn't take focus OnAfterRender
