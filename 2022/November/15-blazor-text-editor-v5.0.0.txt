@@ -9,8 +9,9 @@ DATE: 2022-11-14
     []Copy TODO items from '14-blazor-text-editor-v5.0.0.txt' to this file?
 []Working on closing autocomplete menu with the appropriate keys only
 []Show matches in autocomplete menu
-[]Autocomplete might be working
-    []Auto complete works on row index 0 but no larger?
+[X]Autocomplete might be working
+    [X]Auto complete works on row index 0 but no larger?
+[X]Fix autocomplete
 
 # COMPLETED ----------------------------------------------------------------------------
 [X]Example of a completed item.
