@@ -30,6 +30,7 @@ DATE: 2022-11-15
     rowIndex and largest columnIndex if out of bounds
 [X]Show matches in autocomplete menu
 [X]Esc to close AutocompleteMenu when focusing it
+[X]Fix out of bounds error when deleting after selecting all
 
 }
 
