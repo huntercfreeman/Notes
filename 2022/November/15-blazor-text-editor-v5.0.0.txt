@@ -8,6 +8,8 @@ DATE: 2022-11-15
 []Ensure '14-blazor-text-editor-v5.0.0.txt' has its goals met
     []Copy TODO items from '14-blazor-text-editor-v5.0.0.txt' to this file?
 []Working on closing autocomplete menu with the appropriate keys only
+[]Pasting carriage return newline does not work
+    []It inserts a newline for '\r' and then inserts a newline for '\r\n' seemingly?
 
 
 # COMPLETED ----------------------------------------------------------------------------
