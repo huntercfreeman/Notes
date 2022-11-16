@@ -13,6 +13,7 @@ DATE: 2022-11-14
     [X]Auto complete works on row index 0 but no larger?
 [X]Fix autocomplete
 [X]Tried abc icon in autocomplete looked weird though so removed it
+[X]{ Ctrl + Space } -> bring up auto complete menu
 
 # COMPLETED ----------------------------------------------------------------------------
 [X]Example of a completed item.
