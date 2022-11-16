@@ -9,6 +9,7 @@ DATE: 2022-11-15
     []Copy TODO items from '14-blazor-text-editor-v5.0.0.txt' to this file?
 []BUG: delete all text and try to autocomplete. It wont 
     until you are infront of a newline of any kind
+[]Making the Demo app
 
 
 # COMPLETED ----------------------------------------------------------------------------
@@ -40,7 +41,7 @@ DATE: 2022-11-15
 [X]Add indicator for focus-within editor
 [X]BUG: Cannot close context menu with escape
 [X]Throttle syntax highlighting 1 second
-[]50 ms on mouse move throttle
+[X]50 ms on mouse move throttle
 
 
 }
