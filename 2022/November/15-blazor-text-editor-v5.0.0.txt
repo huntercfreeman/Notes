@@ -40,6 +40,7 @@ DATE: 2022-11-15
 [X]Add indicator for focus-within editor
 [X]BUG: Cannot close context menu with escape
 [X]Throttle syntax highlighting 1 second
+[]50 ms on mouse move throttle
 
 
 }
