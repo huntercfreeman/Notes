@@ -39,6 +39,7 @@ DATE: 2022-11-15
 [X]Working on closing autocomplete menu with the appropriate keys only
 [X]Add indicator for focus-within editor
 [X]BUG: Cannot close context menu with escape
+[X]Throttle syntax highlighting 1 second
 
 
 }
