@@ -36,6 +36,7 @@ DATE: 2022-11-15
     [X]Fix for pasting "\r\n"
 [X]Remove EBI debug UI
 [X]Working on closing autocomplete menu with the appropriate keys only
+[X]Add indicator for focus-within editor
 
 }
 
