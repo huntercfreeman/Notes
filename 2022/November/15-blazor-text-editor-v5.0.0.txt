@@ -10,6 +10,7 @@ DATE: 2022-11-15
 []BUG: delete all text and try to autocomplete. It wont 
     until you are infront of a newline of any kind
 
+
 # COMPLETED ----------------------------------------------------------------------------
 [X]Example of a completed item.
 [X]Disabled button background color change
@@ -37,6 +38,8 @@ DATE: 2022-11-15
 [X]Remove EBI debug UI
 [X]Working on closing autocomplete menu with the appropriate keys only
 [X]Add indicator for focus-within editor
+[X]BUG: Cannot close context menu with escape
+
 
 }
 
