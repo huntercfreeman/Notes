@@ -6,6 +6,8 @@ DATE: 2022-11-17
 
 []Video for every feature showcase.
 
+[]ITextEditorService.cs
+{
     // Properties
     []LocalStorageGlobalTextEditorOptionsKey // static string { get; }
     []TextEditorStates // TextEditorStates  { get; }
@@ -74,6 +76,273 @@ DATE: 2022-11-17
 
     // Dispose methods
     []DisposeTextEditor // void (TextEditorKey textEditorKey);
+}
+
+[]ITextEditorServiceOptions.cs
+{
+    // For those who are using Fluxor
+    // so Fluxor isn't initialized twice.
+    //
+    // Add typeof(ITextEditorServiceOptions).Assembly
+    // when you initialize Fluxor yourself.
+    //
+    // You are to render <Fluxor.Blazor.Web.StoreInitializer/>
+    //
+    // The <BlazorTextEditor.RazorLib.BlazorTextEditorInitializer/> 
+    // still is required
+    public bool InitializeFluxor { get; }
+    public Theme InitialTheme { get; set; }
+}
+
+[]TextEditorServiceOptions.cs
+{
+    public Func<IServiceProvider, IClipboardProvider>? ClipboardProviderFactory { get; set; }
+    public Func<IServiceProvider, IStorageProvider>? StorageProviderFactory { get; set; }
+    public Func<IServiceProvider, IAutocompleteService>? AutocompleteServiceFactory { get; set; }
+    public Func<IServiceProvider, IAutocompleteIndexer>? AutocompleteIndexerFactory { get; set; }
+}
+
+[]BlazorTextEditorInitializer.razor.cs
+{
+
+}
+
+[]TextEditorView.razor
+{
+    Internally this Blazor component is used to render all of the
+    Blazor components which render data from a TextEditorBase.
+
+    This component will automatically rerender when the TextEditorBase with
+    the given Blazor parameter of 'TextEditorKey' changes.
+
+    This component has no user interface and is instead used as a base class.
+
+    This component is public and anyone can make use of it.
+}
+
+[]TextEditorDisplay.razor
+{
+
+}
+
+[]Virtualization/
+{
+    
+}
+
+[]TreeView/
+{
+
+}
+
+[]TextEditor/
+{
+
+}
+
+[]Store/
+{
+    []DialogCase/
+    {
+        
+    }
+
+    []DragCase/
+    {
+
+    }
+
+    []DropdownCase/
+    {
+
+    }
+
+    []IconCase/
+    {
+
+    }
+
+    []NotificationCase/
+    {
+
+    }
+
+    []StorageCase/
+    {
+
+    }
+
+    []TextEditorCase/
+    {
+
+    }
+
+    []ThemeCase/
+    {
+
+    }
+
+    []TreeViewCase/
+    {
+
+    }
+}
+
+[]Row/
+{
+
+}
+
+[]Resize/
+{
+
+}
+
+[]OutOfBoundsClick/
+{
+
+}
+
+[]Notifications/
+{
+
+}
+
+[]Menu/
+{
+
+}
+
+[]Lexing/
+{
+
+}
+
+[]Keymap/
+{
+
+}
+
+[]Keyboard/
+{
+
+}
+
+[]JavaScriptObjects/
+{
+
+}
+
+[]Icons/
+{
+
+}
+
+[]Codicon/
+{
+
+}
+
+[]HelperComponents/
+{
+
+}
+
+[]Editing/
+{
+
+}
+
+[]Dropdown/
+{
+
+}
+
+[]Drag/
+{
+
+}
+
+[]Dimensions/
+{
+
+}
+
+[]Dialog/
+{
+
+}
+
+[]Decoration/
+{
+
+}
+
+[]CustomEvents/
+{
+
+}
+
+[]Cursor/
+{
+
+}
+
+[]Commands/
+{
+
+}
+
+[]Clipboard/
+{
+
+}
+
+[]Character/
+{
+
+}
+
+[]Autocomplete/
+{
+
+}
+
+[]Analysis/
+{
+    []CSharp/
+    {
+
+    }
+
+    []Html/
+    {
+
+    }
+
+    []JavaScript/
+    {
+
+    }
+
+    []Razor/
+    {
+
+    }
+
+    []TypeScript/
+    {
+
+    }
+}
+
+[]wwwroot/
+{
+    []Themes/
+    {
+        
+    }
+}
 
 }
 

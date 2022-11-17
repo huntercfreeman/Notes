@@ -9,6 +9,7 @@ DATE: 2022-11-17
     []Video for every feature showcase.
     []Video for the entire source code start to finish.
     []Video for going through the documentation on video following it live.
+        []Notify the viewer of Roadmap
         []Before filming
             []Ensure nothing is being ran
             []Ensure local nuget source
