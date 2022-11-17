@@ -66,8 +66,11 @@ DATE: 2022-11-17
     
     // Force rerender 
     // 
-    // Avoid using this it is for specific reasons
-    // like cross component communication
+    // Avoid using this.
+    // 
+    // It is for specific reasons
+    // like cross component communication for Events
+    // not directly related to the TextEditorBase.cs changing
     public void ForceRerender(TextEditorKey textEditorKey);
     
     // Local storage methods
@@ -104,7 +107,13 @@ DATE: 2022-11-17
 
 []BlazorTextEditorInitializer.razor.cs
 {
-
+    // Initial theme
+    //
+    // <Fluxor.Blazor.Web.StoreInitializer/>
+    //
+    // <DialogInitializer/>
+    // <NotificationInitializer/>
+    // <DragDisplay/>
 }
 
 []TextEditorView.razor
@@ -122,7 +131,50 @@ DATE: 2022-11-17
 
 []TextEditorDisplay.razor
 {
+    TextEditorDisplay.razor will be referred to in first person by 'I'
 
+    As well the file will be explained by means of pseudo code and English
+    sentences mixed together.
+
+    I require a Blazor parameter named 'TextEditorKey' so I can
+    find the corresponding 'TextEditorBase' that has been registered
+    with the 'ITextEditorService' and subscribe to that 'TextEditorBase'
+    changing.
+
+    The first step I take when rendering is to display an invisible div
+    in my razor markup. I add an arbitrary count of characters to this
+    invisible div. I now can measure the width of a character given the current
+    font-size and font-family by measure the width of the invisible div
+    and dividing that by the arbitrary count of characters that were
+    rendered. The height of a row equates to the height of the invisible div.
+
+    An issue arises however, must not render the entirety of the text content.
+    I should only render text content that is visible as to ensure
+    large text files do not cause slow performance. Therefore horizontal
+    and vertical virtualization is performed to only render the text
+    that is visible.
+
+    How do I perform the virtualization? I use JavaScript to measure the
+    width and the height of the visible portion of the TextEditorDisplay
+    which is currently empty other than the invisible div previously mentioned.
+
+    Using the height of the TextEditorDisplay and the height of a row I can
+    then find how many lines of text can fit in the viewable area. I need to
+    check where the scrollTop is of the scrollbar as that will offset
+    where my startingIndex is for rendering out the lines.
+
+    Foreach line being rendered I as well check how long that line is
+    in terms of character length. This is done by the TextEditorBase
+    maintaining a private List for the position index of the ending
+    of every row. Position index is to refer to the position relative
+    to the document in its entirety. Otherwise you will see a tuple
+    (int rowIndex, int columnIndex) which has the same end value
+    as a positionIndex once the rowIndex and columnIndex are added
+    based off the positionIndex for the start of the row and the column index.
+
+    In addition to checking how many characters fit horizontally in the horizontal
+    viewable area. I need to check the scrollLeft position in order to
+    offset the statingIndex I being rendering out the characters for.
 }
 
 []Virtualization/
@@ -340,7 +392,7 @@ DATE: 2022-11-17
 {
     []Themes/
     {
-        
+
     }
 }
 
