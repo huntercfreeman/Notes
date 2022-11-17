@@ -25,6 +25,7 @@ DATE: 2022-11-16
     []One of such update would be to link to
         INSTALLATION markdown instead of the deprecated
         gettingStarted markdown
+[]Do not scroll cursor into view if out of view when hitting modifier keys
 
 
 # COMPLETED ----------------------------------------------------------------------------
