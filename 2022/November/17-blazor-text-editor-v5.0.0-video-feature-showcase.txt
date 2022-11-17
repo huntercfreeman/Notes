@@ -1,0 +1,141 @@
+DATE: 2022-11-17
+----------------
+
+# Goal
+{
+
+[]Video for every feature showcase.
+
+    // Properties
+    []LocalStorageGlobalTextEditorOptionsKey // static string { get; }
+    []TextEditorStates // TextEditorStates  { get; }
+    []GlobalThemeCssClassString // string { get; }
+    []GlobalThemeValue // Theme? { get; }
+    []GlobalFontSizeInPixelsStyling // string { get; }
+    []GlobalFontSizeInPixelsValue // int { get; }
+    []GlobalShowNewlines // bool { get; }
+    []GlobalShowWhitespace // bool { get; }
+
+    // Events
+    []OnTextEditorStatesChanged // event Action?
+
+    // Register Methods
+    []RegisterCustomTextEditor // public void (TextEditorBase textEditorBase);
+    []RegisterCSharpTextEditor // public void (
+        TextEditorKey textEditorKey,
+        string initialContent,
+        ITextEditorKeymap? textEditorKeymapOverride = null);
+    []RegisterHtmlTextEditor // public void (
+        TextEditorKey textEditorKey,
+        string initialContent,
+        ITextEditorKeymap? textEditorKeymapOverride = null);
+    []RegisterRazorTextEditor // public void (
+        TextEditorKey textEditorKey,
+        string initialContent,
+        ITextEditorKeymap? textEditorKeymapOverride = null);
+    []RegisterJavaScriptTextEditor // public void (
+        TextEditorKey textEditorKey,
+        string initialContent,
+        ITextEditorKeymap? textEditorKeymapOverride = null);
+    []RegisterTypeScriptTextEditor // public void (
+        TextEditorKey textEditorKey,
+        string initialContent,
+        ITextEditorKeymap? textEditorKeymapOverride = null);
+    []RegisterPlainTextEditor // public void (
+        TextEditorKey textEditorKey,
+        string initialContent,
+        ITextEditorKeymap? textEditorKeymapOverride = null);
+
+    // Edit methods
+    []InsertText // void (InsertTextTextEditorBaseAction insertTextTextEditorBaseAction);
+    []HandleKeyboardEvent // void (KeyboardEventTextEditorBaseAction keyboardEventTextEditorBaseAction);
+    []DeleteTextByMotion // void (DeleteTextByMotionTextEditorBaseAction deleteTextByMotionTextEditorBaseAction);
+    []DeleteTextByRange // void (DeleteTextByRangeTextEditorBaseAction deleteTextByRangeTextEditorBaseAction);
+    []RedoEdit // void (TextEditorKey textEditorKey);
+    []UndoEdit // void (TextEditorKey textEditorKey);
+    
+    // Settings methods
+    []SetFontSize // void (int fontSizeInPixels);
+    []SetTheme // void (Theme theme);
+    []SetShowWhitespace // void (bool showWhitespace);
+    []SetShowNewlines // void (bool showNewlines);
+    []SetUsingRowEndingKind // void (TextEditorKey textEditorKey, RowEndingKind rowEndingKind);
+    []ShowSettingsDialog // void (bool isResizable = false);
+    
+    // Force rerender 
+    // 
+    // Avoid using this it is for specific reasons
+    // like cross component communication
+    public void ForceRerender(TextEditorKey textEditorKey);
+    
+    // Local storage methods
+    public Task SetTextEditorOptionsFromLocalStorageAsync();
+    public void WriteGlobalTextEditorOptionsToLocalStorage();
+
+    // Dispose methods
+    []DisposeTextEditor // void (TextEditorKey textEditorKey);
+
+}
+
+# Plan
+{
+}
+
+# Youtube thumbnail ideas
+{
+}
+
+# Youtube title ideas
+{
+}
+
+# Youtube video description
+{
+Email Me:
+    -hunterfreemandev@gmail.com
+
+Text Editor from scratch with Blazor and C# youtube playlist:
+    -https://youtube.com/playlist?list=PLG4PTDe2qc0i0COivTxn_rjSN96Xq-_K1
+
+GitHub repos
+    -BlazorStudio: https://github.com/huntercfreeman/BlazorStudio
+    -Blazor.Text.Editor: https://github.com/huntercfreeman/Blazor.Text.Editor
+    -Blazor.Text.Editor-Template: https://github.com/huntercfreeman/Blazor.Text.Editor-Template
+    -Blazor.Text.Editor.Analysis: https://github.com/huntercfreeman/Blazor.Text.Editor.Analysis
+    -BlazorTreeView: https://github.com/huntercfreeman/BlazorTreeView
+
+NuGet Packages
+    -Blazor.Text.Editor: https://www.nuget.org/packages/Blazor.Text.Editor/
+    -Blazor.Text.Editor.Lexer.HTML: https://www.nuget.org/packages/Blazor.Text.Editor.Lexer.HTML
+    -Blazor.Text.Editor.Lexer.CSharp: https://www.nuget.org/packages/Blazor.Text.Editor.Lexer.CSharp
+}
+
+# Before this video specifically checklist
+{
+[]See in general checklist
+}
+
+# Checklist before recording a video in general
+{
+[]Font-size
+    []Rider
+        []Appearance
+            []Font-Family: Segoe UI;
+		    []Font-Size: 24px;
+        []Editor
+            []Font-Family: Consolas;
+		    []Font-Size: 30px;
+		    []Line Height: 1.1;
+    []Operating system
+        []Windows
+            []Settings > Accessibility > Text size
+                []Text size slider
+                    []150%
+    []Web Browser
+    []BlazorStudio itself
+    []Visual Studio Code
+}
+
+# Web Links
+{
+}
