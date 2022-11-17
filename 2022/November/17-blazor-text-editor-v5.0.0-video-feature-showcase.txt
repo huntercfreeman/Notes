@@ -421,14 +421,10 @@ Text Editor from scratch with Blazor and C# youtube playlist:
 GitHub repos
     -BlazorStudio: https://github.com/huntercfreeman/BlazorStudio
     -Blazor.Text.Editor: https://github.com/huntercfreeman/Blazor.Text.Editor
-    -Blazor.Text.Editor-Template: https://github.com/huntercfreeman/Blazor.Text.Editor-Template
-    -Blazor.Text.Editor.Analysis: https://github.com/huntercfreeman/Blazor.Text.Editor.Analysis
-    -BlazorTreeView: https://github.com/huntercfreeman/BlazorTreeView
+    -Notes: https://github.com/huntercfreeman/Notes
 
 NuGet Packages
     -Blazor.Text.Editor: https://www.nuget.org/packages/Blazor.Text.Editor/
-    -Blazor.Text.Editor.Lexer.HTML: https://www.nuget.org/packages/Blazor.Text.Editor.Lexer.HTML
-    -Blazor.Text.Editor.Lexer.CSharp: https://www.nuget.org/packages/Blazor.Text.Editor.Lexer.CSharp
 }
 
 # Before this video specifically checklist
