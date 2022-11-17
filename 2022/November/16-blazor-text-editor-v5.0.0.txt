@@ -25,11 +25,11 @@ DATE: 2022-11-16
     []One of such update would be to link to
         INSTALLATION markdown instead of the deprecated
         gettingStarted markdown
-[]Do not scroll cursor into view if out of view when hitting modifier keys
-
 
 # COMPLETED ----------------------------------------------------------------------------
-
+[X]Do not scroll cursor into view if out of view when hitting modifier keys
+[X]Fix out of range index exception when undoing shortens document 
+    beyond where cursor is
 
 }
 
