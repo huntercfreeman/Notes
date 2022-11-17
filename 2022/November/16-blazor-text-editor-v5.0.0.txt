@@ -7,12 +7,6 @@ DATE: 2022-11-16
 # TODO ----------------------------------------------------------------------------
 []Ensure '15-blazor-text-editor-v5.0.0.txt' has its goals met
     []Copy TODO items from '15-blazor-text-editor-v5.0.0.txt' to this file?
-[X]BUG: delete all text and try to autocomplete. It wont 
-    until you are infront of a newline of any kind
-    [X]Happens more simply "It wont until you are infront of 
-        a newline of any kind"
-        [X]That is to say the 'delete all text' part is irrelevant.
-    [X]Fixed: issue was check index out of bounds but did length -1 along with >= instead of >
 []Making the Demo app
 []Undo / Redo should track and restore the cursor
     position, and selection.
@@ -21,15 +15,22 @@ DATE: 2022-11-16
     for the _content and index out of bounds exception
     is thrown.
 []Need document Helper Components
-[]Make sure to update README.md
-    []One of such update would be to link to
-        INSTALLATION markdown instead of the deprecated
-        gettingStarted markdown
+
 
 # COMPLETED ----------------------------------------------------------------------------
 [X]Do not scroll cursor into view if out of view when hitting modifier keys
 [X]Fix out of range index exception when undoing shortens document 
     beyond where cursor is
+[X]Make sure to update README.md
+    [X]One of such update would be to link to
+        INSTALLATION markdown instead of the deprecated
+        gettingStarted markdown
+[X]BUG: delete all text and try to autocomplete. It wont 
+    until you are infront of a newline of any kind
+    [X]Happens more simply "It wont until you are infront of 
+        a newline of any kind"
+        [X]That is to say the 'delete all text' part is irrelevant.
+    [X]Fixed: issue was check index out of bounds but did length -1 along with >= instead of >
 
 }
 
