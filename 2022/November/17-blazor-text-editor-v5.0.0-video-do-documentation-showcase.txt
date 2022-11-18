@@ -19,6 +19,8 @@ DATE: 2022-11-17
                     []Make a new blazor app for the video
                     []When filming video for documentation
                         do it with the reference to be published nuget package locally.
+            []Make sure the Razor ILexer is working
+            []Try to find index out of bounds errors due to cursor being out of bounds
             []Checklist before recording for font-size and such
     []After filming
         []Update the root README.md for BlazorTextEditor in the Getting started section

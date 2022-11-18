@@ -11,11 +11,27 @@ DATE: 2022-11-18
     []Final check for bugs
     []publish the nuget package v5.0.0
     []publish the documentation youtube video
-
 []Got this error while using BlazorStudio with the BlazorTextEditor
     []Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
         at System.Collections.Generic.List`1.get_Item(Int32 index)
         at BlazorTextEditor.RazorLib.TextEditor.TextEditorBase.PerformDeletions(KeyboardEventTextEditorBaseAction keyboardEventTextEditorBaseAction) in C:\Users\hunte\Repos\Blazor.Text.Editor\BlazorTextEditor.RazorLib\TextEditor\TextEditorBase.PrivateMethods.cs:line 376
+[]The keyboard scroll keymappings need to be setup
+    []PageUp
+    []PageDown
+    []{ Ctrl + DownArrow }
+    []{ Ctrl + UpArrow }
+    []{ Ctrl + PageUp }
+    []{ Ctrl + PageDown }
+[]Documentation issues
+    []00_INSTALLATION.md
+        []Following "In App.razor, where the Blazor Router is located, at the top of the file add the following Razor markup"
+            is a code snippet where the code snippet erroneously contains a tab key at the start of the snippet.
+    []20_SETTINGS.md
+        []In the Goal section
+            []The third bullet currently says
+                []'Render each settings individually where desired.'
+                []It has 'settings' when it should have the singular 'setting'
+                []It should say: 'Render each setting individually where desired.'
 
 }
 
