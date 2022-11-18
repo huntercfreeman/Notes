@@ -1,0 +1,79 @@
+DATE: 2022-11-18
+----------------
+
+# Goal
+{
+
+[]Videos
+    []Video for going through the documentation on video following it live.
+    []Update README.md with the video format link correct 
+        [](it currently erroneously links to v3.2.0)
+    []Final check for bugs
+    []publish the nuget package v5.0.0
+    []publish the documentation youtube video
+
+[]Got this error while using BlazorStudio with the BlazorTextEditor
+    []Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+        at System.Collections.Generic.List`1.get_Item(Int32 index)
+        at BlazorTextEditor.RazorLib.TextEditor.TextEditorBase.PerformDeletions(KeyboardEventTextEditorBaseAction keyboardEventTextEditorBaseAction) in C:\Users\hunte\Repos\Blazor.Text.Editor\BlazorTextEditor.RazorLib\TextEditor\TextEditorBase.PrivateMethods.cs:line 376
+
+}
+
+# Plan
+{
+}
+
+# Youtube thumbnail ideas
+{
+}
+
+# Youtube title ideas
+{
+}
+
+# Youtube video description
+{
+Email Me:
+    -hunterfreemandev@gmail.com
+
+GitHub repos
+    -BlazorStudio: https://github.com/huntercfreeman/BlazorStudio
+    -Blazor.Text.Editor: https://github.com/huntercfreeman/Blazor.Text.Editor
+    -Notes: https://github.com/huntercfreeman/Notes
+
+NuGet Packages
+    -Blazor.Text.Editor: https://www.nuget.org/packages/Blazor.Text.Editor/
+
+Text Editor from scratch with Blazor and C# youtube playlist:
+    -https://youtube.com/playlist?list=PLG4PTDe2qc0i0COivTxn_rjSN96Xq-_K1
+}
+
+# Before this video specifically checklist
+{
+[]See in general checklist
+}
+
+# Checklist before recording a video in general
+{
+[]Font-size
+    []Rider
+        []Appearance
+            []Font-Family: Segoe UI;
+		    []Font-Size: 24px;
+        []Editor
+            []Font-Family: Consolas;
+		    []Font-Size: 30px;
+		    []Line Height: 1.1;
+    []Operating system
+        []Windows
+            []Settings > Accessibility > Text size
+                []Text size slider
+                    []150%
+    []Web Browser
+    []BlazorStudio itself
+    []Visual Studio Code
+}
+
+# Web Links
+{
+}
