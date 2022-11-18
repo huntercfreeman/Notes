@@ -32,6 +32,10 @@ DATE: 2022-11-17
         []publish the nuget package v5.0.0
         []publish the youtube videos
 
+[]Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at BlazorTextEditor.RazorLib.TextEditor.TextEditorBase.PerformDeletions(KeyboardEventTextEditorBaseAction keyboardEventTextEditorBaseAction) in C:\Users\hunte\Repos\Blazor.Text.Editor\BlazorTextEditor.RazorLib\TextEditor\TextEditorBase.PrivateMethods.cs:line 376
+
 }
 
 # Plan
