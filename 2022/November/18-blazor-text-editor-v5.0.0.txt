@@ -32,6 +32,24 @@ DATE: 2022-11-18
                 []'Render each settings individually where desired.'
                 []It has 'settings' when it should have the singular 'setting'
                 []It should say: 'Render each setting individually where desired.'
+        []The bullet: "Above where the button is to open the settings dialog. 
+            Render the razor components shown in the following markup."
+            []Needs to have a code snippet above it telling the reader to add
+                []@using BlazorTextEditor.RazorLib.HelperComponents
+    []Showcase how one would read local storage when their Blazor app starts
+        to initialize the TextEditor settings.
+[]Bugs
+    []I have 3 bugs currently listed after this regarding 'invisible text' when deleting
+        []I more recently found it LIKELY is exactly due to both
+            []Pasting when having a selection.
+            []Or 'delete key' when at the end of the file with the cursor
+    []Take a look into the deletion logic and 'delete key'
+        []Seemingly invisible text can appear due to this logic.
+    []Take a look into pasting over a selection
+        []Seemingly invisible text can appear due to this logic.
+    []Take a look into deletion 'delete key' at the very last cursor position possible.
+        []It seemingly deletes as if one hits 'backspace key' and
+            can cause invisible text.
 
 }
 
