@@ -1,0 +1,133 @@
+DATE: 2022-11-19
+----------------
+
+# Goal
+{
+
+[]Write ILexer.cs implementations for:
+    []C#
+    []Css
+    []F#
+    []Html
+    []JavaScript
+    []Plain (meaning no SyntaxHighlighting so just default ILexer.cs)
+    []Razor
+    []TypeScript
+
+[]Write IDecorationMapper.cs implementations for:
+    []C#
+    []Css
+    []F#
+    []Html
+    []JavaScript
+    []Plain (meaning no SyntaxHighlighting so just default ILexer.cs)
+    []Razor
+    []TypeScript
+
+[]While lexing each file type.
+    []Consider the process behind what you are doing
+        and try to formulate a series of steps
+        so you can look back on them to write an ILexer.cs
+        of any file type in the future.
+
+[]Looking at JavaScript and TypeScript a sense
+    of procrastination and inability to recognize
+    where to even begin arises.
+    []Yesterday I decided, 
+        []'Well I want the keywords syntax highlighted.'
+        []As a human if I look at a JavaScript file
+            I can recognize keywords.
+        []How is it that my brain goes about doing this?
+        []If I slow down and try to actively recognize
+            keywords, as opposed to the somewhat
+            automatic nature by which it happens otherwise.
+        []It appears that when I glance at a JavaScript file
+            my brain is subconciously performing an algorithm
+            somewhat like the following to recognize keywords.
+        []I have in my brain memories of various keywords
+            I have seen, and learned out in the past.
+        []Whenever I see a contiguous block of letters
+            or digits I check the first character of that
+            contiguous block.
+        []This first character check allows me to discard
+            any keywords that I have in my memory
+            from being possibilities if they start with
+            a different letter.
+        []Going character by character through the contiguous
+            block of letters or digits I can one by one further
+            narrow down the list of possible keywords
+            from my memory that might match
+            the text I am looking at.
+        []Eventually the contiguous block of letters or digits
+            will end. The ending point is to be either
+            whitespace or the end of the file.
+        []Upon reaching the end of the contiguous block of
+            letters or digits, I must find an exact match
+            where the entirety of the text in the contiguous block
+            of letters or digits matches exactly to a remaining
+            keyword in my list of possibilities that have been
+            narrowed down to.
+        []If there is no match then the word is not a keyword.
+        []I repeat this process foreach word in the document
+            in order to find the keywords.
+
+}
+
+# Plan
+{
+}
+
+# Youtube thumbnail ideas
+{
+}
+
+# Youtube title ideas
+{
+}
+
+# Youtube video description
+{
+Email Me:
+    -hunterfreemandev@gmail.com
+
+GitHub repos
+    -BlazorStudio: https://github.com/huntercfreeman/BlazorStudio
+    -Blazor.Text.Editor: https://github.com/huntercfreeman/Blazor.Text.Editor
+    -Notes: https://github.com/huntercfreeman/Notes
+
+NuGet Packages
+    -Blazor.Text.Editor: https://www.nuget.org/packages/Blazor.Text.Editor/
+
+Text Editor from scratch with Blazor and C# youtube playlist:
+    -https://youtube.com/playlist?list=PLG4PTDe2qc0i0COivTxn_rjSN96Xq-_K1
+}
+
+# Before this video specifically checklist
+{
+[]See in general checklist
+}
+
+# Checklist before recording a video in general
+{
+[]Font-size
+    []Rider
+        []Appearance
+            []Font-Family: Segoe UI;
+		    []Font-Size: 24px;
+        []Editor
+            []Font-Family: Consolas;
+		    []Font-Size: 30px;
+		    []Line Height: 1.1;
+    []Operating system
+        []Windows
+            []Settings > Accessibility > Text size
+                []Text size slider
+                    []150%
+    []Web Browser
+    []BlazorStudio itself
+    []Visual Studio Code
+}
+
+# Web Links
+{
+}
