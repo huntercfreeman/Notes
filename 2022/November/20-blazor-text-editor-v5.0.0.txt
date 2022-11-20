@@ -89,6 +89,10 @@ DATE: 2022-11-20
                 []Would the virtualization result need to be returned?
             []TextEditorRowWrap needs horizontal virtualization ONLY
                 as the vertical virtualization is provided by its parent element
+    []Stay focused on the previous tasks however, remember for the future
+        that the text selection is not virtualized. It renders that div
+        for the background color even for text not being rendered due to
+        being out of view.
 
 
 }
