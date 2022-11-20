@@ -73,6 +73,38 @@ DATE: 2022-11-19
         []I want to write a UnitTest for all of the ILexer
             implementations to get their respective keywords.
 
+[]While working on the ILexer.cs implementations it appears
+    a lot of parts are repeated and possible could be
+    split out into its own method which all ILexers invoke?
+    []I am making constants for what entails whitespace
+        and doing so foreach ILexer.
+        []FSharpWhitespace is an example of a class
+            that contains all the whitespace constants.
+            []It appears that having a whitespace constants for
+                all ILexers is redundant.
+                []Initially my thought was about Python having
+                    whitespace be a mandatory part of
+                    following the syntax.
+    []When lexing the keywords of a language, the lexing
+        is done by matching words. If a word that was just
+        read by the Lexer is contained within the list of keyword
+        constant strings then a keyword was found.
+        []Therefore, this word matching is repeated for the
+            various ILexer implementations in order to
+            lex their keywords.
+            []Can this word matching be common logic shared
+                among all lexers?
+                []I saw when looking up the keywords in F#
+                    that some have an exclamation mark, '!',
+                    after them. There for example is listed
+                    on Microsofts documentation:
+                    https://learn.microsoft.com/en-us/dotnet/fsharp/language-reference/keyword-reference#f-keyword-table
+                    the keyword, "yield", but as well, "yield!".
+                    []Is it the case that the exclamation mark ended keywords in F# would
+                        result in the shared keyword lexer not working?
+
+
+
 }
 
 # Plan
