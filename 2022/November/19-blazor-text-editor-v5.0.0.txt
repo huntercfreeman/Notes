@@ -111,6 +111,7 @@ DATE: 2022-11-19
                 []Instead of making a lamba would it be a worth while enough optimization
                     to use while() and in-line that lambda in while body?
     []Roslyn has a C# parser, does it have an F# parser?
+    []Made common WhitespaceFacts.cs
 
 
 }
