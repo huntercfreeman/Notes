@@ -67,7 +67,29 @@ DATE: 2022-11-20
                             []Would resolving this so the ITextEditorService understood
                                 and could manipulate the scrollbar result in a natural
                                 step by process that concludes in fixing horizontal scrolling?
-                                
+    []What is the HTML markup generally going to look like?
+        []-TextEditorDisplay
+            []-TextEditorContent
+                []VirtualizeVertically
+                    []-TextEditorGutterWrap
+                        []-TextEditorGutter
+                        []-TextEditorGutter
+                        []-TextEditorGutter
+                        []-... foreach row make a TextEditorGutter
+                    []-TextEditorRowWrap
+                        []VirtualizeHorizontally
+                            []-TextEditorRow
+                            []-TextEditorRow
+                            []-TextEditorRow
+                            []-... foreach row make a TextEditorRow
+    []The TextEditorContent is to contain the gutter wrap and the row wrap.
+        []The TextEditorContent is to virtualized vertically
+            []Instead of the virtualization component rendering out the
+                virtualization result.
+                []Would the virtualization result need to be returned?
+            []TextEditorRowWrap needs horizontal virtualization ONLY
+                as the vertical virtualization is provided by its parent element
+
 
 }
 
