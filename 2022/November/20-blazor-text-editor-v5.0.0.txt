@@ -1,0 +1,127 @@
+DATE: 2022-11-20
+----------------
+
+# Goal
+{
+
+[]Fix horizontal scrolling.
+    []Currently the horizontal scrollbar is shared by:
+        []The line numbers.
+        []The text content.
+    []The line numbers should NOT have a scroll bar.
+    []The text content should have its own scroll bar separate from
+        the line numbers.
+    []Currently the horizontal virtualization is being leveraged to
+        modify the left css position of the line numbers in accordance
+        to the scrollLeft.
+        []This makes the line numbers scroll and stay in view al the
+            user scrolls horizontally.
+            []This however, is very janky, weird, and is the
+                cause of some bugs.
+                []One such bug is to scroll horizontally and then
+                    use the keyboard 'Home' key to move the cursor
+                    to column 0.
+                    []When the JavaScript intersection observer fires
+                        to the scroll the cursor into view because
+                        it went out of view.
+                        []The width of the line numbers is not accounted for
+                            and the line numbers cover some of the beginning of each row.
+
+}
+
+# Plan
+{
+
+[]Fix horizontal scrolling.
+    []Currently support for the keyboard scrolling inputs are not implemented.
+        []PageUp
+        []PageDown
+        []Ctrl + PageUp
+        []Ctrl + PageDown
+        []Ctrl + ArrowUp
+        []Ctrl + ArrowDown
+    []As well the intersection observer which is to scroll the cursor
+        into view has a timing issue where one might have to hit
+        1 keyboard button to mark the cursor as out of view. Then another
+        to actually perform the scroll into view.
+        []The intersection observer logic for scrolling the cursor into view
+            needs to be fixed such that the cursor consistently gets
+            scrolled into view upon the FIRST keyboard button event that
+            moves it out of view.
+    []The reason for bringing up keyboard scrolling inputs and the intersection
+        observer logic is:
+        []The overall goal for this day is to fix horizontal scrolling.
+            []I wonder if on a related note the implementation of
+                the scrolling input and fixing the intersection observer logic
+                would bring one to naturally fixing the horizontal scrolling.
+                []That is to say, PageUp, requires one to knnow the height of
+                    the text editor so the scrollbar can be moved at most
+                    the height of the text editor if enough space remains.
+                    []The idea of manipulating the scroll position either
+                        vertical or horizontal forces one to further explore
+                        the idea understanding what is rendered on the screen
+                        by monitoring scroll position, width of the editor,
+                        font size, etc...
+                        []Is there a lack of the ITextEditorService
+                            understanding and being able to manipulate the scrollbar?
+                            []Would resolving this so the ITextEditorService understood
+                                and could manipulate the scrollbar result in a natural
+                                step by process that concludes in fixing horizontal scrolling?
+                                
+
+}
+
+# Youtube thumbnail ideas
+{
+}
+
+# Youtube title ideas
+{
+}
+
+# Youtube video description
+{
+Email Me:
+    -hunterfreemandev@gmail.com
+
+GitHub repos
+    -BlazorStudio: https://github.com/huntercfreeman/BlazorStudio
+    -Blazor.Text.Editor: https://github.com/huntercfreeman/Blazor.Text.Editor
+    -Notes: https://github.com/huntercfreeman/Notes
+
+NuGet Packages
+    -Blazor.Text.Editor: https://www.nuget.org/packages/Blazor.Text.Editor/
+
+Text Editor from scratch with Blazor and C# youtube playlist:
+    -https://youtube.com/playlist?list=PLG4PTDe2qc0i0COivTxn_rjSN96Xq-_K1
+}
+
+# Before this video specifically checklist
+{
+[]See in general checklist
+}
+
+# Checklist before recording a video in general
+{
+[]Font-size
+    []Rider
+        []Appearance
+            []Font-Family: Segoe UI;
+		    []Font-Size: 24px;
+        []Editor
+            []Font-Family: Consolas;
+		    []Font-Size: 30px;
+		    []Line Height: 1.1;
+    []Operating system
+        []Windows
+            []Settings > Accessibility > Text size
+                []Text size slider
+                    []150%
+    []Web Browser
+    []BlazorStudio itself
+    []Visual Studio Code
+}
+
+# Web Links
+{
+}
