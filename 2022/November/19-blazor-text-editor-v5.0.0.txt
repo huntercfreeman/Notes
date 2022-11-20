@@ -112,6 +112,8 @@ DATE: 2022-11-19
                     to use while() and in-line that lambda in while body?
     []Roslyn has a C# parser, does it have an F# parser?
     []Made common WhitespaceFacts.cs
+    []Made the method StringWalker.ConsumeWord() to remedy the repeated logic for 
+        finding keywords in each ILexer implementation.
 
 
 }
