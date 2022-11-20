@@ -102,6 +102,14 @@ DATE: 2022-11-19
                     the keyword, "yield", but as well, "yield!".
                     []Is it the case that the exclamation mark ended keywords in F# would
                         result in the shared keyword lexer not working?
+    []The method StringWalker.WhileNotEndOfFile() is used frequently
+        within the various ILexers. This method provides means of
+        doing a while loop until the end of the file (or break early).
+        []One could also use while(!END_OF_FILE (this is pseudo code)) { ... }
+            []StringWalker.WhileNotEndOfFile() is invoking a method every iteration
+                whereas while presumably would be doing a goto operation.
+                []Instead of making a lamba would it be a worth while enough optimization
+                    to use while() and in-line that lambda in while body?
 
 
 
