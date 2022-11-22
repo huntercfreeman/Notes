@@ -51,6 +51,19 @@ DATE: 2022-11-22
                 []None
             []private methods
                 []string GetTextSelectionStyleCss(int lowerBound, int upperBound, int rowIndex)
+        []GutterSection
+            []Put "bte_gutter" inside this component using a 
+                foreach from the VirtualizationResult
+            []Blazor Parameters
+                []CASCADING VirtualizationResult<List<RichCharacter>> VirtualizationResult
+            []private fields
+                []None
+            []public properties
+                []None
+            []public methods
+                []None
+            []private methods
+                []string GetGutterStyleCss(int index, double? virtualizedRowLeftInPixels)
     []Can all of the div with class of "bte_text-editor" be moved so the attributes
         are on the child div with class of "bte_text-editor-content" (the "bte_text-editor"
         div would then be removed and 1 less div. I don't see the point of the parent div
@@ -73,6 +86,8 @@ DATE: 2022-11-22
         []Do this so when using inspect element the rows are kept behind
             a level of nesting so they don't make debugging the html
             noisy.
+    []Consider having [CascadingParameter] for the TextEditorBase it seems
+        like a lot of components will need it.
 
 
 }
