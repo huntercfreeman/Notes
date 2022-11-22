@@ -23,19 +23,44 @@ DATE: 2022-11-22
         that are necessary.
         []MeasureCharacterWidthAndRowHeight
             []Put it in place of div with class: "bte_measure-character-width-and-row-height"
+            []Blazor Parameters
+                []string ElementId 
+                    []// Used by TextEditorDisplay.razor.cs to target the element 
+                        when invoking JavaScript for measuring character width and row height.
             []private fields
                 []string _testStringForMeasurement
                 []int _testStringRepeatCount
             []public properties
-                []string ElementId // public get only for access from @ref when JavaScript
                 []int CountOfTestCharacters // expression bound
                     []// so TextEditorDisplay can use an @ref to access the CountOfTestCharacters
                         when invoking the javascript function to measure width of characters
                         and height of rows.
+            []public methods
+                []None
+            []private methods
+                []None
+        []TextSelectionGroup
+            []Put it in place of div with class: "bte_text-selection-group"
+            []Blazor Parameters
+                []TextEditorCursorSnapshot PrimaryCursorSnapshot
+            []private fields
+                []None
+            []public properties
+                []None
+            []public methods
+                []None
+            []private methods
+                []string GetTextSelectionStyleCss(int lowerBound, int upperBound, int rowIndex)
     []Can all of the div with class of "bte_text-editor" be moved so the attributes
         are on the child div with class of "bte_text-editor-content" (the "bte_text-editor"
         div would then be removed and 1 less div. I don't see the point of the parent div
         if there is a point that is fine but its existence must be justified.)
+    []In TextSelectionGroup.GetTextSelectionStyleCss(...) CharacterWidthAndRowHeight
+        is checked for is null. Ensure this is necessary I believe the Razor
+        markup checked this already in TextEditorDisplay.
+        []Fixed, moved TextSelectionGroup to inside a null check within TextEditorDisplay
+            and removed null check from within TextSelectionGroup
+    []Move TextSelectionGroup within the VirtualizationDisplay.ChildContent
 
 
 }
