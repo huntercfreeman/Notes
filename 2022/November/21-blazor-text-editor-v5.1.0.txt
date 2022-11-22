@@ -1,0 +1,138 @@
+DATE: 2022-11-21
+----------------
+
+# Goal
+{
+
+[]Fix horizontal scrolling.
+    
+
+}
+
+# Plan
+{
+
+[]Fix horizontal scrolling.
+    []Currently support for the keyboard scrolling inputs are not implemented.
+        []PageUp
+        []PageDown
+        []Ctrl + PageUp
+        []Ctrl + PageDown
+        []Ctrl + ArrowUp
+        []Ctrl + ArrowDown
+    []As well the intersection observer which is to scroll the cursor
+        into view has a timing issue where one might have to hit
+        1 keyboard button to mark the cursor as out of view. Then another
+        to actually perform the scroll into view.
+        []The intersection observer logic for scrolling the cursor into view
+            needs to be fixed such that the cursor consistently gets
+            scrolled into view upon the FIRST keyboard button event that
+            moves it out of view.
+    []The reason for bringing up keyboard scrolling inputs and the intersection
+        observer logic is:
+        []The overall goal for this day is to fix horizontal scrolling.
+            []I wonder if on a related note the implementation of
+                the scrolling input and fixing the intersection observer logic
+                would bring one to naturally fixing the horizontal scrolling.
+                []That is to say, PageUp, requires one to knnow the height of
+                    the text editor so the scrollbar can be moved at most
+                    the height of the text editor if enough space remains.
+                    []The idea of manipulating the scroll position either
+                        vertical or horizontal forces one to further explore
+                        the idea understanding what is rendered on the screen
+                        by monitoring scroll position, width of the editor,
+                        font size, etc...
+                        []Is there a lack of the ITextEditorService
+                            understanding and being able to manipulate the scrollbar?
+                            []Would resolving this so the ITextEditorService understood
+                                and could manipulate the scrollbar result in a natural
+                                step by process that concludes in fixing horizontal scrolling?
+    []What is the HTML markup generally going to look like?
+        []-TextEditorDisplay
+            []-TextEditorContent
+                []VirtualizeVertically
+                    []-TextEditorGutterWrap
+                        []-TextEditorGutter
+                        []-TextEditorGutter
+                        []-TextEditorGutter
+                        []-... foreach row make a TextEditorGutter
+                    []-TextEditorRowWrap
+                        []VirtualizeHorizontally
+                            []-TextEditorRow
+                            []-TextEditorRow
+                            []-TextEditorRow
+                            []-... foreach row make a TextEditorRow
+    []The TextEditorContent is to contain the gutter wrap and the row wrap.
+        []The TextEditorContent is to virtualized vertically
+            []Instead of the virtualization component rendering out the
+                virtualization result.
+                []Would the virtualization result need to be returned?
+            []TextEditorRowWrap needs horizontal virtualization ONLY
+                as the vertical virtualization is provided by its parent element
+    []Stay focused on the previous tasks but, remember for the future:
+        []Text selection is not virtualized. It renders that div
+            for the background color even for text not being rendered due to
+            being out of view.
+        []When showing whitespace it needs to be done as is done with
+            the text editor selection.
+            []That is to say, another group of absolute positioned
+                divs separate from the text content being rendered.
+    
+
+
+}
+
+# Youtube thumbnail ideas
+{
+}
+
+# Youtube title ideas
+{
+}
+
+# Youtube video description
+{
+Email Me:
+    -hunterfreemandev@gmail.com
+
+GitHub repos
+    -BlazorStudio: https://github.com/huntercfreeman/BlazorStudio
+    -Blazor.Text.Editor: https://github.com/huntercfreeman/Blazor.Text.Editor
+    -Notes: https://github.com/huntercfreeman/Notes
+
+NuGet Packages
+    -Blazor.Text.Editor: https://www.nuget.org/packages/Blazor.Text.Editor/
+
+Text Editor from scratch with Blazor and C# youtube playlist:
+    -https://youtube.com/playlist?list=PLG4PTDe2qc0i0COivTxn_rjSN96Xq-_K1
+}
+
+# Before this video specifically checklist
+{
+[]See in general checklist
+}
+
+# Checklist before recording a video in general
+{
+[]Font-size
+    []Rider
+        []Appearance
+            []Font-Family: Segoe UI;
+		    []Font-Size: 24px;
+        []Editor
+            []Font-Family: Consolas;
+		    []Font-Size: 30px;
+		    []Line Height: 1.1;
+    []Operating system
+        []Windows
+            []Settings > Accessibility > Text size
+                []Text size slider
+                    []150%
+    []Web Browser
+    []BlazorStudio itself
+    []Visual Studio Code
+}
+
+# Web Links
+{
+}
