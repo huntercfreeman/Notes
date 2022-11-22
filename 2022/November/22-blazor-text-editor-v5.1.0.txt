@@ -1,0 +1,96 @@
+DATE: 2022-11-22
+----------------
+
+# Goal
+{
+
+[]Fix horizontal scrolling.
+    
+
+}
+
+# Plan
+{
+
+[]The TextEditorDisplay Blazor Component is rather unwieldy and I
+    want to break down the Blazor Component to render internally a component
+    foreach feature as to encapsulate that feature's code behind a Component Tag
+    reference.
+    []Move as much code from the codebehind of TextEditorDisplay.razor.cs into
+        the Blazor Components that are made today where it makes sense.
+    []Make the following Blazor Components and swap out the respective inline Razor markup
+        with a rendering of the Blazor Component with any Blazor Parameters passed in
+        that are necessary.
+        []MeasureCharacterWidthAndRowHeight
+            []Put it in place of div with class: "bte_measure-character-width-and-row-height"
+            []private fields
+                []string _testStringForMeasurement
+                []int _testStringRepeatCount
+            []public properties
+                []string ElementId // public get only for access from @ref when JavaScript
+                []int CountOfTestCharacters // expression bound
+                    []// so TextEditorDisplay can use an @ref to access the CountOfTestCharacters
+                        when invoking the javascript function to measure width of characters
+                        and height of rows.
+    []Can all of the div with class of "bte_text-editor" be moved so the attributes
+        are on the child div with class of "bte_text-editor-content" (the "bte_text-editor"
+        div would then be removed and 1 less div. I don't see the point of the parent div
+        if there is a point that is fine but its existence must be justified.)
+
+
+}
+
+# Youtube thumbnail ideas
+{
+}
+
+# Youtube title ideas
+{
+}
+
+# Youtube video description
+{
+Email Me:
+    -hunterfreemandev@gmail.com
+
+GitHub repos
+    -BlazorStudio: https://github.com/huntercfreeman/BlazorStudio
+    -Blazor.Text.Editor: https://github.com/huntercfreeman/Blazor.Text.Editor
+    -Notes: https://github.com/huntercfreeman/Notes
+
+NuGet Packages
+    -Blazor.Text.Editor: https://www.nuget.org/packages/Blazor.Text.Editor/
+
+Text Editor from scratch with Blazor and C# youtube playlist:
+    -https://youtube.com/playlist?list=PLG4PTDe2qc0i0COivTxn_rjSN96Xq-_K1
+}
+
+# Before this video specifically checklist
+{
+[]See in general checklist
+}
+
+# Checklist before recording a video in general
+{
+[]Font-size
+    []Rider
+        []Appearance
+            []Font-Family: Segoe UI;
+		    []Font-Size: 24px;
+        []Editor
+            []Font-Family: Consolas;
+		    []Font-Size: 30px;
+		    []Line Height: 1.1;
+    []Operating system
+        []Windows
+            []Settings > Accessibility > Text size
+                []Text size slider
+                    []150%
+    []Web Browser
+    []BlazorStudio itself
+    []Visual Studio Code
+}
+
+# Web Links
+{
+}
