@@ -61,6 +61,18 @@ DATE: 2022-11-22
         []Fixed, moved TextSelectionGroup to inside a null check within TextEditorDisplay
             and removed null check from within TextSelectionGroup
     []Move TextSelectionGroup within the VirtualizationDisplay.ChildContent
+    []Move bte_gutter into a Component with div having class of "bte_gutter-section"
+        this encompassing div should do nothing and the position absolute of the gutters
+        should still point to the bte_text-editor-content.
+        []Do this so when using inspect element the gutters are kept behind
+            a level of nesting so they don't make debugging the html
+            noisy.
+    []Move bte_row into a Component with div having class of "bte_row-section"
+        this encompassing div should do nothing and the position absolute of the rows
+        should still point to the bte_text-editor-content.
+        []Do this so when using inspect element the rows are kept behind
+            a level of nesting so they don't make debugging the html
+            noisy.
 
 
 }
