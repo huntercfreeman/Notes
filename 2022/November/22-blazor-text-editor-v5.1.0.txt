@@ -56,6 +56,8 @@ DATE: 2022-11-22
                 foreach from the VirtualizationResult
             []Blazor Parameters
                 []CASCADING VirtualizationResult<List<RichCharacter>> VirtualizationResult
+                []TextEditorBase TextEditor
+                []CharacterWidthAndRowHeight CharacterWidthAndRowHeight
             []private fields
                 []None
             []public properties
@@ -64,6 +66,21 @@ DATE: 2022-11-22
                 []None
             []private methods
                 []string GetGutterStyleCss(int index, double? virtualizedRowLeftInPixels)
+        []RowSection // Seem to be making progress on the changes going to continue with a bit less notes from here
+            []Put "bte_row" inside this component using a 
+                foreach from the VirtualizationResult
+            []Blazor Parameters
+                []CASCADING VirtualizationResult<List<RichCharacter>> VirtualizationResult
+                []TextEditorBase TextEditor
+                []CharacterWidthAndRowHeight CharacterWidthAndRowHeight
+            []private fields
+                []None
+            []public properties
+                []None
+            []public methods
+                []None
+            []private methods
+                []string GetRowStyleCss(int index, double? virtualizedRowLeftInPixels)
     []Can all of the div with class of "bte_text-editor" be moved so the attributes
         are on the child div with class of "bte_text-editor-content" (the "bte_text-editor"
         div would then be removed and 1 less div. I don't see the point of the parent div
