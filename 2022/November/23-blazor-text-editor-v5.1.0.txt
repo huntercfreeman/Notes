@@ -37,8 +37,8 @@ DATE: 2022-11-22
         []Now will prevent propagation on all mouse events when interacting with the scrollbar.
             []Explanation: previously clicking the native scrollbar would propagate that click
                 event to the text editor causing a janky and mostly unusable scrolling behavior to occur.
-        []The cursor going out of view is now done using C# as opposed to the way
-            it was of a JavaScript intersection observer.
+        []Scrolling the cursor into view if it is out of view is now done using C# as 
+            opposed to the way it was of a JavaScript intersection observer.
             []A keyboard event which results in the cursor going out of view will automatically
                 scroll the cursor into view.
                 []Explanation: previously a cursor going out of view would sometimes not scroll the cursor into view
@@ -57,6 +57,14 @@ DATE: 2022-11-22
                 []Keywords are syntax highlighted
             []TypeScript ILexer
                 []Keywords are syntax highlighted
+
+[]Bugs
+    []One can scroll horizontally beyond the maximum horizontal scroll distance???
+    []Cannot use mouse to set scrollbar slider
+        []OnClick
+        []OnDrag
+    []Scrollbar slider needs css changes it does not look good
+    []Scrollbar slider needs css for both light and dark theme
 
 }
 
