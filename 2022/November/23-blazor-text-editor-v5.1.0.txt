@@ -1,0 +1,99 @@
+DATE: 2022-11-22
+----------------
+
+# Goal
+{
+
+[]Determine 
+    []If v5.1.0 should be published on Friday.
+    []What the general theme of v5.1.0 changes were.
+    []Exactly what has changed in v5.1.0
+    []What should be finished for the release of v5.1.0
+    []If enough of what should be finished for the release of v5.1.0
+        will realistically be done in time to warrant an update.
+
+}
+
+# Plan
+{
+
+[]v5.1.0 deals with fixing issues regarding scrolling.
+    []It includes the following keymap additions
+        []PageDown
+            []Scroll vertically down at most the height of the view
+        []PageUp
+            []Scroll vertically up at most the height of the view
+        []Ctrl + PageDown
+            []Move cursor to the last viewable row given the current view.
+        []Ctrl + PageUp
+            []Move cursor to the first viewable row given the current view.
+        []Ctrl + ArrowDown
+            []Scroll the view down by the height of one line without moving the cursor.
+        []Ctrl + ArrowUp
+            []Scroll the view up by the height of one line without moving the cursor.
+    []
+    []Side changes
+        []ILexer changes
+            []F# ILexer added
+                []Keywords are syntax highlighted
+            []JavaScript ILexer
+                []Keywords are syntax highlighted
+            []TypeScript ILexer
+                []Keywords are syntax highlighted
+
+}
+
+# Youtube thumbnail ideas
+{
+}
+
+# Youtube title ideas
+{
+}
+
+# Youtube video description
+{
+Email Me:
+    -hunterfreemandev@gmail.com
+
+GitHub repos
+    -BlazorStudio: https://github.com/huntercfreeman/BlazorStudio
+    -Blazor.Text.Editor: https://github.com/huntercfreeman/Blazor.Text.Editor
+    -Notes: https://github.com/huntercfreeman/Notes
+
+NuGet Packages
+    -Blazor.Text.Editor: https://www.nuget.org/packages/Blazor.Text.Editor/
+
+Text Editor from scratch with Blazor and C# youtube playlist:
+    -https://youtube.com/playlist?list=PLG4PTDe2qc0i0COivTxn_rjSN96Xq-_K1
+}
+
+# Before this video specifically checklist
+{
+[]See in general checklist
+}
+
+# Checklist before recording a video in general
+{
+[]Font-size
+    []Rider
+        []Appearance
+            []Font-Family: Segoe UI;
+		    []Font-Size: 24px;
+        []Editor
+            []Font-Family: Consolas;
+		    []Font-Size: 30px;
+		    []Line Height: 1.1;
+    []Operating system
+        []Windows
+            []Settings > Accessibility > Text size
+                []Text size slider
+                    []150%
+    []Web Browser
+    []BlazorStudio itself
+    []Visual Studio Code
+}
+
+# Web Links
+{
+}
