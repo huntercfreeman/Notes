@@ -57,6 +57,8 @@ DATE: 2022-11-22
                 []Keywords are syntax highlighted
             []TypeScript ILexer
                 []Keywords are syntax highlighted
+        []TextEditorLexerDefault rename
+        []TextEditorDecorationMapperDefault rename
 
 []Bugs
     []One can scroll horizontally beyond the maximum horizontal scroll distance???
@@ -66,6 +68,9 @@ DATE: 2022-11-22
     []Scrollbar slider needs css changes it does not look good
     []Scrollbar slider needs css for both light and dark theme
     []On mouse up of the TextEditor should clear scrollbar thinking it is mousedowned
+    []Does a TextEditor being modified rerenders all text editors?
+        []It feels like this is true when running with WebAssembly single threaded
+    []Scrolling occurs prematurely when the gutter does not fill the vertical view
 
 }
 
