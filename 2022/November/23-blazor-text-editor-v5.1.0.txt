@@ -72,6 +72,13 @@ DATE: 2022-11-22
         []It feels like this is true when running with WebAssembly single threaded
     []Scrolling occurs prematurely when the gutter does not fill the vertical view
 
+[]Look at the published version of the v5.1.0 demo and list and fix any bugs
+    []NOTE: As of this note being written Blazor WebAssembly is single threaded.
+        []Care needs to be taken to ensure the UI does not freeze.
+            []Task.Yield() would be the first code used to remedy the problem.
+                []If the UI freezing persists perhaps that method is able to be
+                    batched or debounced/throttled.
+
 }
 
 # Youtube thumbnail ideas
