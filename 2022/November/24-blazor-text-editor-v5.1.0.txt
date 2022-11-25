@@ -148,7 +148,12 @@ DATE: 2022-11-24
 []BUG:When doing horizontal virtualization it seems tab key width is not accounted for?
     []Seeing nothing when using tab key to put text horizontally out of view then horizontally scrolling that text into view.
         []Proceeding to put an enter key to split the line and all the text appears again.
-        
+[]BUG:Pick line ending of CR and then proceed to hit Enter key
+    []Afterwards pick line ending of LF then proceed to hit Enter key
+    []Something weird regarding carriage return line feed is happening here.
+    []I saw the length go up by 1 for the CR
+    []But then the LF which has a length of 1 added 2 length
+
 
 
 }
