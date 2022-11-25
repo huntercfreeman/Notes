@@ -4,19 +4,15 @@ DATE: 2022-11-25
 # Goal
 {
 
-
 []Update 
-[]Make a youtube video going over the changes in v5.1.0
+    []CHANGELOG.md
+    []ROADMAP.md
+[](do not publish this video yet) Make a youtube video going over the changes in v5.1.0
 []Publish v5.1.0 of Blazor.Text.Editor NuGet Package
-
-
-Determine 
-    []If v5.1.0 should be published on Friday.
-    []What the general theme of v5.1.0 changes were.
-    []Exactly what has changed in v5.1.0
-    []What should be finished for the release of v5.1.0
-    []If enough of what should be finished for the release of v5.1.0
-        will realistically be done in time to warrant an update.
+[]Update github to have a release and git tag that points to the commit used
+    for the v5.1.0 NuGet Package
+[]Publish the previously made youtube video going over the changes in v5.1.0 with
+    a title and thumbnail that clearly indicates v5.1.0 is available on NuGet
 
 }
 
