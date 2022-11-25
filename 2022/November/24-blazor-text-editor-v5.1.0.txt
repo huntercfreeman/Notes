@@ -97,6 +97,19 @@ DATE: 2022-11-24
                     []IDEA:
                         []The arrow left inner bug appears to be due to the cursor being within
                             the visual position of where the Gutter should be rendered.
+        []DIFFERENT: I re-encountered this bug.
+            []Refresh page
+            []Ctrl + End to go to end of the file
+            []Move cursor to line 171
+            []Hit Home to go to start of the row
+            []Hit End to go to the end of the row.
+            []At this point PREVIOUSLY hitting the home
+                key or moving ArrowUp or ArrowDown would
+                scroll the cursor into view.
+            []NOW however, I am seeing no keyboard event result in the cursor
+                being scrolled into view when in this state
+            []One must instead click on the text editor to scroll it into view.
+                []Seemingly this click must be a different row than the line 171.
     []User action resulting in bug:
         []Move the scrollTop (scroll down) such that the row with index 0
             is out of view.
