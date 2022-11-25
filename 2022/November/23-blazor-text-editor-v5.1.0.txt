@@ -78,6 +78,25 @@ DATE: 2022-11-22
             []Task.Yield() would be the first code used to remedy the problem.
                 []If the UI freezing persists perhaps that method is able to be
                     batched or debounced/throttled.
+    []Premature scrolling
+    []Does the most characters on a line get updated as the User
+        interacts with the text editor or only on initialization?
+    []User action resulting in bug:
+        []Go to end of the file.
+        []Right click after the final character in the file.
+        []Pick the cut option
+        []Do the right click cut option a second time.
+        []Up arrow keys to move cursor to start of line 171
+        []Hit the 'EndKey'
+            []BUGS:
+                []Gutter is not being rendered (for clarity: there is no part of the gutter at all being rendered in view)
+                []Caret row erroneously does not span the entire width of the scrollWidth
+                []Hit ArrowLeft / Ctrl + ArrowLeft.
+                    []The scrollLeft is not being changed even though the cursor is out of view
+                    []Once the cursor reaches column index of 0, then the cursor finally is scrolled into view.
+                    []IDEA:
+                        []The arrow left inner bug appears to be due to the cursor being within
+                            the visual position of where the Gutter should be rendered.
 
 }
 
