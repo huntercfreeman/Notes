@@ -79,6 +79,11 @@ DATE: 2022-11-24
                 []If the UI freezing persists perhaps that method is able to be
                     batched or debounced/throttled.
     []Premature scrolling
+        []Explanation: when there are 3 rows but the vertical view can fit 10 rows
+            inserting a 4th will cause the view to scroll the 1st row out
+            of view erroneously
+        []Vertical especially
+        []Maybe this also happens with premature horizontal scrolling?
     []Does the most characters on a line get updated as the User
         interacts with the text editor or only on initialization?
     []User action resulting in bug:
