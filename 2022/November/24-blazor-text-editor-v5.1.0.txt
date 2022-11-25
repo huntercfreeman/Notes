@@ -110,6 +110,8 @@ DATE: 2022-11-24
                 being scrolled into view when in this state
             []One must instead click on the text editor to scroll it into view.
                 []Seemingly this click must be a different row than the line 171.
+        []Scrolling vertically in this state all the text editor content disappears.
+        []This bug is appearing locally when running Blazor ServerSide
     []User action resulting in bug:
         []Move the scrollTop (scroll down) such that the row with index 0
             is out of view.
