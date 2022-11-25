@@ -78,6 +78,7 @@ DATE: 2022-11-24
             []Task.Yield() would be the first code used to remedy the problem.
                 []If the UI freezing persists perhaps that method is able to be
                     batched or debounced/throttled.
+        []Holding the enter key freezes the UI
     []Premature scrolling
         []Explanation: when there are 3 rows but the vertical view can fit 10 rows
             inserting a 4th will cause the view to scroll the 1st row out
