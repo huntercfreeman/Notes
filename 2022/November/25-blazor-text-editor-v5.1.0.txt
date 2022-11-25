@@ -26,6 +26,16 @@ DATE: 2022-11-25
 []BUG: (TreeView specificially related)
     []Javascript feels to randomly throw an exception something about is
 
+[]BUG: (BlazorStudio specificially related)
+    []Created templated file 'Index.razor.cs' when Index.razor existed
+    []This resulted in 'Index.razor.cs' being created.
+    []However, 'Index.razor.cs' does not display in the tree view likely because
+        'Index.razor' is claiming it as a related file (so it should nest like a codebehind
+            in the TreeView).
+    []But, Index.razor was never told to refresh its children and render
+        'Index.razor.cs' as nested. So 'Index.razor.cs' thereby would never appear
+        until 'Index.razor' was told to reload its children.
+
 }
 
 # Plan
