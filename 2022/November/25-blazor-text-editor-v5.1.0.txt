@@ -4,9 +4,13 @@ DATE: 2022-11-25
 # Goal
 {
 
-[]Update 
-    []CHANGELOG.md
-    []ROADMAP.md
+[x]Update 
+    [X]CHANGELOG.md
+    [X]ROADMAP.md
+[]Locally dotnet build and dotnet pack the nuget package source code
+    []Reference the local version of v5.1.0 and ensure everything is working.
+    []Update the demo to that exact local instance of v5.1.0 (it had been published as v5.1.0 previously
+        but you must use the exact nuget package file you are going to publish as there may have been changes.)
 [](do not publish this video yet) Make a youtube video going over the changes in v5.1.0
 []Publish v5.1.0 of Blazor.Text.Editor NuGet Package
 []Update github to have a release and git tag that points to the commit used
