@@ -97,7 +97,18 @@ DATE: 2022-11-24
                     []IDEA:
                         []The arrow left inner bug appears to be due to the cursor being within
                             the visual position of where the Gutter should be rendered.
-
+    []User action resulting in bug:
+        []Move the scrollTop (scroll down) such that the row with index 0
+            is out of view.
+        []Ctrl + A to select all the text
+        []Then hit backspace.
+            []NOTE: Ensure this when this bug is fixed that typing over a selection
+                works properly as well as just basic deletion
+        []The cursor will be moved to (row 0, column 0) as all the text will have
+            been deleted.
+        []However, the cursor will not be scrolled into view regardless of what keyboard
+            input is given by the user at this point.
+        []One must click on the text editor and then the cursor will be scrolled into view.
 }
 
 # Youtube thumbnail ideas
