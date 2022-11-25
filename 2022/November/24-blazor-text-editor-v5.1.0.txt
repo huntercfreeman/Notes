@@ -128,6 +128,15 @@ DATE: 2022-11-24
         []One can scroll horizontally very far if not infinitely?
     []User action resulting in bug:
         []Scrolling using mouse and horizontal scrollbar is not rerendering as the drag is performed.
+    []User action resulting in bug:
+        []Scrolling using mouse and horizontal scrollbar is 
+        
+        
+// get new request force from virtualization request is not being updated
+// overflow-hidden results in width: 100% no longer filling the viewable AND scrollable area
+// instead only the initial location of the viewable area has the width of virtualization correct
+// as the scrollbar width/height is no longer being included.
+// Make a force reload virtualization method
 }
 
 # Youtube thumbnail ideas
