@@ -126,6 +126,8 @@ DATE: 2022-11-24
         []One must click on the text editor and then the cursor will be scrolled into view.
     []User action resulting in bug:
         []One can scroll horizontally very far if not infinitely?
+    []User action resulting in bug:
+        []Scrolling using mouse and horizontal scrollbar is not rerendering as the drag is performed.
 }
 
 # Youtube thumbnail ideas
