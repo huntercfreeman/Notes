@@ -143,6 +143,14 @@ DATE: 2022-11-24
 // instead only the initial location of the viewable area has the width of virtualization correct
 // as the scrollbar width/height is no longer being included.
 // Make a force reload virtualization method
+
+
+[]BUG:When doing horizontal virtualization it seems tab key width is not accounted for?
+    []Seeing nothing when using tab key to put text horizontally out of view then horizontally scrolling that text into view.
+        []Proceeding to put an enter key to split the line and all the text appears again.
+        
+
+
 }
 
 # Youtube thumbnail ideas
