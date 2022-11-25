@@ -18,6 +18,14 @@ DATE: 2022-11-25
 []Publish the previously made youtube video going over the changes in v5.1.0 with
     a title and thumbnail that clearly indicates v5.1.0 is available on NuGet
 
+[]BUG:
+    []If there is nowhere to vertically scroll (the vertical view is not overflowed)
+        then the vertical scroll can be scrolled infinitely in one direction
+    []The user then has to vertically scroll in the opposite direction
+
+[]BUG: (TreeView specificially related)
+    []Javascript feels to randomly throw an exception something about is
+
 }
 
 # Plan
