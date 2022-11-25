@@ -124,6 +124,8 @@ DATE: 2022-11-24
         []However, the cursor will not be scrolled into view regardless of what keyboard
             input is given by the user at this point.
         []One must click on the text editor and then the cursor will be scrolled into view.
+    []User action resulting in bug:
+        []One can scroll horizontally very far if not infinitely?
 }
 
 # Youtube thumbnail ideas
