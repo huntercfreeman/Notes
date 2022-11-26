@@ -1,0 +1,92 @@
+DATE: 2022-11-26
+----------------
+
+# Goal
+{
+
+[]When writing the ILexer(s) make sure to
+    []Paint text which is marked as DecorationKind.None
+        []Otherwise the syntax highlighting text previously
+            was given never disappears.
+[]Lex css files in their entirety by the end of the day.
+    [X]Comments
+
+[]BUG:
+    []If there is nowhere to vertically scroll (the vertical view is not overflowed)
+        then the vertical scroll can be scrolled infinitely in one direction
+    []The user then has to vertically scroll in the opposite direction
+
+[]BUG: (TreeView specificially related)
+    []Javascript feels to randomly throw an exception something about is
+
+[]BUG: (BlazorStudio specificially related)
+    []Created templated file 'Index.razor.cs' when Index.razor existed
+    []This resulted in 'Index.razor.cs' being created.
+    []However, 'Index.razor.cs' does not display in the tree view likely because
+        'Index.razor' is claiming it as a related file (so it should nest like a codebehind
+            in the TreeView).
+    []But, Index.razor was never told to refresh its children and render
+        'Index.razor.cs' as nested. So 'Index.razor.cs' thereby would never appear
+        until 'Index.razor' was told to reload its children.
+
+}
+
+# Plan
+{
+
+}
+
+# Youtube thumbnail ideas
+{
+}
+
+# Youtube title ideas
+{
+}
+
+# Youtube video description
+{
+Email Me:
+    -hunterfreemandev@gmail.com
+
+GitHub repos
+    -BlazorStudio: https://github.com/huntercfreeman/BlazorStudio
+    -Blazor.Text.Editor: https://github.com/huntercfreeman/Blazor.Text.Editor
+    -Notes: https://github.com/huntercfreeman/Notes
+
+NuGet Packages
+    -Blazor.Text.Editor: https://www.nuget.org/packages/Blazor.Text.Editor/
+
+Text Editor from scratch with Blazor and C# youtube playlist:
+    -https://youtube.com/playlist?list=PLG4PTDe2qc0i0COivTxn_rjSN96Xq-_K1
+}
+
+# Before this video specifically checklist
+{
+[]See in general checklist
+}
+
+# Checklist before recording a video in general
+{
+[]Font-size
+    []Rider
+        []Appearance
+            []Font-Family: Segoe UI;
+		    []Font-Size: 24px;
+        []Editor
+            []Font-Family: Consolas;
+		    []Font-Size: 30px;
+		    []Line Height: 1.1;
+    []Operating system
+        []Windows
+            []Settings > Accessibility > Text size
+                []Text size slider
+                    []150%
+    []Web Browser
+    []BlazorStudio itself
+    []Visual Studio Code
+}
+
+# Web Links
+{
+}
