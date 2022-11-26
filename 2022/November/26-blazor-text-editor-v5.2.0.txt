@@ -119,6 +119,9 @@ GitHub repos
     -Blazor.Text.Editor: https://github.com/huntercfreeman/Blazor.Text.Editor
     -Notes: https://github.com/huntercfreeman/Notes
 
+Demo Website (Runs WebAssembly so clear your cache if you see an old version)
+    -https://hunter-freeman-dev.azurewebsites.net/
+
 NuGet Packages
     -Blazor.Text.Editor: https://www.nuget.org/packages/Blazor.Text.Editor/
 
