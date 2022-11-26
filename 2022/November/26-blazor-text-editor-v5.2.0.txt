@@ -36,6 +36,7 @@ DATE: 2022-11-26
         []Unicode Range
         []Punctuation
     []C#
+        []Attributes
         []Punctuation
         []Comments
         []Keywords
@@ -56,9 +57,42 @@ DATE: 2022-11-26
             []Escape Characters
         []Types
     []HTML
+        []Attribute name
+        []Attribute value
+        []Comments
+        []Entity reference // &nbsp;
+        []Tag Name
     []JavaScript
+        []Punctuation
+        []Decorator
+        []Type
+        []Function
+        []Variable
+        []Keyword
+        []Comment
+        []Numbers
+        []String Literal
+            []Escape Characters
     []Razor
+        []Tag Helper Attribute
+        []Tag Helper Element
+        []Keyword
+        []Code Block
+        []Code Block Tag
+        []Dependent on
+            []Html ILexer
+            []C# ILexer
     []TypeScript
+        []Punctuation
+        []Decorator
+        []Type
+        []Function
+        []Variable
+        []Keyword
+        []Comment
+        []Numbers
+        []String Literal
+            []Escape Characters
 
 }
 
