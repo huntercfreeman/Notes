@@ -140,6 +140,26 @@ Text Editor from scratch with Blazor and C# youtube playlist:
 		    []Font-Size: 24px;
         []Editor
             []Font-Family: Consolas;
+		    []Font-Size: 28px;
+		    []Line Height: 1.1;
+    []Operating system
+        []Windows
+            []Settings > Accessibility > Text size
+                []Text size slider
+                    []180%
+    []Web Browser
+        []110%
+    []BlazorStudio itself
+    []Visual Studio Code
+        []14 font size
+---------------------------------------- First Version after this
+[]Font-size
+    []Rider
+        []Appearance
+            []Font-Family: Segoe UI;
+		    []Font-Size: 24px;
+        []Editor
+            []Font-Family: Consolas;
 		    []Font-Size: 30px;
 		    []Line Height: 1.1;
     []Operating system
