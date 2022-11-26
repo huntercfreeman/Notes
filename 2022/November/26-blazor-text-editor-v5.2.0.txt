@@ -21,8 +21,8 @@ DATE: 2022-11-26
     []TypeScript
 
 []Plan out an ordering for implementing the ILexer(s) to be done for the Friday v5.2.0 update
-    []CSS
-        []Comments
+    []CSS // 2022-11-26
+        [X]Comments
         []Tag Selectors // Maybe 'Identifiers' is a better term?
         []Function
         []Hex Color
@@ -35,7 +35,13 @@ DATE: 2022-11-26
         []URL
         []Unicode Range
         []Punctuation
-    []C#
+    []HTML // 2022-11-27
+        []Attribute name
+        []Attribute value
+        []Comments
+        []Entity reference // &nbsp;
+        []Tag Name
+    []C# // 2022-11-28
         []Attributes
         []Punctuation
         []Comments
@@ -46,7 +52,38 @@ DATE: 2022-11-26
         []String Literal
             []Escape Characters
         []Types
-    []F#
+    []Razor // 2022-11-29
+        []Tag Helper Attribute
+        []Tag Helper Element
+        []Keyword
+        []Code Block
+        []Code Block Tag
+        []Dependent on
+            []Html ILexer
+            []C# ILexer
+    []JavaScript // 2022-11-30
+        []Punctuation
+        []Decorator
+        []Type
+        []Function
+        []Variable
+        []Keyword
+        []Comment
+        []Numbers
+        []String Literal
+            []Escape Characters
+    []TypeScript // 2022-12-1
+        []Punctuation
+        []Decorator
+        []Type
+        []Function
+        []Variable
+        []Keyword
+        []Comment
+        []Numbers
+        []String Literal
+            []Escape Characters
+    []F# // 2022-12-2
         []Punctuation
         []Comments
         []Keywords
@@ -56,43 +93,6 @@ DATE: 2022-11-26
         []String Literal
             []Escape Characters
         []Types
-    []HTML
-        []Attribute name
-        []Attribute value
-        []Comments
-        []Entity reference // &nbsp;
-        []Tag Name
-    []JavaScript
-        []Punctuation
-        []Decorator
-        []Type
-        []Function
-        []Variable
-        []Keyword
-        []Comment
-        []Numbers
-        []String Literal
-            []Escape Characters
-    []Razor
-        []Tag Helper Attribute
-        []Tag Helper Element
-        []Keyword
-        []Code Block
-        []Code Block Tag
-        []Dependent on
-            []Html ILexer
-            []C# ILexer
-    []TypeScript
-        []Punctuation
-        []Decorator
-        []Type
-        []Function
-        []Variable
-        []Keyword
-        []Comment
-        []Numbers
-        []String Literal
-            []Escape Characters
 
 }
 
