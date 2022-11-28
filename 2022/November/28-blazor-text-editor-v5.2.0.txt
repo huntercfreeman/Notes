@@ -18,6 +18,9 @@ DATE: 2022-11-28
 []Missing ILexer(s)
     []JSON
 []Active file Tabs should be a helper component out of the box
+[]The Demo app hosts: { Wasm and ServerSide } now share common
+    []Razor class library
+    []Class library
 
 }
 
