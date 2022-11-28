@@ -13,6 +13,8 @@ DATE: 2022-11-28
                 []Then any parameters that are also including
                     themselves a method invocation will get
                     the method syntax highlighted as a method.
+[]In general the ILexer logic needs to clear to DecorationKind.None the no longer
+    applicable syntax highlighting which was previously applied.
 
 }
 
