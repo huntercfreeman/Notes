@@ -5,6 +5,14 @@ DATE: 2022-11-28
 {
 
 []Work on C# ILexer implementation
+    []The order of the Syntax Highlighting appears to need be changed.
+        []A parameter to a method invocation might at times
+            itself be made up of method invocations or Types.
+            []Therefore the parameters for method invocations
+                must be colored first.
+                []Then any parameters that are also including
+                    themselves a method invocation will get
+                    the method syntax highlighted as a method.
 
 }
 
