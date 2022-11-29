@@ -23,6 +23,7 @@ DATE: 2022-11-28
     []Razor class library
     []Class library
 []Make tests that input malformed syntaxes into the ILexer(s)
+[]Perhaps there might be time to add linting for 5.2.0?
 
 }
 
