@@ -18,6 +18,9 @@ DATE: 2022-11-29
   /// currentCharacterOut:<br/>
   /// - <see cref="JsonFacts.OBJECT_END"/><br/>
   /// </summary>
+[]Need to make unit tests to check for escaped characters
+    []For example an escaped quote within a string should not erroneously
+        close the string.
 }
 
 # Plan
