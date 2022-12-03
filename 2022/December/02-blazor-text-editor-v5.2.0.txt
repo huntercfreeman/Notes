@@ -99,7 +99,7 @@ Text Editor from scratch with Blazor and C# youtube playlist:
         []Windows
             []Settings > Accessibility > Text size
                 []Text size slider
-                    []150%
+                    []200%
     []Web Browser
     []BlazorStudio itself
     []Visual Studio Code
