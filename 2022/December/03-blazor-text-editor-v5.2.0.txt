@@ -19,7 +19,7 @@ DATE: 2022-12-03
 
 # Youtube thumbnail ideas
 {
-    
+
 }
 
 # Youtube title ideas
@@ -59,7 +59,7 @@ Text Editor from scratch with Blazor and C# youtube playlist:
 		    []Font-Size: 24px;
         []Editor
             []Font-Family: Consolas;
-		    []Font-Size: 30px;
+		    []Font-Size: 32px;
 		    []Line Height: 1.1;
     []Operating system
         []Windows
