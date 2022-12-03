@@ -1,0 +1,110 @@
+DATE: 2022-12-02
+----------------
+
+# Goal
+{
+
+[]Work on TypeScript and JavaScript ILexer implementation
+    []Strings
+    []Comments
+    []Do not highlight keywords found within strings or comments
+[]In general the ILexer logic needs to clear to DecorationKind.None the no longer
+    applicable syntax highlighting which was previously applied.
+[]Active file Tabs should be a helper component out of the box
+    []TextEditorGroups?
+[]Make tests that input malformed syntaxes into the ILexer(s)
+[]Perhaps there might be time to add linting for 5.2.0?
+[]/// <summary>
+  /// currentCharacterIn:<br/>
+  /// - <see cref="JsonFacts.OBJECT_START"/><br/>
+  /// <br/>
+  /// currentCharacterOut:<br/>
+  /// - <see cref="JsonFacts.OBJECT_END"/><br/>
+  /// </summary>
+[]Need to make unit tests to check for escaped characters
+    []For example an escaped quote within a string should not erroneously
+        close the string.
+}
+
+# Plan
+{
+
+}
+
+# Youtube thumbnail ideas
+{
+}
+
+# Youtube title ideas
+{
+}
+
+# Youtube video description
+{
+Email Me:
+    -hunterfreemandev@gmail.com
+
+GitHub repos
+    -BlazorStudio: https://github.com/huntercfreeman/BlazorStudio
+    -Blazor.Text.Editor: https://github.com/huntercfreeman/Blazor.Text.Editor
+    -Notes: https://github.com/huntercfreeman/Notes
+
+Demo Website (Runs WebAssembly so clear your cache if you see an old version)
+    -https://hunter-freeman-dev.azurewebsites.net/
+
+NuGet Packages
+    -Blazor.Text.Editor: https://www.nuget.org/packages/Blazor.Text.Editor/
+
+Text Editor from scratch with Blazor and C# youtube playlist:
+    -https://youtube.com/playlist?list=PLG4PTDe2qc0i0COivTxn_rjSN96Xq-_K1
+}
+
+# Before this video specifically checklist
+{
+[]See in general checklist
+}
+
+# Checklist before recording a video in general
+{
+[]Font-size
+    []Rider
+        []Appearance
+            []Font-Family: Segoe UI;
+		    []Font-Size: 24px;
+        []Editor
+            []Font-Family: Consolas;
+		    []Font-Size: 30px;
+		    []Line Height: 1.1;
+    []Operating system
+        []Windows
+            []Settings > Accessibility > Text size
+                []Text size slider
+                    []200%
+    []Web Browser
+        []110%
+    []BlazorStudio itself
+    []Visual Studio Code
+        []14 font size
+---------------------------------------- First Version after this
+[]Font-size
+    []Rider
+        []Appearance
+            []Font-Family: Segoe UI;
+		    []Font-Size: 24px;
+        []Editor
+            []Font-Family: Consolas;
+		    []Font-Size: 30px;
+		    []Line Height: 1.1;
+    []Operating system
+        []Windows
+            []Settings > Accessibility > Text size
+                []Text size slider
+                    []150%
+    []Web Browser
+    []BlazorStudio itself
+    []Visual Studio Code
+}
+
+# Web Links
+{
+}
