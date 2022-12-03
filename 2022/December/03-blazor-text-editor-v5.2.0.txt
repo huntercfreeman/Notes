@@ -30,6 +30,9 @@ DATE: 2022-12-03
 # Youtube video description
 {
 
+Previous Video which goes over this same topic but with pseudo code:
+    -https://youtu.be/KEakxOFEMkk
+
 Email Me:
     -hunterfreemandev@gmail.com
 
