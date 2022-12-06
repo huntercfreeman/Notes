@@ -57,6 +57,7 @@ DATE: 2022-12-06
         []RazorLexer.cs 
         // find answer to this question: is .cshtml exactly the same in regards to lexing - just different file extension?
         // Reading this to see what it says about razor: https://learn.microsoft.com/en-us/aspnet/web-pages/overview/getting-started/introducing-razor-syntax-c
+        // regarding ^ make notes while reading below
         // Visual Basic is supported in razor see: https://learn.microsoft.com/en-us/aspnet/web-pages/overview/getting-started/introducing-razor-syntax-vb
             []Inner ILexer(s)
                 []HtmlLexer.cs
@@ -97,6 +98,9 @@ DATE: 2022-12-06
                 []Multi Line Html Comment:
                     []Start: '<!--'
                     []End: '-->'
+    []Introduction to ASP.NET Web Programming Using the Razor Syntax (C#)
+      https://learn.microsoft.com/en-us/aspnet/web-pages/overview/getting-started/introducing-razor-syntax-c
+      []
             
 }
 
