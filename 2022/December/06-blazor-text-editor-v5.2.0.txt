@@ -123,6 +123,17 @@ DATE: 2022-12-06
             in the page source
         []C# comments within a code block are 
             removed and not shown in the page source
+        []HTML comments ARE rendered to the page and
+            the user can see them by viewing the
+            page source.
+        []Conditions/Loops
+            []if
+                []else if
+                []else
+            []switch
+            []for
+            []foreach
+            []while
 
 }
 
