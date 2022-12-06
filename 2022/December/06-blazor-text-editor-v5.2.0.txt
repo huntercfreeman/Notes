@@ -56,6 +56,8 @@ DATE: 2022-12-06
         of mixing HTML and an injected language):
         []RazorLexer.cs 
         // find answer to this question: is .cshtml exactly the same in regards to lexing - just different file extension?
+        // Reading this to see what it says about razor: https://learn.microsoft.com/en-us/aspnet/web-pages/overview/getting-started/introducing-razor-syntax-c
+        // Visual Basic is supported in razor see: https://learn.microsoft.com/en-us/aspnet/web-pages/overview/getting-started/introducing-razor-syntax-vb
             []Inner ILexer(s)
                 []HtmlLexer.cs
                 []CSharpLexer.cs
