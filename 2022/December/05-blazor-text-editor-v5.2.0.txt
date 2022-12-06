@@ -1,0 +1,87 @@
+DATE: 2022-12-03
+----------------
+
+# Goal
+{
+
+[]Implement the ILexer for F#
+    []Comments
+    []Strings
+    []Keywords
+[]The TextEditorDisplay scrollbar should listen for mousemove
+    events in the viewport instead of the current functionality.
+    []The current functionality is to listen for mousemove events
+        within the rendered scrollbar html element.
+        []This feels very awkward to use currently so
+            using mousemove on viewport and displacing the
+            scrollbar based on a position diff between 
+            current and previous events instead of taking
+            mouse position at time of event will
+            feel much more natural.
+
+}
+
+# Plan
+{
+
+}
+
+# Youtube thumbnail ideas
+{
+
+}
+
+# Youtube title ideas
+{
+
+}
+
+# Youtube video description
+{
+
+Previous Video which goes over this same topic but with pseudo code:
+    -https://youtu.be/KEakxOFEMkk
+
+Email Me:
+    -hunterfreemandev@gmail.com
+
+GitHub repos
+    -BlazorStudio: https://github.com/huntercfreeman/BlazorStudio
+    -Blazor.Text.Editor: https://github.com/huntercfreeman/Blazor.Text.Editor
+    -Notes: https://github.com/huntercfreeman/Notes
+
+Demo Website (Runs WebAssembly so clear your cache if you see an old version)
+    -https://hunter-freeman-dev.azurewebsites.net/
+
+NuGet Packages
+    -Blazor.Text.Editor: https://www.nuget.org/packages/Blazor.Text.Editor/
+
+Text Editor from scratch with Blazor and C# youtube playlist:
+    -https://youtube.com/playlist?list=PLG4PTDe2qc0i0COivTxn_rjSN96Xq-_K1
+
+}
+
+# Checklist before recording a video in general
+{
+
+[]Font-size
+    []Rider
+        []Appearance
+            []Font-Family: Segoe UI;
+		    []Font-Size: 24px;
+        []Editor
+            []Font-Family: Consolas;
+		    []Font-Size: 32px;
+		    []Line Height: 1.1;
+    []Operating system
+        []Windows
+            []Settings > Accessibility > Text size
+                []Text size slider
+                    []200%
+    []Web Browser
+        []110%
+    []BlazorStudio itself
+    []Visual Studio Code
+        []14 font size
+
+}
