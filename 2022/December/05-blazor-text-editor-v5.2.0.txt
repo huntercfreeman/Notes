@@ -38,6 +38,9 @@ DATE: 2022-12-03
         []Currently only the
             []@code{...}
                 []Is syntax highlighted properly
+[]Added in Svelte ILexer to work on alongside Razor ILexer.
+    Helps with InjectedLanguageDefinition.cs figuring out what
+    is needed.
 
 }
 
