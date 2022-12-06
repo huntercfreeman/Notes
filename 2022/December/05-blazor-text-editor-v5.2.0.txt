@@ -24,6 +24,9 @@ DATE: 2022-12-03
             current and previous events instead of taking
             mouse position at time of event will
             feel much more natural.
+[]When out of view of the first line and deleting all the Text
+    one finds themselves NOT having the first line scrolled
+    into view. This is erroneous and needs fixed.
 
 }
 
