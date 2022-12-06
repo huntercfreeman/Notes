@@ -27,6 +27,17 @@ DATE: 2022-12-03
 []When out of view of the first line and deleting all the Text
     one finds themselves NOT having the first line scrolled
     into view. This is erroneous and needs fixed.
+[]Razor needs better ILexer implementation as 
+    []@code{...}
+    []@code
+      {
+
+      }
+    []Previous two @code examples must be syntaxed highlighted
+        properly.
+        []Currently only the
+            []@code{...}
+                []Is syntax highlighted properly
 
 }
 
