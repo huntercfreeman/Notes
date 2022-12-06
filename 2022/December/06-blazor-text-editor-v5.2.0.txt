@@ -109,6 +109,13 @@ DATE: 2022-12-06
         []Code blocks
             []Semicolon foreach statement
         []Inline expressions do NOT end with a semicolon
+        []Http Globally Available Objects
+            []Request
+            []IsPost
+            []... others?
+        []Code blocks can contain tag elements
+        []Code blocks can contain a <text> element
+        []Code blocks can contain @: operator
 }
 
 # Youtube thumbnail ideas
