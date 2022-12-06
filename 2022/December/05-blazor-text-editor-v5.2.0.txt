@@ -6,6 +6,12 @@ DATE: 2022-12-03
 
 []Implement the ILexer for F#
     []Comments
+        []Single Line Comment
+            []// An example F# single line comment
+        []Multi Line Comment
+            [](* lets declare and print variable in F#   
+                Here x is a integer variable  
+              *)  
     []Strings
     []Keywords
 []The TextEditorDisplay scrollbar should listen for mousemove
