@@ -52,12 +52,37 @@ DATE: 2022-12-06
                 []This then gives the other inner ILexer
                     implementations a chance to take control.
     []Examples of ILexers made by composition of inner ILexers (two
-        examples are used as to not have an overly narrow understanding of
-        mixing HTML and an injected language):
+        examples are used as to not have an overly narrow understanding
+        of mixing HTML and an injected language):
         []RazorLexer.cs
-            []HtmlLexer.cs
-            []CSharpLexer.cs
+            []Inner ILexer(s)
+                []HtmlLexer.cs
+                []CSharpLexer.cs
+            []Conditions to give an inner ILexer control
+                []
         []SvelteLexer.css
+            []Inner ILexer(s)
+                []User chooses between
+                    []JavaScriptLexer.cs
+                    []TypeScriptLexer.cs
+                []HtmlLexer.cs
+                []CssLexer.cs
+            []Conditions to give an inner ILexer control
+                []<script> tag
+                    []<script lang="ts">
+                        []TypeScriptLexer.cs
+                    []<script>
+                        []JavaScriptLexer.cs
+                []Top level text is treated as HTML if not a
+                    matching tag which specifies a specific ILexer
+                    []HtmlLexer.cs
+                        []The '{' and '}' characters deliminate swapping
+                            to the corresponding ILexer which is chosen
+                            in the user's <script> tag. The default
+                            ILexer is JavaScriptLexer.
+                []<style> tag
+                    []CssLexer.cs
+            
 }
 
 # Youtube thumbnail ideas
