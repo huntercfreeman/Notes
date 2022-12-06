@@ -143,6 +143,13 @@ DATE: 2022-12-06
     []Need to find any HTML that is within a razor code block.
         []Use HtmlLexer.cs on that HTML
             []Use CSharpLexer.cs on the part of the razor code block that remains otherwise.
+    []The '@' character is used to transition from HTML to C#
+        []Escape by using a second '@' character.
+        []If a razor keyword immediately follows the '@' then
+            Razor specific Markup
+            []Example: "@if (true) { ... }"
+
+        
 }
 
 # Youtube thumbnail ideas
