@@ -114,8 +114,16 @@ DATE: 2022-12-06
             []IsPost
             []... others?
         []Code blocks can contain tag elements
-        []Code blocks can contain a <text> element
-        []Code blocks can contain @: operator
+            []When you don't want to render an HTML element
+                []Code blocks can contain a <text> element
+                    []Multiple lines
+                []Code blocks can contain @: operator
+                    []Single line
+        []Razor comments are removed and not shown
+            in the page source
+        []C# comments within a code block are 
+            removed and not shown in the page source
+
 }
 
 # Youtube thumbnail ideas
