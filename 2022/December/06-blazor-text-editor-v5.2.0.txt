@@ -59,7 +59,15 @@ DATE: 2022-12-06
                 []HtmlLexer.cs
                 []CSharpLexer.cs
             []Conditions to give an inner ILexer control
-                []
+                []'@' is the indicator that what follows is
+                    a C# injected language fragment.
+            []Comment syntaxes
+                []Multi Line Razor Comment:
+                    []Start: '@*'
+                    []End: '*@'
+                []Multi Line Html Comment:
+                    []Start: '<!--'
+                    []End: '-->'
         []SvelteLexer.css
             []Inner ILexer(s)
                 []User chooses between
@@ -82,6 +90,10 @@ DATE: 2022-12-06
                             ILexer is JavaScriptLexer.
                 []<style> tag
                     []CssLexer.cs
+            []Comment syntaxes
+                []Multi Line Html Comment:
+                    []Start: '<!--'
+                    []End: '-->'
             
 }
 
