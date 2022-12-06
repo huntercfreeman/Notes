@@ -136,6 +136,8 @@ DATE: 2022-12-06
             []while
     []Razor syntax reference for ASP.NET Core
       https://learn.microsoft.com/en-us/aspnet/core/mvc/views/razor?view=aspnetcore-7.0
+        []Oh my goodness yes I found the reserved words for razor
+            []https://learn.microsoft.com/en-us/aspnet/core/mvc/views/razor?view=aspnetcore-7.0#razor-reserved-keywords
 
 }
 
