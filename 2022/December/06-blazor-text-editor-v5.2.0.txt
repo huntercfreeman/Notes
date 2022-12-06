@@ -139,6 +139,10 @@ DATE: 2022-12-06
         []Oh my goodness yes I found the reserved words for razor
             []https://learn.microsoft.com/en-us/aspnet/core/mvc/views/razor?view=aspnetcore-7.0#razor-reserved-keywords
 
+
+    []Need to find any HTML that is within a razor code block.
+        []Use HtmlLexer.cs on that HTML
+            []Use CSharpLexer.cs on the part of the razor code block that remains otherwise.
 }
 
 # Youtube thumbnail ideas
