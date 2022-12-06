@@ -1,32 +1,9 @@
-DATE: 2022-12-05
+DATE: 2022-12-06
 ----------------
 
 # Goal
 {
 
-[]Implement the ILexer for F#
-    []Comments
-        []Single Line Comment
-            []// An example F# single line comment
-        []Multi Line Comment
-            [](* lets declare and print variable in F#   
-                Here x is a integer variable  
-              *)  
-    []Strings
-    []Keywords
-[]The TextEditorDisplay scrollbar should listen for mousemove
-    events in the viewport instead of the current functionality.
-    []The current functionality is to listen for mousemove events
-        within the rendered scrollbar html element.
-        []This feels very awkward to use currently so
-            using mousemove on viewport and displacing the
-            scrollbar based on a position diff between 
-            current and previous events instead of taking
-            mouse position at time of event will
-            feel much more natural.
-[]When out of view of the first line and deleting all the Text
-    one finds themselves NOT having the first line scrolled
-    into view. This is erroneous and needs fixed.
 []Razor needs better ILexer implementation as 
     []@code{...}
     []@code
@@ -42,11 +19,45 @@ DATE: 2022-12-05
     Helps with InjectedLanguageDefinition.cs figuring out what
     is needed.
 
+[]The TextEditorDisplay scrollbar should listen for mousemove
+    events in the viewport instead of the current functionality.
+    []The current functionality is to listen for mousemove events
+        within the rendered scrollbar html element.
+        []This feels very awkward to use currently so
+            using mousemove on viewport and displacing the
+            scrollbar based on a position diff between 
+            current and previous events instead of taking
+            mouse position at time of event will
+            feel much more natural.
+[]When out of view of the first line and deleting all the Text
+    one finds themselves NOT having the first line scrolled
+    into view. This is erroneous and needs fixed.
+
 }
 
 # Plan
 {
 
+[]Regarding .razor file parsing
+    []An ILexer should be composable from other
+        ILexer implementations
+        []Then the ILexer which is a composition of others
+            would only have parsing logic to determine
+            which ILexer it is composed of gets control.
+            []Once an inner ILexer gets control the idea
+                is that the inner ILexer performs its
+                operation and then returns back to the
+                parent ILexer which has the main while() 
+                loop.
+                []This then gives the other inner ILexer
+                    implementations a chance to take control.
+    []Examples of ILexers made by composition of inner ILexers (two
+        examples are used as to not have an overly narrow understanding of
+        mixing HTML and an injected language):
+        []RazorLexer.cs
+            []HtmlLexer.cs
+            []CSharpLexer.cs
+        []SvelteLexer.css
 }
 
 # Youtube thumbnail ideas
