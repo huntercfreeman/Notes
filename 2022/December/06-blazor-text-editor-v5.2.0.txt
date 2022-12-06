@@ -54,7 +54,8 @@ DATE: 2022-12-06
     []Examples of ILexers made by composition of inner ILexers (two
         examples are used as to not have an overly narrow understanding
         of mixing HTML and an injected language):
-        []RazorLexer.cs
+        []RazorLexer.cs 
+        // find answer to this question: is .cshtml exactly the same in regards to lexing - just different file extension?
             []Inner ILexer(s)
                 []HtmlLexer.cs
                 []CSharpLexer.cs
