@@ -170,7 +170,30 @@ DATE: 2022-12-06
 
                 <br/>
               }
-                []
+                []Need to write code to discern whether a HTML tag is found
+                    []If so then invoke the HtmlLexer.cs just as was done when
+                        first invoking Lex on the Razor file itself
+                        []Any inner code blocks would go on to be handled as
+                            this is a recursive call which uses the same logic
+                            as was used to parse the main razor file
+                            []Each HTML tag within a razor code block is in a sense
+                                its own separate Html Document root.
+                []Also must discern when something isn't HTML but C#
+                    []When finding C# one must then find the end of that C# text
+                        []If '@code{}' or '@functions{}' then wrap the found C#
+                            text in a temporary class definition as to have
+                            Roslyn syntax highlight methods and other various details
+                            that require a class wrapping.
+                            []Track the offset within the Razor files overall text
+                                and convert Roslyn's syntax highlighting results
+                                to have the correct starting and ending position index
+                                by using the saved offset before using Roslyn.
+                                []Also just as with the saved offset one must
+                                    account for the amount of characters that start the
+                                    adhoc class definition wrapping.
+                [](??? I am unsure on this point) Also must discern when something isn't C# but razor like '<text></text>'
+                    or '@:'
+                
         
 }
 
