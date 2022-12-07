@@ -196,7 +196,11 @@ DATE: 2022-12-06
                             []Or an adhoc class with an adhoc method.
                 [](??? I am unsure on this point) Also must discern when something isn't C# but razor like '<text></text>'
                     or '@:'
-                
+                []First implementation should solely color code the code block content
+                    as to indicate whether it is HTML, C#, or (OTHER??? unsure if this is needed)
+                    []So in otherwords HTML can be made blue and C# can be made red for example.
+                        []Then once it seems the logic to discern between HTML and C# is correct
+                            then introduce Roslyn and the HtmlLexer
         
 }
 
