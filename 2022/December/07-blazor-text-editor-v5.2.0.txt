@@ -4,6 +4,8 @@ DATE: 2022-12-07
 # Goal
 {
 
+[]remove dead // TODO: comments that were accidentally left
+    []2 are in the RazorSyntaxTree.cs ReadCodeBlock method
 []Following block of text does not lex correctly. The inner for loops '{' is never being accounted for an the outer @for() loop closes early?
 {
     <input type="number" @bind="_incrementBy"/>
