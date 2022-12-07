@@ -191,6 +191,9 @@ DATE: 2022-12-06
                                 []Also just as with the saved offset one must
                                     account for the amount of characters that start the
                                     adhoc class definition wrapping.
+                        []If just a regular code block perhaps using
+                            an adhoc function would work?
+                            []Or an adhoc class with an adhoc method.
                 [](??? I am unsure on this point) Also must discern when something isn't C# but razor like '<text></text>'
                     or '@:'
                 
