@@ -4,7 +4,48 @@ DATE: 2022-12-07
 # Goal
 {
 
-[]Razor needs better ILexer implementation as 
+[]Following block of text does not lex correctly. The inner for loops '{' is never being accounted for an the outer @for() loop closes early?
+{
+    <input type="number" @bind="_incrementBy"/>
+
+@for (int i = 0; i < _incrementBy; i++)
+{
+	Console.WriteLine("Hello World!");
+
+	<div class="demo_counter">
+		<button class="demo_increment-count-button">
+			@_count;
+		</button>
+	</div>
+ 
+	for (int i = 0; i < _incrementBy; i++)
+	{
+		Console.WriteLine("Hello World!");
+
+		<div class="demo_counter">
+			<button class="demo_increment-count-button">
+				@_count;
+			</button>
+		</div>
+	}
+	<div class="demo_counter">
+		<button class="demo_increment-count-button">
+			@_count;
+		</button>
+	</div>
+}
+
+@code 
+{
+	private int _count;
+	private int _incrementBy = 1;
+
+	private void IncrementCount()
+	{
+		_count++;
+	}
+}
+}
 
 }
 
