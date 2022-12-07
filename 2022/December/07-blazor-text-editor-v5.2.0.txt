@@ -4,6 +4,14 @@ DATE: 2022-12-07
 # Goal
 {
 
+[]If less than viewable height of rows are shown the scroll does not
+    occur.
+    []This was a hack to fix a bug regarding starting with row 1 and only having 1 row
+        you'd eventually as you add rows find yourself scrolling even though the viewable height is not filled.
+        []This hack results in the bug where if you delete enough text to have a rowCount that does
+            not fill the vertical viewable height then and your cursor is out of view.
+            []You will not get scrolled into view automatically
+                []Must click editor or interact with the scroll wheel
 []remove dead // TODO: comments that were accidentally left
     []2 are in the RazorSyntaxTree.cs ReadCodeBlock method
 []Following block of text does not lex correctly. The inner for loops '{' is never being accounted for an the outer @for() loop closes early?
