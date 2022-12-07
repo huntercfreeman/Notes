@@ -153,14 +153,22 @@ DATE: 2022-12-06
             has immediate child syntax nodes of both HTML and C#
             []@for (int i = 0; i < 10; i++)
               {
-                  if (i % 2 == 0)
-                  {
-                      <div>even:&nbsp;@i</div>
-                  }
-                  else
-                  {
-                      <div>odd:&nbsp;@i</div>
-                  }
+                @: The value @i&nbsp;
+
+                if (i % 2 == 0)
+                {
+                    <text>
+                        is even
+                    </text>
+                }
+                else
+                {
+                    <text>
+                        is odd
+                    </text>
+                }
+
+                <br/>
               }
                 []
         
