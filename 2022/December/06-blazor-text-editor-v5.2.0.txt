@@ -148,6 +148,21 @@ DATE: 2022-12-06
             Razor specific Markup
             []Example: "@if (true) { ... }"
 
+    []Running into an issue with syntax highlighting the razor code blocks
+        []The issue is: a code block in a sense
+            has immediate child syntax nodes of both HTML and C#
+            []@for (int i = 0; i < 10; i++)
+              {
+                  if (i % 2 == 0)
+                  {
+                      <div>even:&nbsp;@i</div>
+                  }
+                  else
+                  {
+                      <div>odd:&nbsp;@i</div>
+                  }
+              }
+                []
         
 }
 
