@@ -128,11 +128,33 @@ DATE: 2022-12-08
 
 }
 
-# Youtube video description
+# VIDEO 1 Youtube video description
+{
+
+Email Me:
+    -hunterfreemandev@gmail.com
+
+GitHub repos
+    -BlazorStudio: https://github.com/huntercfreeman/BlazorStudio
+    -Blazor.Text.Editor: https://github.com/huntercfreeman/Blazor.Text.Editor
+    -Notes: https://github.com/huntercfreeman/Notes
+
+Demo Website (Runs WebAssembly so clear your cache if you see an old version)
+    -https://hunter-freeman-dev.azurewebsites.net/
+
+NuGet Packages
+    -Blazor.Text.Editor: https://www.nuget.org/packages/Blazor.Text.Editor/
+
+Text Editor from scratch with Blazor and C# youtube playlist:
+    -https://youtube.com/playlist?list=PLG4PTDe2qc0i0COivTxn_rjSN96Xq-_K1
+
+}
+
+# VIDEO 2 Youtube video description
 {
 
 Previous Video which goes over this same topic but with pseudo code:
-    -https://youtu.be/KEakxOFEMkk
+    -https://youtu.be/O6757Aj-qss
 
 Email Me:
     -hunterfreemandev@gmail.com
