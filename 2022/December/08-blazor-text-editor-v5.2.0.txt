@@ -1,0 +1,179 @@
+DATE: 2022-12-08
+----------------
+
+# Goal
+{
+
+[]Findings from using v5.2.0 with BlazorStudio
+    NOTE: Assume "using the webview from Ubuntu" unless stated otherwise
+    []/wwwroot/css/open-iconic/font/css/open-iconic-bootstrap.min.css
+        []Opening this file resulted in no horizontal scrollbar
+            likely due to integer overflow into a negative value?
+    []/wwwroot/css/bootstrap/bootstrap.min.css.map
+        []Opening this file resulted in no horizontal scrollbar
+            likely due to integer overflow into a negative value?
+            []Also not filling the vertical space with rows will result
+                in keyboard movements which go horizontally out of view will not scroll the
+                cursor into view.
+                []This is already known in regards to the cause see the vertical case.
+    []/Pages/Index.razor is not syntax highlighting <SurveyPrompt .../> correctly
+        []The Title attribute has a value which has spaces in it. Is this related?
+    []/Shared/NavMenu.razor is not syntax highlighting <NavLink ... href="" ...> correctly
+        []The href attribute lacks a value (it is an empty string). Is this related?
+    []The scrollbars should have onmousemove diffs relative to the viewport instead of
+        exact position movement relative to the tiny scrollbar height/width.
+    []Changing tabs does not reset scroll position
+    []Holding ShiftKey + mousewheeling does not scroll horizontally.
+    []If the vertical space is not filled by rows one can scroll infinitely
+    []Always can horizontally scroll infinitely(??? unsure of this)
+    []FUTURE: cursors should be stored separate from
+        the UI so when changing tabs the cursor position stays the same.
+        []FUTURE: Store scroll position too?
+    []Regarding the below note "If less than viewable height of rows are shown
+        the scroll does not occur."
+        []In BlazorStudio when using the webview from Ubuntu NOTHING will scroll it into view
+            other than scrolling manually.
+    []FetchData.razor from the Blazor ServerSide template
+        []@if (forecasts == null){...} not syntax highlighting due to depth of inner HTML tags?
+        []@foreach (var forecast in forecasts)
+            []When syntax highlighting keywords make sure the end of A WORD is checked against.
+                []Meaning, currently erroneously in this file @forecast will 
+                    syntax highlight @for because it for is a keyword and a substring of
+                    forecast. 
+                    []Must do a match on entire upcoming word.
+    []In BlazorStudio 
+        []setup .json to use the corresponding JSON Lexer
+            and then check the output for the .json files in the solution.
+            []/Properties/launchSettings.json is one of such JSON files.
+        []setup .css to use the corresponding CSS Lexer
+            and then check the output for the .css files in the solution.
+            []/wwwroot/css/site.css is one of such CSS files.
+        []setup .cshtml to use the corresponding Razor Lexer
+            and then check the output for the .cshtml files in the solution.
+            []/Pages/_Layout.cshtml is one of such cshtml files.
+    []Shift scroll is not working
+
+
+
+[]If less than viewable height of rows are shown the scroll does not
+    occur.
+    []This was a hack to fix a bug regarding starting with row 1 and only having 1 row
+        you'd eventually as you add rows find yourself scrolling even though the viewable height is not filled.
+        []This hack results in the bug where if you delete enough text to have a rowCount that does
+            not fill the vertical viewable height then and your cursor is out of view.
+            []You will not get scrolled into view automatically
+                []Must click editor or interact with the scroll wheel
+[]remove dead // TODO: comments that were accidentally left
+    []2 are in the RazorSyntaxTree.cs ReadCodeBlock method
+[]Following block of text does not lex correctly. The inner for loops '{' is never being accounted for an the outer @for() loop closes early?
+{
+    <input type="number" @bind="_incrementBy"/>
+
+@for (int i = 0; i < _incrementBy; i++)
+{
+	Console.WriteLine("Hello World!");
+
+	<div class="demo_counter">
+		<button class="demo_increment-count-button">
+			@_count;
+		</button>
+	</div>
+ 
+	for (int i = 0; i < _incrementBy; i++)
+	{
+		Console.WriteLine("Hello World!");
+
+		<div class="demo_counter">
+			<button class="demo_increment-count-button">
+				@_count;
+			</button>
+		</div>
+	}
+	<div class="demo_counter">
+		<button class="demo_increment-count-button">
+			@_count;
+		</button>
+	</div>
+}
+
+@code 
+{
+	private int _count;
+	private int _incrementBy = 1;
+
+	private void IncrementCount()
+	{
+		_count++;
+	}
+}
+}
+
+}
+
+# Plan
+{
+
+[]Regarding .razor file parsing
+    []
+        
+}
+
+# Youtube thumbnail ideas
+{
+
+}
+
+# Youtube title ideas
+{
+
+}
+
+# Youtube video description
+{
+
+Previous Video which goes over this same topic but with pseudo code:
+    -https://youtu.be/KEakxOFEMkk
+
+Email Me:
+    -hunterfreemandev@gmail.com
+
+GitHub repos
+    -BlazorStudio: https://github.com/huntercfreeman/BlazorStudio
+    -Blazor.Text.Editor: https://github.com/huntercfreeman/Blazor.Text.Editor
+    -Notes: https://github.com/huntercfreeman/Notes
+
+Demo Website (Runs WebAssembly so clear your cache if you see an old version)
+    -https://hunter-freeman-dev.azurewebsites.net/
+
+NuGet Packages
+    -Blazor.Text.Editor: https://www.nuget.org/packages/Blazor.Text.Editor/
+
+Text Editor from scratch with Blazor and C# youtube playlist:
+    -https://youtube.com/playlist?list=PLG4PTDe2qc0i0COivTxn_rjSN96Xq-_K1
+
+}
+
+# Checklist before recording a video in general
+{
+
+[]Font-size
+    []Rider
+        []Appearance
+            []Font-Family: Segoe UI;
+		    []Font-Size: 24px;
+        []Editor
+            []Font-Family: Consolas;
+		    []Font-Size: 32px;
+		    []Line Height: 1.1;
+    []Operating system
+        []Windows
+            []Settings > Accessibility > Text size
+                []Text size slider
+                    []200%
+    []Web Browser
+        []110%
+    []BlazorStudio itself
+    []Visual Studio Code
+        []14 font size
+
+}
