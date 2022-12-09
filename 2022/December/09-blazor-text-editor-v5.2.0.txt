@@ -4,11 +4,16 @@ DATE: 2022-12-09
 # Goal
 {
 
+[]BUG: within a razor code block using '<' is erroneously 
+    interpreted as the start of an HTML tag.
+    []Example: less than 
+    []Example: generic arguments
+
 []Check that each ILexer is working
     []CSharp
     []Css
     []FSharp
-    []Html
+    [X]Html
     []JavaScript
     []Json
     []Razor
