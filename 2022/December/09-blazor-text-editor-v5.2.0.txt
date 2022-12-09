@@ -1,0 +1,97 @@
+DATE: 2022-12-09
+----------------
+
+# Goal
+{
+
+[]Check that each ILexer is working
+    []CSharp
+    []Css
+    []FSharp
+    []Html
+    []JavaScript
+    []Json
+    []Razor
+    []TypeScript
+[]DO NOT PUBLISH but do create v5.2.0 NuGet Package locally
+    []dotnet build
+    []dotnet pack
+[]Update the WebAssembly Demo
+    []Reference the v5.2.0 local NuGet Package directly
+    []Publish
+[]Double check the CHANGELOG.md to make sure it is up to date.
+[]Make a new .NET Solution
+    []Make a new Blazor ServerSide application
+    []Follow the markdown tutorials while modifying the
+        Blazor ServerSide application.
+        []Example: 00_INSTALLATION.md
+    []Modify the markdown tutorials to 
+        fix anything that is outdated.
+[]Make video going over v5.2.0 changes
+
+
+}
+
+# Plan
+{
+
+
+        
+}
+
+# Youtube thumbnail ideas
+{
+
+}
+
+# Youtube title ideas
+{
+
+}
+
+# Youtube video description
+{
+
+Email Me:
+    -hunterfreemandev@gmail.com
+
+GitHub repos
+    -BlazorStudio: https://github.com/huntercfreeman/BlazorStudio
+    -Blazor.Text.Editor: https://github.com/huntercfreeman/Blazor.Text.Editor
+    -Notes: https://github.com/huntercfreeman/Notes
+
+Demo Website (Runs WebAssembly so clear your cache if you see an old version)
+    -https://hunter-freeman-dev.azurewebsites.net/
+
+NuGet Packages
+    -Blazor.Text.Editor: https://www.nuget.org/packages/Blazor.Text.Editor/
+
+Text Editor from scratch with Blazor and C# youtube playlist:
+    -https://youtube.com/playlist?list=PLG4PTDe2qc0i0COivTxn_rjSN96Xq-_K1
+
+}
+
+# Checklist before recording a video in general
+{
+
+[]Font-size
+    []Rider
+        []Appearance
+            []Font-Family: Segoe UI;
+		    []Font-Size: 24px;
+        []Editor
+            []Font-Family: Consolas;
+		    []Font-Size: 32px;
+		    []Line Height: 1.1;
+    []Operating system
+        []Windows
+            []Settings > Accessibility > Text size
+                []Text size slider
+                    []200%
+    []Web Browser
+        []110%
+    []BlazorStudio itself
+    []Visual Studio Code
+        []14 font size
+
+}
