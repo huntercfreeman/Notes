@@ -18,7 +18,9 @@ DATE: 2022-12-09
     []dotnet pack
 []Update the WebAssembly Demo
     []Reference the v5.2.0 local NuGet Package directly
-    []Publish
+    []Check that everything is still working.
+    []Publish to staging slot
+    []Swap to production
 []Double check the CHANGELOG.md to make sure it is up to date.
 []Make a new .NET Solution
     []Make a new Blazor ServerSide application
@@ -28,7 +30,7 @@ DATE: 2022-12-09
     []Modify the markdown tutorials to 
         fix anything that is outdated.
 []Make video going over v5.2.0 changes
-
+    []Use the published demo to demonstrate the changes.
 
 }
 
