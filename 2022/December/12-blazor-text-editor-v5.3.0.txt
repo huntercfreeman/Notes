@@ -20,10 +20,49 @@ DATE: 2022-12-12
         []FeatureState(s)
             []TextEditorModelsCollection
             []TextEditorViewsCollection
-    
+    []Types
+        []TextEditorModel.cs
+        []TextEditorView.cs
+        []ContractionModel.cs
+    []Hiearchy of Types
+        []TextEditorModel.cs
+        []TextEditorView.cs
+            []ContractionModel.cs
+    []Count for each Type
+        []TextEditorModel.cs
+            []One per file
+        []TextEditorView.cs
+            []Many as desired per file
+        []ContractionModel.cs
+            []One per TextEditorView.cs
+    []Purpose for each Type
+        []TextEditorModel.cs
+            []Using the file system as an example, the TextEditorModel.cs is
+                a copy of a unique file's text contents.
+                []Therefore changes to TextEditorModel.cs have no changes
+                    to the original file until a 'save request' is made.
+                    []The 'save request' in this case would overwrite the
+                        original file with whatever was in the TextEditorModel's
+                        copy.
+        []TextEditorView.cs
+            []The state regarding a User's current cursor position,
+                and what the user can visibly see on the UI given
+                their scroll position and other factors.
+        []ContractionModel.cs
+            []Encapsulates all the C# Properties which relate to
+                what the user can visibly see on the UI given
+                their scroll position and other factors.
+    []Properties for each Type
+        []TextEditorModel.cs
+            []
+        []TextEditorView.cs
+            []
+        []ContractionModel.cs
+            []
 
-    []ContractionModel.cs
-    []
+
+
+[]User wants to 'E
 
 }
 
