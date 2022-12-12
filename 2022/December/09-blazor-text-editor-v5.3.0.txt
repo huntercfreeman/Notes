@@ -4,7 +4,14 @@ DATE: 2022-12-12
 # Goal
 {
 
-[]The gutter needs fixing.
+[]Fix bug where one can scroll infinitely in a direction.
+    []When the respective direction does not fill the viewable
+        area this bug occurs for.
+        []Horizontal
+        []Vertical
+    []At all times this occurs for
+        []Horizontal
+[]Fix tracking of the most characters on a single line
 
 }
 
