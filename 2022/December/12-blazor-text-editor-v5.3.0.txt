@@ -70,7 +70,13 @@ TextEditorCase works by
             []Track one of the members as being the active member
         []Render a TextEditorGroupDisplay.razor for the group
     []Render a TextEditorViewDisplay for the active members
-    
+
+
+SEPARATE TextEditorRenderFragment.razor
+    []TextEditorGroupRenderFragment.razor
+    []TextEditorViewRenderFragment.razor
+    []TextEditorModelRenderFragment.razor
+
             
 
 
