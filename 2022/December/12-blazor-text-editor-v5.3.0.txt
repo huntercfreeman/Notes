@@ -60,6 +60,21 @@ DATE: 2022-12-12
         []ContractionModel.cs
             []
 
+-for many window do many TextEditorGroup.cs
+
+TextEditorCase works by
+    []Start with TextEditorModel.cs of a unique file
+        []Make a TextEditorView.cs of the TextEditorModel.cs
+            []Add to a TextEditorGroup.cs the TextEditorView.cs
+                []Render each member of the group as a tab
+            []Track one of the members as being the active member
+        []Render a TextEditorGroupDisplay.razor for the group
+    []Render a TextEditorViewDisplay for the active members
+    
+            
+
+
+
 
 
 []User wants to 'E
