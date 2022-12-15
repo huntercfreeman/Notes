@@ -9,7 +9,32 @@ DATE: 2022-12-15
 []Implement Text Editor Tabs
     []If I have two files, at arbitrary file paths, which are named:
         []groceries.txt
-        []groceries.txt
+        []homework.txt
+    []How do I create an instance of `TextEditorModel` for each of the files.
+    []Render an HTML <input/> text element to allow the user to provide a filename.
+    []Render a <textarea/> element to allow the user to provide the file's contents by pasting
+        them from their clipboard with { 'Ctrl' + 'v' }.
+    []How do I create an instance of `TextEditorView` for each of the files.
+    []Make a button with the text of, 'Create TextEditorView'.
+        []This button will when clicked open a dialog.
+            []The dialog will display an HTML <select/> element where
+                there is an HTML <option/> element foreach TextEditorModel the user
+                has registered.
+                []Put a button at the bottom of the dialog with the text 'Submit'
+                    []This button when clicked will invoke 
+                        TextEditorService.RegisterTextEditorView(...);
+    []Proceed to render the two `TextEditorView` as 
+        two separate `TextEditorViewDisplay` component instances.
+        []This showcases that two text editor views can be rendered simultaneously and have
+            the states be separate.
+    []How do I render the two `TextEditorView` as a window with a tab foreach file?
+    []How do I create an instance of `TextEditorGroup` for each of the files.
+    []How do I set an active tab of the `TextEditorGroupDisplay`.
+    []How do I create an instance of `TextEditorGroup` which is titled, "TODO Lists";
+    []How do I render a TextEditorGroupDisplay with two tabs which display
+        the corresponding filename within the tab.
+    []How do I set an active tab.
+    []How do I render the contents of 
 
 }
 
