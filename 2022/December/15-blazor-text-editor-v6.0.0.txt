@@ -36,6 +36,8 @@ DATE: 2022-12-15
     []How do I set an active tab.
     []How do I render the contents of 
 
+[]BUG: One can put a resizable dialog off screen and it becomes stuck.
+
 }
 
 # Plan
