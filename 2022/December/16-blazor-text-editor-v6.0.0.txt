@@ -14,22 +14,31 @@ DATE: 2022-12-16
         []Tabs must be <button> HTML elements to allow for automatic registering
             of 'submit' like keydown events triggering the @onclick
 
+[]/* TODO: 2022-12-16 The TextEditorGroup tabs need to be given some css to be more visually pleasing */
+[]/* TODO: 2022-12-16 The TextEditorGroup tabs need to display the backing TextEditorModel's ResourceUri in the tab */
+[]/* TODO: 2022-12-16 The active TextEditorGroup tab needs to be visually distinct from the other non active tabs */
+[]/* TODO: 2022-12-16 The TextEditorViewDisplay is not rendering anything even though the backing TextEditorModel has RichCharacter _content. */
 []/* TODO: 2022-12-16 I need to separate out new css from old css for a moment using this comment put put them back together eventually */
-  /* TODO: 2022-12-16 Go through the old css above this todo and delete anything not being used anymore */
-  /* TODO: 2022-12-16 Every color must be a css variable */
-  /* TODO: 2022-12-16 Every size must be a css variable */
-  /* TODO: 2022-12-16 Every z-index must be a css variable */
-  /* TODO: 2022-12-16 Everything ever must be a css variable */
-  /* TODO: 2022-12-16 Figure out what you want to take from the Demo source code to be moved over as just part of the library itself */
-  /* TODO: 2022-12-16 Delete any duplicated css. For example, perhaps css exists in both the library and the demo for no reason at all. Just keep it in the library only then. */ 
-  /* TODO: 2022-12-16 Delete every unused css variable unless a justification can be made for its existence. */
-  /* TODO: 2022-12-16 The horizontal scrollbar currently is erroneously covering the final line of text in the TextEditorViewDisplay - this needs to be fixed. */
-  /* TODO: 2022-12-16 Make variables for the { 'TAB_WIDTH', ... maybe others will be added here in the future } */
-  /* TODO: 2022-12-16 One should not be able to scroll vertically infinitely. This occurs when the count of rows times the height of a row does not fill the viewable height of the TextEditorViewDisplay */
-  /* TODO: 2022-12-16 One should not be able to scroll horizontally infinitely. This occurs ALWAYS */
-  /* TODO: 2022-12-16 One should be able to scroll some variable amount of rows beyond the final row of the TextEditorViewDisplay. Sort of a 'margin-bottom' situation so the horizontal scrollbar doesn't cover the final row in the TextEditorViewDisplay. */
-  /* TODO: 2022-12-16 One should be able to scroll some variable amount of character columns beyond the largest column index of the TextEditorViewDisplay. Sort of a 'margin-right' situation so the vertical scrollbar doesn't cover the final column in the TextEditorViewDisplay. */
-  /* TODO: 2022-12-16 When a keyboard event places the user's cursor out of the viewable rectangle of the TextEditorViewDisplay, some amount of padding needs to be taken into account when scrolling the cursor into view. Currently the scroll into view is pixel perfect and its annoying. I believe this might only be a problem for scrolling horizontally into view? In other words scroll a few columns horizontally more than is necessary when scrolling into view an "out of view" cursor. */
+[]/* TODO: 2022-12-16 Go through the old css above this todo and delete anything not being used anymore */
+[]/* TODO: 2022-12-16 Every color must be a css variable */
+[]/* TODO: 2022-12-16 Every size must be a css variable */
+[]/* TODO: 2022-12-16 Every z-index must be a css variable */
+[]/* TODO: 2022-12-16 Everything ever must be a css variable */
+[]/* TODO: 2022-12-16 Figure out what you want to take from the Demo source code to be moved over as just part of the library itself */
+[]/* TODO: 2022-12-16 Delete any duplicated css. For example, perhaps css exists in both the library and the demo for no reason at all. Just keep it in the library only then. */ 
+[]/* TODO: 2022-12-16 Delete every unused css variable unless a justification can be made for its existence. */
+[]/* TODO: 2022-12-16 The horizontal scrollbar currently is erroneously covering the final line of text in the TextEditorViewDisplay - this needs to be fixed. */
+[]/* TODO: 2022-12-16 Make variables for the { 'TAB_WIDTH', ... maybe others will be added here in the future } */
+[]/* TODO: 2022-12-16 One should not be able to scroll VERTICALLY infinitely. This occurs when the count of rows times the height of a row does not fill the viewable height of the TextEditorViewDisplay */
+[]/* TODO: 2022-12-16 One should not be able to scroll HORIZONTALLY infinitely. This occurs ALWAYS */
+[]/* TODO: 2022-12-16 One should be able to scroll some variable amount of rows beyond the final row of the TextEditorViewDisplay. Sort of a 'margin-bottom' situation so the horizontal scrollbar doesn't cover the final row in the TextEditorViewDisplay. */
+[]/* TODO: 2022-12-16 One should be able to scroll some variable amount of character columns beyond the largest column index of the TextEditorViewDisplay. Sort of a 'margin-right' situation so the vertical scrollbar doesn't cover the final column in the TextEditorViewDisplay. */
+[]/* TODO: 2022-12-16 When a keyboard event places the user's cursor out of the viewable rectangle of the TextEditorViewDisplay, some amount of padding needs to be taken into account when scrolling the cursor into view. Currently the scroll into view is pixel perfect and its annoying. I believe this might only be a problem for scrolling horizontally into view? In other words scroll a few columns horizontally more than is necessary when scrolling into view an "out of view" cursor. */
+[]/* TODO: 2022-12-16 Add proportional font logic. Remember you render a div offscreen to do this and measure the offset of the cursor and such to say it succinctly in this TODO */
+[]/* TODO: 2022-12-16 Add logic to click and drag a TextEditorGroup tab "off of" a TextEditorGroup. This makes a TextEditorView which is displayed in a floating resizable Dialog window. */
+[]/* TODO: 2022-12-16 Add logic to click and drag a floating resizable Dialog window "on to" a TextEditorGroup. This moves the TextEditorView to be a tab on that TextEditorGroup and the floating dialog is no longer displayed. */
+[]/* TODO: 2022-12-16 Add logic to render a GridView. This component will allow users to split the GridView by dragging a floating resizable Dialog window. When performing a drag on a floating resizable Dialog window, every editor within a GridView is to display an overlay of a compass like component with a dropzone for NWES (north west...) as well for Center. One can drop the drag operation North to place ANOTHER TextEditorWindow north of where the drag operation occurred. Center will put another tab on that TextEditorWindow. */
+[]/* TODO: 2022-12-16 Add a helper component to allow user to change their font family. This component must make it distinct which fonts are monospace vs proportional. */
 
 []BUG: One can put a resizable dialog off screen and it becomes stuck.
 
