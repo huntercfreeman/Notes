@@ -21,6 +21,8 @@ DATE: 2022-12-16
   /* TODO: 2022-12-16 Every z-index must be a css variable */
   /* TODO: 2022-12-16 Everything ever must be a css variable */
   /* TODO: 2022-12-16 Figure out what you want to take from the Demo source code to be moved over as just part of the library itself */
+  /* TODO: 2022-12-16 Delete any duplicated css. For example, perhaps css exists in both the library and the demo for no reason at all. Just keep it in the library only then. */ 
+  /* TODO: 2022-12-16 Delete every unused css variable unless a justification can be made for its existence. */
 
 []BUG: One can put a resizable dialog off screen and it becomes stuck.
 
