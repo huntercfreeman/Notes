@@ -14,7 +14,7 @@ DATE: 2022-12-16
         []Tabs must be <button> HTML elements to allow for automatic registering
             of 'submit' like keydown events triggering the @onclick
 
-[]/* TODO: 2022-12-16 The TextEditorGroup tabs need to be given some css to be more visually pleasing */
+[]00:01:27 -> 01:36:15 /* TODO: 2022-12-16 The TextEditorGroup tabs need to be given some css to be more visually pleasing */
 []/* TODO: 2022-12-16 The TextEditorGroup tabs need to display the backing TextEditorModel's ResourceUri in the tab */
 []/* TODO: 2022-12-16 The active TextEditorGroup tab needs to be visually distinct from the other non active tabs */
 []/* TODO: 2022-12-16 The TextEditorViewDisplay is not rendering anything even though the backing TextEditorModel has RichCharacter _content. */
