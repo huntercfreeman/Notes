@@ -23,6 +23,13 @@ DATE: 2022-12-16
   /* TODO: 2022-12-16 Figure out what you want to take from the Demo source code to be moved over as just part of the library itself */
   /* TODO: 2022-12-16 Delete any duplicated css. For example, perhaps css exists in both the library and the demo for no reason at all. Just keep it in the library only then. */ 
   /* TODO: 2022-12-16 Delete every unused css variable unless a justification can be made for its existence. */
+  /* TODO: 2022-12-16 The horizontal scrollbar currently is erroneously covering the final line of text in the TextEditorViewDisplay - this needs to be fixed. */
+  /* TODO: 2022-12-16 Make variables for the { 'TAB_WIDTH', ... maybe others will be added here in the future } */
+  /* TODO: 2022-12-16 One should not be able to scroll vertically infinitely. This occurs when the count of rows times the height of a row does not fill the viewable height of the TextEditorViewDisplay */
+  /* TODO: 2022-12-16 One should not be able to scroll horizontally infinitely. This occurs ALWAYS */
+  /* TODO: 2022-12-16 One should be able to scroll some variable amount of rows beyond the final row of the TextEditorViewDisplay. Sort of a 'margin-bottom' situation so the horizontal scrollbar doesn't cover the final row in the TextEditorViewDisplay. */
+  /* TODO: 2022-12-16 One should be able to scroll some variable amount of character columns beyond the largest column index of the TextEditorViewDisplay. Sort of a 'margin-right' situation so the vertical scrollbar doesn't cover the final column in the TextEditorViewDisplay. */
+  /* TODO: 2022-12-16 When a keyboard event places the user's cursor out of the viewable rectangle of the TextEditorViewDisplay, some amount of padding needs to be taken into account when scrolling the cursor into view. Currently the scroll into view is pixel perfect and its annoying. I believe this might only be a problem for scrolling horizontally into view? In other words scroll a few columns horizontally more than is necessary when scrolling into view an "out of view" cursor. */
 
 []BUG: One can put a resizable dialog off screen and it becomes stuck.
 
