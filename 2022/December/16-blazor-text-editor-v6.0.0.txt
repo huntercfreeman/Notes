@@ -1,0 +1,81 @@
+DATE: 2022-12-16
+----------------
+
+# Goal
+{
+
+[]Implement Text Editor Tabs
+    []Need to make the UI for the TextEditorGroup tabs look nice.
+        []Show the active TextEditorGroup tab with a differing background color
+            from the non active entries.
+        []@onclick for the tabs should set that tab as active.
+        []Tabs must be <button> HTML elements to allow for automatic registering
+            of 'submit' like keydown events triggering the @onclick
+
+[]BUG: One can put a resizable dialog off screen and it becomes stuck.
+
+}
+
+# Plan
+{
+
+[]
+        
+}
+
+# Youtube thumbnail ideas
+{
+
+}
+
+# Youtube title ideas
+{
+
+}
+
+# Youtube video description
+{
+
+Email Me:
+    -hunterfreemandev@gmail.com
+
+GitHub repos
+    -BlazorStudio: https://github.com/huntercfreeman/BlazorStudio
+    -Blazor.Text.Editor: https://github.com/huntercfreeman/Blazor.Text.Editor
+    -Notes: https://github.com/huntercfreeman/Notes
+
+Demo Website (Runs WebAssembly so clear your cache if you see an old version)
+    -https://hunter-freeman-dev.azurewebsites.net/
+
+NuGet Packages
+    -Blazor.Text.Editor: https://www.nuget.org/packages/Blazor.Text.Editor/
+
+Text Editor from scratch with Blazor and C# youtube playlist:
+    -https://youtube.com/playlist?list=PLG4PTDe2qc0i0COivTxn_rjSN96Xq-_K1
+
+}
+
+# Checklist before recording a video in general
+{
+
+[]Font-size
+    []Rider
+        []Appearance
+            []Font-Family: Segoe UI;
+		    []Font-Size: 24px;
+        []Editor
+            []Font-Family: Consolas;
+		    []Font-Size: 32px;
+		    []Line Height: 1.1;
+    []Operating system
+        []Windows
+            []Settings > Accessibility > Text size
+                []Text size slider
+                    []200%
+    []Web Browser
+        []110%
+    []BlazorStudio itself
+    []Visual Studio Code
+        []14 font size
+
+}
