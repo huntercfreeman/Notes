@@ -8,9 +8,19 @@ DATE: 2022-12-16
     []Need to make the UI for the TextEditorGroup tabs look nice.
         []Show the active TextEditorGroup tab with a differing background color
             from the non active entries.
+        []Show the ResourceUri for the given TextEditorView tab which is active
+            in a TextEditorGroup
         []@onclick for the tabs should set that tab as active.
         []Tabs must be <button> HTML elements to allow for automatic registering
             of 'submit' like keydown events triggering the @onclick
+
+[]/* TODO: 2022-12-16 I need to separate out new css from old css for a moment using this comment put put them back together eventually */
+  /* TODO: 2022-12-16 Go through the old css above this todo and delete anything not being used anymore */
+  /* TODO: 2022-12-16 Every color must be a css variable */
+  /* TODO: 2022-12-16 Every size must be a css variable */
+  /* TODO: 2022-12-16 Every z-index must be a css variable */
+  /* TODO: 2022-12-16 Everything ever must be a css variable */
+  /* TODO: 2022-12-16 Figure out what you want to take from the Demo source code to be moved over as just part of the library itself */
 
 []BUG: One can put a resizable dialog off screen and it becomes stuck.
 
