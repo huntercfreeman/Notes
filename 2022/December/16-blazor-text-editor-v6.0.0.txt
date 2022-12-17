@@ -42,6 +42,13 @@ DATE: 2022-12-16
 
 []BUG: One can put a resizable dialog off screen and it becomes stuck.
 
+[]Filmed the video for "TODO: 2022-12-16 The TextEditorGroup tabs need to be given some css to be more visually pleasing"
+    []Need to breakdown the video into smaller videos where possible
+        []Title these videos accordingly.
+            []0:00:00 to 0:24:50 is a video "Videos future"
+            []0:24:51 to AAAA is a video "Aaa"
+    []The broken down videos need YouTube timestamps where possible
+
 }
 
 # Plan
