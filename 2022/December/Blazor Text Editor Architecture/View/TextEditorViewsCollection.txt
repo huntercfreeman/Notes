@@ -3,5 +3,10 @@
 [FeatureState]
 public class TextEditorViewsCollection
 {
-    
+    public TextEditorViewsCollection()
+    {
+        ViewsMap = ImmutableDictionary<TextEditorView>.Empty;
+    }
+
+    public ImmutableDictionary<TextEditorView> ViewsMap { get; init; }
 }

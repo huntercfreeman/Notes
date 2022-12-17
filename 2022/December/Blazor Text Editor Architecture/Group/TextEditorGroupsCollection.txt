@@ -3,5 +3,10 @@
 [FeatureState]
 public class TextEditorGroupsCollection
 {
-    
+    public TextEditorGroupsCollection()
+    {
+        GroupsMap = ImmutableDictionary<TextEditorGroup>.Empty;
+    }
+
+    public ImmutableDictionary<TextEditorGroup> GroupsMap { get; init; }
 }

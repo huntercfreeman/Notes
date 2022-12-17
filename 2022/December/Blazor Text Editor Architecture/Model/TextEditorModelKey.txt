@@ -1,6 +1,11 @@
 // TextEditorModelKey : C# Class
 
-public record TextEditorModelKey
+public record TextEditorModelKey(Guid Guid)
 {
-    
+    public static readonly Guid Empty = new TextEditorModelKey(Guid.Empty);
+
+    public static TextEditorModelKey NewTextEditorModelKey()
+    {
+        return new TextEditorModelKey(Guid.NewGuid());
+    }
 }

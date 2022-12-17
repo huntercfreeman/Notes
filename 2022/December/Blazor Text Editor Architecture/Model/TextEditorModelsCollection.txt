@@ -3,5 +3,10 @@
 [FeatureState]
 public class TextEditorModelsCollection
 {
-    
+    public TextEditorModelsCollection()
+    {
+        ModelsMap = ImmutableDictionary<TextEditorModel>.Empty;
+    }
+
+    public ImmutableDictionary<TextEditorModel> ModelsMap { get; init; }
 }

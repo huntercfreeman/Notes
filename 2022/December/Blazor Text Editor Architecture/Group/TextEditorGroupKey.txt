@@ -1,6 +1,11 @@
 // TextEditorGroupKey : C# Class
 
-public record TextEditorGroupKey
+public record TextEditorGroupKey(Guid Guid)
 {
-    
+    public static readonly Guid Empty = new TextEditorGroupKey(Guid.Empty);
+
+    public static TextEditorGroupKey NewTextEditorGroupKey()
+    {
+        return new TextEditorGroupKey(Guid.NewGuid());
+    }
 }

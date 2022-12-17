@@ -1,6 +1,11 @@
 // TextEditorViewKey : C# Class
 
-public record TextEditorViewKey
+public record TextEditorViewKey(Guid Guid)
 {
-    
+    public static readonly Guid Empty = new TextEditorViewKey(Guid.Empty);
+
+    public static TextEditorViewKey NewTextEditorViewKey()
+    {
+        return new TextEditorViewKey(Guid.NewGuid());
+    }
 }

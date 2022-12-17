@@ -2,5 +2,5 @@
 
 public record TextEditorGroup
 {
-    
+    public TextEditorGroupKey TextEditorGroupKey { get; set; } = TextEditorGroupKey.NewTextEditorGroupKey();
 }
