@@ -1,3 +1,5 @@
+// TextEditorGroup : C# Class
+
 public class TextEditorGroup
 {
     

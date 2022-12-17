@@ -1,3 +1,5 @@
+// TextEditorView : C# Class
+
 public class TextEditorView
 {
     

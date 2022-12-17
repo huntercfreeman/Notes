@@ -1,3 +1,5 @@
+// TextEditorModel : C# Class
+
 public class TextEditorModel
 {
     
