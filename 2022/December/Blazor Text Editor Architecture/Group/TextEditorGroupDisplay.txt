@@ -9,10 +9,10 @@
 
 @cSharpCode
 {
-    INHERITS: FluxorComponent
+    INHERITS: ComponentBase, IDisposable
 
     [Inject]
-    private IStateSelection<TextEditorGroupCollection?> TextEditorGroupSelection { get; set; } = null!;
+    private IState<TextEditorGroupCollection?> TextEditorGroupWrap { get; set; } = null!;
     [Inject]
     private IDispatcher Dispatcher { get; set; } = null!;
 
@@ -28,17 +28,38 @@
     [Parameter, EditorRequired]
     public TextEditorGroupKey TextEditorGroupKey { get; set; } = null!;
 
+    private TextEditorGroupKey _previousTextEditorGroupKey;
+    private TextEditorRenderStateKey _previousTextEditorRenderStateKey;
+
     protected override void OnInitialized()
     {
-        TextEditorGroupSelection.Select(textEditorGroupCollection =>
-        {
-            _ = textEditorGroupCollection.TryGetValue(
-                    TextEditorGroupKey, 
-                    out var textEditorGroup);
-
-            return textEditorGroup;
-        });
+        TextEditorGroupWrap.StateChanged += OnTextEditorGroupWrapStateChanged;
 
         base.OnInitialized();
+    }
+
+    protected override bool ShouldRender()
+    {
+        TextEditorGroupWrap.StateChanged += OnTextEditorGroupWrapStateChanged;
+
+        base.OnInitialized();
+    }
+
+    private void OnTextEditorGroupWrapStateChanged(object sender, EventArgs e)
+    {
+        _ = textEditorGroupCollection.TryGetValue(
+                TextEditorGroupKey, 
+                out var textEditorGroup);
+
+        if (textEditorGroup.TextEditorRenderStateKey != _previousTextEditorRenderStateKey)
+        {
+            _previousTextEditorRenderStateKey = textEditorGroup.TextEditorRenderStateKey;
+            InvokeAsync(StateHasChanged);
+        }
+    }
+
+    public void Dispose()
+    {
+        TextEditorGroupWrap.StateChanged -= OnTextEditorGroupWrapStateChanged;
     }
 }
