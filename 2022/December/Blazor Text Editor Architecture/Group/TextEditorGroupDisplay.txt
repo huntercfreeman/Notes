@@ -1,0 +1,44 @@
+// TextEditorGroupDisplay : Blazor Component
+
+@razorMarkup
+{
+    <div class="bte_text-editor-group">
+
+    </div>
+}
+
+@cSharpCode
+{
+    INHERITS: FluxorComponent
+
+    [Inject]
+    private IStateSelection<TextEditorGroupCollection?> TextEditorGroupSelection { get; set; } = null!;
+    [Inject]
+    private IDispatcher Dispatcher { get; set; } = null!;
+
+    /// <summary>
+    /// If the provided <see cref="TextEditorGroupKey"/> is registered using the
+    /// <see cref="TextEditorService"/>. Then this component will automatically update
+    /// when the corresponding <see cref="TextEditorGroup"/> is replaced.
+    /// <br/><br/>
+    /// A <see cref="TextEditorGroupKey"/> which is NOT registered using the
+    /// <see cref="TextEditorService"/> can be passed in. Then if the <see cref="TextEditorGroupKey"/>
+    /// ever gets registered then this Blazor Component will update accordingly.
+    /// </summary>
+    [Parameter, EditorRequired]
+    public TextEditorGroupKey TextEditorGroupKey { get; set; } = null!;
+
+    protected override void OnInitialized()
+    {
+        TextEditorGroupSelection.Select(textEditorGroupCollection =>
+        {
+            _ = textEditorGroupCollection.TryGetValue(
+                    TextEditorGroupKey, 
+                    out var textEditorGroup);
+
+            return textEditorGroup;
+        });
+
+        base.OnInitialized();
+    }
+}

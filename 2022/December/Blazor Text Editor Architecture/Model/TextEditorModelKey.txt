@@ -1,0 +1,6 @@
+// TextEditorModelKey : C# Class
+
+public record TextEditorModelKey
+{
+    
+}

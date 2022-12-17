@@ -1,0 +1,7 @@
+// TextEditorViewsCollection : C# Class
+
+[FeatureState]
+public class TextEditorViewsCollection
+{
+    
+}

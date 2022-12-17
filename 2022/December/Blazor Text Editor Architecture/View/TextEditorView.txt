@@ -1,0 +1,6 @@
+// TextEditorView : C# Class
+
+public record TextEditorView
+{
+    public TextEditorViewKey TextEditorViewKey { get; set; } = TextEditorViewKey.NewTextEditorViewKey();
+}

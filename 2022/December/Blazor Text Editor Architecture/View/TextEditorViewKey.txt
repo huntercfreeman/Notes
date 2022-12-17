@@ -1,0 +1,6 @@
+// TextEditorViewKey : C# Class
+
+public record TextEditorViewKey
+{
+    
+}

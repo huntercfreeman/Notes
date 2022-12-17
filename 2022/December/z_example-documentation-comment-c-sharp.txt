@@ -1,0 +1,5 @@
+/// <summary>
+/// <see cref="ConsumeComment"/> will immediately invoke
+/// <see cref="StringWalker.ReadCharacter"/> once
+///  invoked.
+/// </summary>

@@ -1,6 +1,6 @@
 // TextEditorModel : C# Class
 
-public class TextEditorModel
+public record TextEditorModel
 {
     
 }

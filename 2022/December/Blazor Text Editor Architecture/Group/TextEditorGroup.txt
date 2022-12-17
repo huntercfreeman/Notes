@@ -1,6 +1,6 @@
 // TextEditorGroup : C# Class
 
-public class TextEditorGroup
+public record TextEditorGroup
 {
     
 }

@@ -1,0 +1,6 @@
+// TextEditorGroupKey : C# Class
+
+public record TextEditorGroupKey
+{
+    
+}
