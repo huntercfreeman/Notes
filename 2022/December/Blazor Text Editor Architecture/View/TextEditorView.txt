@@ -3,4 +3,5 @@
 public record TextEditorView
 {
     public TextEditorViewKey TextEditorViewKey { get; set; } = TextEditorViewKey.NewTextEditorViewKey();
+    public TextEditorRenderStateKey TextEditorRenderStateKey { get; set; } = TextEditorRenderStateKey.NewTextEditorRenderStateKey();
 }

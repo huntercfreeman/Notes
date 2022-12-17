@@ -18,11 +18,11 @@
 
     /// <summary>
     /// If the provided <see cref="TextEditorModelKey"/> is registered using the
-    /// <see cref="TextEditorService"/>. Then this component will automatically update
+    /// <see cref="ITextEditorService"/>. Then this component will automatically update
     /// when the corresponding <see cref="TextEditorModel"/> is replaced.
     /// <br/><br/>
     /// A <see cref="TextEditorModelKey"/> which is NOT registered using the
-    /// <see cref="TextEditorService"/> can be passed in. Then if the <see cref="TextEditorModelKey"/>
+    /// <see cref="ITextEditorService"/> can be passed in. Then if the <see cref="TextEditorModelKey"/>
     /// ever gets registered then this Blazor Component will update accordingly.
     /// </summary>
     [Parameter, EditorRequired]

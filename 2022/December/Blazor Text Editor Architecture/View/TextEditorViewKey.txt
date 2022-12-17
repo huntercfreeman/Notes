@@ -1,5 +1,13 @@
 // TextEditorViewKey : C# Class
 
+/// <summary>
+/// <see cref="TextEditorViewKey"/> is used to uniquely 
+/// identify a <see cref="TextEditorView"/>.
+/// <br/><br/>
+/// When interacting with the <see cref="ITextEditorService"/> it is
+/// common that a method regarding a <see cref="TextEditorView"/>
+/// will take a <see cref="TextEditorViewKey"/> as a parameter.
+/// </summary>
 public record TextEditorViewKey(Guid Guid)
 {
     public static readonly Guid Empty = new TextEditorViewKey(Guid.Empty);

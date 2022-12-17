@@ -3,4 +3,5 @@
 public record TextEditorModel
 {
     public TextEditorModelKey TextEditorModelKey { get; set; } = TextEditorModelKey.NewTextEditorModelKey();
+    public TextEditorRenderStateKey TextEditorRenderStateKey { get; set; } = TextEditorRenderStateKey.NewTextEditorRenderStateKey();
 }
