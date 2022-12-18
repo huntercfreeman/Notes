@@ -42,6 +42,12 @@ DATE: 2022-12-18
         []Showcase how to clone BlazorStudio
         []Next, showcase how to Publish BlazorStudio to a local folder
         []Next, showcase running the BlazorStudio executable from that published folder
+[]Next, update the personal website to be a Blazor WebAssembly application
+    []Which has the Blazor template and each navlink is each component.
+    []On each components url @page include
+        []An example of the component.
+        []A link to the GitHub hosted source code
+        []A link to the nuget.org NuGet Package
 
 }
 
