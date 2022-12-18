@@ -1,0 +1,104 @@
+DATE: 2022-12-18
+----------------
+
+# Goal
+{
+
+[]Make an "a la carte" Blazor component library.
+    []Break out all the Blazor components I made into their own separate public GitHub repository.
+    []Package all the separate GitHub repos for the various components as their own NuGet Packages.
+    []In BlazorStudio remove all source code related to those Blazor components which were moved into their
+        own separate git repositories and separate NuGet Packages.
+    []In BlazorStudio reference all the NuGet Packages which were published of the various components.
+        []This makes BlazorStudio incredibly easy to clone so it is vital to reference the NuGet Packages
+            not the source code.
+    []This is "a la carte" as every component will have its own GitHub repo and corresponding NuGet Package.
+        []If one wishes to have the source code they can go to the GitHub repo. If they just want to install
+            the nuget package they have that option as well.
+        []They also can choose just the components they want.
+    []Components
+        []BlazorMenu
+        []BlazorResize
+        []BlazorDrag
+        []BlazorNotifications
+        []BlazorTheme
+        []BlazorVirtualization
+        []BlazorTreeView
+        []BlazorTextEditor
+        []BlazorDropdown
+        []BlazorDialog
+    []Interfaces
+        []IDragService
+        []IResizeService
+        []IThemeService
+        []ITreeViewService
+        []ITextEditorService
+        []IVirtualizationService
+        []IDropdownService
+        []IMenuService
+
+}
+
+# Plan
+{
+
+[]
+        
+}
+
+# Youtube thumbnail ideas
+{
+
+}
+
+# Youtube title ideas
+{
+
+}
+
+# Youtube video description
+{
+
+Email Me:
+    -hunterfreemandev@gmail.com
+
+GitHub repos
+    -BlazorStudio: https://github.com/huntercfreeman/BlazorStudio
+    -Blazor.Text.Editor: https://github.com/huntercfreeman/Blazor.Text.Editor
+    -Notes: https://github.com/huntercfreeman/Notes
+
+Demo Website (Runs WebAssembly so clear your cache if you see an old version)
+    -https://hunter-freeman-dev.azurewebsites.net/
+
+NuGet Packages
+    -Blazor.Text.Editor: https://www.nuget.org/packages/Blazor.Text.Editor/
+
+Text Editor from scratch with Blazor and C# youtube playlist:
+    -https://youtube.com/playlist?list=PLG4PTDe2qc0i0COivTxn_rjSN96Xq-_K1
+
+}
+
+# Checklist before recording a video in general
+{
+
+[]Font-size
+    []Rider
+        []Appearance
+            []Font-Family: Segoe UI;
+		    []Font-Size: 24px;
+        []Editor
+            []Font-Family: Consolas;
+		    []Font-Size: 32px;
+		    []Line Height: 1.1;
+    []Operating system
+        []Windows
+            []Settings > Accessibility > Text size
+                []Text size slider
+                    []200%
+    []Web Browser
+        []110%
+    []BlazorStudio itself
+    []Visual Studio Code
+        []14 font size
+
+}
