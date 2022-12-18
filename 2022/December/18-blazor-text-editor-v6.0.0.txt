@@ -48,6 +48,11 @@ DATE: 2022-12-18
         []An example of the component.
         []A link to the GitHub hosted source code
         []A link to the nuget.org NuGet Package
+[]Write README.md(s) for the various Blazor components.
+[]Make a youtube video where you go through and make a brand new Blazor ServerSide Application
+    everytime to show how to install/setup the various Blazor components.
+    []When you have the video publicly uploaded add a link to it in the corresponding
+        Blazor component's README.md
 
 }
 
