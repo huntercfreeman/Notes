@@ -27,6 +27,7 @@ DATE: 2022-12-18
         []BlazorTextEditor
         []BlazorDropdown
         []BlazorDialog
+        []BlazorShared
     []Interfaces
         []IDragService
         []IResizeService
