@@ -36,6 +36,12 @@ DATE: 2022-12-18
         []IVirtualizationService
         []IDropdownService
         []IMenuService
+[]After making the "a la carte" Blazor component library.
+    []Update BlazorStudio's README.md(s)
+    []Make a youtube video for the "Make an IDE from scratch using Blazor and C#" playlist
+        []Showcase how to clone BlazorStudio
+        []Next, showcase how to Publish BlazorStudio to a local folder
+        []Next, showcase running the BlazorStudio executable from that published folder
 
 }
 
