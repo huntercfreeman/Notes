@@ -27,6 +27,12 @@ DATE: 2022-12-21
             of the gutter. The left which represented the width
             of the gutter no longer needs to be put on each row.
 
+[]NOTES:
+    []Make sure the UI renders as a transaction such that the
+        state is evaluated once at the beginning and then a cascading
+        parameter shares the EXACT same state to all child components
+        so components cannot be out of sync.
+
 }
 
 # Plan
