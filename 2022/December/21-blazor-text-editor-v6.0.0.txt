@@ -26,6 +26,7 @@ DATE: 2022-12-21
             css position left that was offset by the width
             of the gutter. The left which represented the width
             of the gutter no longer needs to be put on each row.
+    []Margin-ScrollHeight is 40% of the page height;
 
 []NOTES:
     []Make sure the UI renders as a transaction such that the
