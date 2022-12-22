@@ -1,0 +1,84 @@
+<scheme name="Visual Studio Light" version="142" parent_scheme="Visual Studio Light">
+  <metaInfo>
+    <property name="created">2022-12-22T12:02:27</property>
+    <property name="ide">Rider</property>
+    <property name="ideVersion">2022.3.1.0.0</property>
+    <property name="modified">2022-12-22T12:02:41</property>
+    <property name="originalScheme">_@user_Visual Studio Light</property>
+  </metaInfo>
+  <colors>
+    <option name="CARET_ROW_COLOR" value="fcf8e6" />
+    <option name="GUTTER_BACKGROUND" value="f8f8ee" />
+  </colors>
+  <attributes>
+    <option name="DEFAULT_ATTRIBUTE">
+      <value>
+        <option name="FOREGROUND" value="9678" />
+      </value>
+    </option>
+    <option name="DEFAULT_FUNCTION_CALL">
+      <value>
+        <option name="FOREGROUND" value="c86e00" />
+      </value>
+    </option>
+    <option name="DEFAULT_FUNCTION_DECLARATION">
+      <value>
+        <option name="FOREGROUND" value="c86e00" />
+      </value>
+    </option>
+    <option name="DEFAULT_INSTANCE_METHOD" baseAttributes="DEFAULT_FUNCTION_DECLARATION" />
+    <option name="DEFAULT_LOCAL_VARIABLE">
+      <value>
+        <option name="FOREGROUND" value="751fa3" />
+      </value>
+    </option>
+    <option name="DEFAULT_PARAMETER">
+      <value>
+        <option name="FOREGROUND" value="751fa3" />
+      </value>
+    </option>
+    <option name="DEFAULT_STATIC_METHOD" baseAttributes="DEFAULT_FUNCTION_DECLARATION" />
+    <option name="DEFAULT_TAG">
+      <value />
+    </option>
+    <option name="MATCHED_BRACE_ATTRIBUTES">
+      <value>
+        <option name="BACKGROUND" value="eab75d" />
+      </value>
+    </option>
+    <option name="NOT_USED_ELEMENT_ATTRIBUTES">
+      <value>
+        <option name="EFFECT_COLOR" value="c2771a" />
+      </value>
+    </option>
+    <option name="ReSharper.ASP_NET_BLOCK_TAG">
+      <value>
+        <option name="FOREGROUND" value="c800be" />
+      </value>
+    </option>
+    <option name="ReSharper.ASP_NET_RAZOR_CODE_BLOCK">
+      <value />
+    </option>
+    <option name="ReSharper.ASP_NET_RAZOR_TAG_HELPER_ATTRIBUTE">
+      <value>
+        <option name="FOREGROUND" value="c800be" />
+      </value>
+    </option>
+    <option name="ReSharper.ASP_NET_RAZOR_TAG_HELPER_ELEMENT">
+      <value>
+        <option name="FOREGROUND" value="c800be" />
+      </value>
+    </option>
+    <option name="ReSharper.CSHARP_ACCESSOR_IDENTIFIER" baseAttributes="ReSharper.CSHARP_METHOD_IDENTIFIER" />
+    <option name="ReSharper.CSHARP_EXTENSION_METHOD_IDENTIFIER" baseAttributes="ReSharper.CSHARP_METHOD_IDENTIFIER" />
+    <option name="TEXT">
+      <value>
+        <option name="FOREGROUND" value="0" />
+        <option name="BACKGROUND" value="fdfdfd" />
+      </value>
+    </option>
+    <option name="TODO_DEFAULT_ATTRIBUTES">
+      <value />
+    </option>
+  </attributes>
+</scheme>
