@@ -29,12 +29,12 @@ DATE: 2022-12-21
     []Margin-ScrollHeight is 40% of the page height;
     []<DialogInitializer/> and <NotificationInitializer/> go as children of the "<div class="page @TextEditorService.GlobalThemeCssClassString">"
     []Scroll bars use <DragDisplay/> from BlazorALaCarte
-
 []NOTES:
     []Make sure the UI renders as a transaction such that the
         state is evaluated once at the beginning and then a cascading
         parameter shares the EXACT same state to all child components
         so components cannot be out of sync.
+    []Context menu options (copy, paste, etc...) are not working however the keymap version works
 
 }
 
