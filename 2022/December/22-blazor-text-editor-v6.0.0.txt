@@ -4,14 +4,13 @@ DATE: 2022-12-22
 # Goal
 {
 
-[]Work on finishing Blazor.Text.Editor v6.0.0
+[]Work on finishing Blazor.Text.Editor (choose the update version: v6.0.0 or v5.3.0)
 []List Changes Here:
     []TextEditorViewModelDisplay.razor instead of TextEditorDisplay.razor
     []Change FileExtension from Blazor Parameter to property on the TextEditorBase.cs
 
 // ScrollHorizontal, ScrollVertical, and CursorDisplay need to have TextEditorDisplay parameter
     replaced the the TextEditorViewModel
-
 
 []Need to fix the context menu mouse events not working for the TextEditor
 []Need to fix the [BUG] issues on the GitHub hosted repo.
@@ -32,6 +31,29 @@ DATE: 2022-12-22
     [][Bug] Writing in demo disables intellisense
         []Is something wrong with how the SemaphoreSlim
             logic is written thereby causing a deadlock?
+[]Update the:
+    []README.md
+    []CHANGELOG.md
+    []CHANGELOG.md
+    []00_INSTALLATION.md
+    []10_USAGE.md
+    []20_SETTINGS.md
+
+[]BlazorStudio
+    []Locally package the BlazorALaCarte Library NuGet Packages
+        []BlazorALaCarte.Shared
+        []BlazorALaCarte.DialogNotification
+        []BlazorALaCarte.TreeView
+    []Locally package the Blazor.Text.Editor NuGet Package
+    []Update BlazorStudio git repo so it can be cloned and ran without any additional steps.
+        []This will be accomplished due to the BlazorALaCarte Library and Blazor.Text.Editor Library
+            both being referenced as NuGet Packages.
+    []Update the BlazorStudio README.md with instructions on how to clone and run the Repository.
+    []Make a youtube video where you preferrably in under a minute clone and run BlazorStudio
+        []NOTE: under a minute is a bit extreme but hopefully the idea is conveyed. The video
+            is to be very to the point.
+        []Update the BlazorStudio README.md to in addition to the text instructions on how to clone and run the Repository
+            include a link to the video format.
 
 }
 
