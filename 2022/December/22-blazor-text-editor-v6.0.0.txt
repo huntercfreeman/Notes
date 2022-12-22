@@ -7,7 +7,10 @@ DATE: 2022-12-22
 []Work on finishing Blazor.Text.Editor v6.0.0
 []List Changes Here:
     []TextEditorViewModelDisplay.razor instead of TextEditorDisplay.razor
+    []Change FileExtension from Blazor Parameter to property on the TextEditorBase.cs
 
+// ScrollHorizontal, ScrollVertical, and CursorDisplay need to have TextEditorDisplay parameter
+    replaced the the TextEditorViewModel
 }
 
 # Plan
