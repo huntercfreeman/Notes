@@ -28,6 +28,7 @@ DATE: 2022-12-21
             of the gutter no longer needs to be put on each row.
     []Margin-ScrollHeight is 40% of the page height;
     []<DialogInitializer/> and <NotificationInitializer/> go as children of the "<div class="page @TextEditorService.GlobalThemeCssClassString">"
+    []Scroll bars use <DragDisplay/> from BlazorALaCarte
 
 []NOTES:
     []Make sure the UI renders as a transaction such that the
