@@ -12,7 +12,7 @@ DATE: 2022-12-22
 // ScrollHorizontal, ScrollVertical, and CursorDisplay need to have TextEditorDisplay parameter
     replaced the the TextEditorViewModel
 
-[]Need to fix the context menu mouse events not working for the TextEditor
+[X]Need to fix the context menu mouse events not working for the TextEditor
 []Need to fix the [BUG] issues on the GitHub hosted repo.
     [][Bug] The gutter overlaps the text
         []Fix row css positioning
