@@ -11,6 +11,28 @@ DATE: 2022-12-22
 
 // ScrollHorizontal, ScrollVertical, and CursorDisplay need to have TextEditorDisplay parameter
     replaced the the TextEditorViewModel
+
+
+[]Need to fix the context menu mouse events not working for the TextEditor
+[]Need to fix the [BUG] issues on the GitHub hosted repo.
+    [][Bug] The gutter overlaps the text
+        []Fix row css positioning
+    [][Bug] The indent isn't working correctly
+        []Was never sure what the comment meant by this.
+            []I presume he means that I don't have implemented
+                selecting text then hitting the tab key to indent it.
+                []Perhaps for the next update find time to implement this?
+    [][Bug] The component has a lot of dependencies (50MB download WASM files)
+        []Compile the WASM app correctly.
+            []TreeShaking and such.
+    [][Bug] Incorrect placement of cursor on editor in demo
+        []Fix row css positioning
+    [][Bug] Demo showing code incorrectly on Chrome
+        []Fix row css positioning
+    [][Bug] Writing in demo disables intellisense
+        []Is something wrong with how the SemaphoreSlim
+            logic is written thereby causing a deadlock?
+
 }
 
 # Plan
