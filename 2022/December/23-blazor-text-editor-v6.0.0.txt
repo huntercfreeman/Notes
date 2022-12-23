@@ -37,6 +37,9 @@ DATE: 2022-12-23
             record keyword "with" to mutate the desired TextEditorViewModel's ShouldMeasureDimensions
             property.
 
+[]When horizontally scrolled one cannot vertically scroll to the very bottom
+    it seems to be off by a rounding error so it stops scrolling slightly before the ending.
+
 []BUG: Longest line tracking is wrong.
     []Insertion and deletion update length
     []Track row index as well as the actual length of line
