@@ -37,7 +37,13 @@ DATE: 2022-12-23
             record keyword "with" to mutate the desired TextEditorViewModel's ShouldMeasureDimensions
             property.
 
-[]BUG: Currently is not rerendering after measuring
+[]BUG: Longest line tracking is wrong.
+
+
+[X]BUG: Currently is not rerendering after measuring
+[]BUG: Cursor is not being scrolled into view when revisiting a previously rendered
+    TreeViewModel in which the cursor starts off rendered out of view
+[]BUG: ContextMenu css colors for dark theme look horrible
 []BUG: Margin-ScrollHeight is breaking the line numbers.
     []BUG: The line numbers are being displaced from top by the amount of margin
 
