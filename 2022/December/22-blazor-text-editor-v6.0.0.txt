@@ -62,6 +62,14 @@ DATE: 2022-12-22
         []Update the BlazorStudio README.md to in addition to the text instructions on how to clone and run the Repository
             include a link to the video format.
 
+/////////////////////////////
+
+[]Stuck need to think
+    []Step 1 measure character width and row height.
+    []Step 2 calculate the width of the gutter.
+    []Step 3 calculate the width of the body.
+        []Found by { widthOfContent - widthOfGutter => widthOfBody }
+
 }
 
 # Plan
