@@ -42,6 +42,7 @@ DATE: 2022-12-23
     []Track row index as well as the actual length of line
     []Change row index accordingly when removing and adding rows
     []Are line endings an edge case?
+    []Delete vs Backspace maybe are edge cases?
 
 
 [X]BUG: Currently is not rerendering after measuring
