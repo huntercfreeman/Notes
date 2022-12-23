@@ -12,6 +12,7 @@ DATE: 2022-12-22
 // ScrollHorizontal, ScrollVertical, and CursorDisplay need to have TextEditorDisplay parameter
     replaced the the TextEditorViewModel
 
+[]BUG: Currently is not rerendering after measuring
 []Rename to 'LOCAL_STORAGE_GLOBAL_TEXT_EDITOR_OPTIONS_KEY'
 []Remove the IncludeDefaultAutocompleteMenu and IncludeDefaultContextMenu
 []Remove 'ShouldRemeasureFlag' from the TextEditorViewModelDisplay.razor
