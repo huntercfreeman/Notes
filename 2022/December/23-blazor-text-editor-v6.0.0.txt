@@ -38,6 +38,10 @@ DATE: 2022-12-23
             property.
 
 []BUG: Longest line tracking is wrong.
+    []Insertion and deletion update length
+    []Track row index as well as the actual length of line
+    []Change row index accordingly when removing and adding rows
+    []Are line endings an edge case?
 
 
 [X]BUG: Currently is not rerendering after measuring
