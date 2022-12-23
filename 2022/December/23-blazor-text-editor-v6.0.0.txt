@@ -1,0 +1,158 @@
+DATE: 2022-12-23
+----------------
+
+# Goal
+{
+
+[]Work on finishing Blazor.Text.Editor v6.0.0
+
+[]List Changes Here:
+    []Summarize the changes here:
+        []This update changes the already existing "TextEditorBase" class
+            to instead be a model of a "unique file" if one uses the file system
+            as an example use case.
+        []Added the class "TextEditorViewModel". This class acts contains any state
+            one previously found on the Blazor Component: "TextEditorDisplay.razor".
+            This allows one to maintain the TextEditorCursor position for example
+            as its state is no longer tied to the lifecycle of the
+            "TextEditorDisplay.razor" Blazor Component.
+        []Rename "TextEditorDisplay.razor" to "TextEditorViewModelDisplay.razor"
+            and change the Blazor Parameter from "TextEditorKey" to "TextEditorViewModelKey"
+        []Added the class "TextEditorGroup". This class adds 'tab' functionality and maintains the
+            state of the new Blazor component named "TextEditorGroupDisplay.razor".
+        []The TextEditor's gutter and body have separate parent HTML elements which they
+            are positioned relative to.
+            [](the gutter and body are position: absolute and previous versions had
+                bugs involving the body being displayed within the gutter do to incorrectly
+                calculating the CSS 'left' attribute value.)
+    []TextEditorViewModelDisplay.razor instead of TextEditorDisplay.razor
+        []Blazor Parameter is Type: "TextEditorViewModelKey".
+    []Change FileExtension from Blazor Parameter to property on the TextEditorBase.cs
+    []Rename to 'LOCAL_STORAGE_GLOBAL_TEXT_EDITOR_OPTIONS_KEY'
+    []Remove the IncludeDefaultAutocompleteMenu and IncludeDefaultContextMenu
+        []The respective override parameters still exist. The removed parts were redundant
+            as one would just provide an override if they don't want the default.
+    []Remove 'ShouldRemeasureFlag' from the TextEditorViewModelDisplay.razor
+        []Use the method: "TextEditorService.SetViewModelWith(...)" and the
+            record keyword "with" to mutate the desired TextEditorViewModel's ShouldMeasureDimensions
+            property.
+
+[]BUG: Currently is not rerendering after measuring
+[]BUG: Margin-ScrollHeight is breaking the line numbers.
+    []BUG: The line numbers are being displaced from top by the amount of margin
+
+[X]Check that the JavaScript interop calls that use 'getElementById' return early if the result was undefined.
+[X]Maybe should move the text selection div to inside the "bte_body-section"
+[X]Make the sure overflow: hidden is on the correct HTML element.
+    []Give the body the "overflow: hidden" and the gutter gets
+        a reference to the OnWheelAsync method so it can scroll the body too.
+        []The scroll dispatches an event and thus the gutter will rerender even though
+            it is not technically scrolling.
+[X]Need to fix the context menu mouse events not working for the TextEditor
+[]Need to fix the [BUG] issues on the GitHub hosted repo.
+    [][Bug] The gutter overlaps the text
+        []Fix row css positioning
+    [][Bug] The indent isn't working correctly
+        []Was never sure what the comment meant by this.
+            []I presume he means that I don't have implemented
+                selecting text then hitting the tab key to indent it.
+                []Perhaps for the next update find time to implement this?
+    [][Bug] The component has a lot of dependencies (50MB download WASM files)
+        []Compile the WASM app correctly.
+            []TreeShaking and such.
+    [][Bug] Incorrect placement of cursor on editor in demo
+        []Fix row css positioning
+    [][Bug] Demo showing code incorrectly on Chrome
+        []Fix row css positioning
+    [][Bug] Writing in demo disables intellisense
+        []Is something wrong with how the SemaphoreSlim
+            logic is written thereby causing a deadlock?
+[]Update the:
+    []README.md
+    []CHANGELOG.md
+    []CHANGELOG.md
+    []00_INSTALLATION.md
+    []10_USAGE.md
+    []20_SETTINGS.md
+
+[]BlazorStudio
+    []Locally package the BlazorALaCarte Library NuGet Packages
+        []BlazorALaCarte.Shared
+        []BlazorALaCarte.DialogNotification
+        []BlazorALaCarte.TreeView
+    []Locally package the Blazor.Text.Editor NuGet Package
+    []Update BlazorStudio git repo so it can be cloned and ran without any additional steps.
+        []This will be accomplished due to the BlazorALaCarte Library and Blazor.Text.Editor Library
+            both being referenced as NuGet Packages.
+    []Update the BlazorStudio README.md with instructions on how to clone and run the Repository.
+    []Make a youtube video where you preferrably in under a minute clone and run BlazorStudio
+        []NOTE: under a minute is a bit extreme but hopefully the idea is conveyed. The video
+            is to be very to the point.
+        []Update the BlazorStudio README.md to in addition to the text instructions on how to clone and run the Repository
+            include a link to the video format.
+
+}
+
+# Plan
+{
+
+[]
+        
+}
+
+# Youtube thumbnail ideas
+{
+
+}
+
+# Youtube title ideas
+{
+
+}
+
+# Youtube video description
+{
+
+Email Me:
+    -hunterfreemandev@gmail.com
+
+GitHub repos
+    -BlazorStudio: https://github.com/huntercfreeman/BlazorStudio
+    -Blazor.Text.Editor: https://github.com/huntercfreeman/Blazor.Text.Editor
+    -Notes: https://github.com/huntercfreeman/Notes
+
+Demo Website (Runs WebAssembly so clear your cache if you see an old version)
+    -https://hunter-freeman-dev.azurewebsites.net/
+
+NuGet Packages
+    -Blazor.Text.Editor: https://www.nuget.org/packages/Blazor.Text.Editor/
+
+Text Editor from scratch with Blazor and C# youtube playlist:
+    -https://youtube.com/playlist?list=PLG4PTDe2qc0i0COivTxn_rjSN96Xq-_K1
+
+}
+
+# Checklist before recording a video in general
+{
+
+[]Font-size
+    []Rider
+        []Appearance
+            []Font-Family: Segoe UI;
+		    []Font-Size: 24px;
+        []Editor
+            []Font-Family: Consolas;
+		    []Font-Size: 32px;
+		    []Line Height: 1.1;
+    []Operating system
+        []Windows
+            []Settings > Accessibility > Text size
+                []Text size slider
+                    []200%
+    []Web Browser
+        []110%
+    []BlazorStudio itself
+    []Visual Studio Code
+        []14 font size
+
+}
