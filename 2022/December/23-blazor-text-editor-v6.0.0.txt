@@ -74,6 +74,8 @@ DATE: 2022-12-23
     []00_INSTALLATION.md
     []10_USAGE.md
     []20_SETTINGS.md
+    []Enough changes occurred to necessitate the re-recording of Getting started the Video Format
+        []"https://www.youtube.com/watch?v=3HuqQ4e1q7g"
 
 []BlazorStudio
     []Locally package the BlazorALaCarte Library NuGet Packages
