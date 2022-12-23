@@ -12,6 +12,7 @@ DATE: 2022-12-22
 // ScrollHorizontal, ScrollVertical, and CursorDisplay need to have TextEditorDisplay parameter
     replaced the the TextEditorViewModel
 
+[]Remove the IncludeDefaultAutocompleteMenu and IncludeDefaultContextMenu
 []Remove 'ShouldRemeasureFlag' from the TextEditorViewModelDisplay.razor
 []Check that the JavaScript interop calls that use 'getElementById' return early if the result was undefined.
 []Maybe should move the text selection div to inside the "bte_body-section"
