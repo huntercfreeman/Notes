@@ -12,6 +12,7 @@ DATE: 2022-12-22
 // ScrollHorizontal, ScrollVertical, and CursorDisplay need to have TextEditorDisplay parameter
     replaced the the TextEditorViewModel
 
+[]Maybe should move the text selection div to inside the "bte_body-section"
 []Make the sure overflow: hidden is on the correct HTML element.
     []Give the body the "overflow: hidden" and the gutter gets
         a reference to the OnWheelAsync method so it can scroll the body too.
