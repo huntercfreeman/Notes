@@ -1,10 +1,10 @@
-DATE: 2022-12-24
+DATE: 2022-12-25
 ----------------
 
 # Goal
 {
 
-[]Make these keymap changes
+[X]Make these keymap changes
     [X]{ "Ctrl" + 'd' }
         [X]Duplicate selection.
         [X]If no selection, duplicate line.
