@@ -14,11 +14,11 @@ DATE: 2022-12-24
     [X]{ "Ctrl" + 'x' }
         [X]Cut selection.
         [X]If no selection, cut line.
-    []{ "Tab" }
-        []Insert a tab character at the beginning of every line with a selection on it.
+    [X]{ "Tab" }
+        [X]Insert a tab character at the beginning of every line with a selection on it.
         [X]If no selection, insert tab character at cursor position.
-    []{ "Shift" + "Tab" }
-        []With a selection, apply logic to every line with a selection on it. Remove either a tab character from the beginning of every line if its the first character found.
+    [X]{ "Shift" + "Tab" }
+        [X]With a selection, apply logic to every line with a selection on it. Remove either a tab character from the beginning of every line if its the first character found.
             []Or remove up to at max {TAB_WIDTH} space characters if they are the first characters found.
         [X]If no selection, apply logic to the current line the cursor is one. Remove either a tab character from the beginning of every line if its the first character found.
             []Or remove up to at max {TAB_WIDTH} space characters if they are the first characters found.
