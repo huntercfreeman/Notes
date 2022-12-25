@@ -8,9 +8,9 @@ DATE: 2022-12-24
     [X]{ "Ctrl" + 'd' }
         [X]Duplicate selection.
         [X]If no selection, duplicate line.
-    []{ "Ctrl" + 'c' }
+    [X]{ "Ctrl" + 'c' }
         [X]Copy selection.
-        []If no selection, copy line.
+        [X]If no selection, copy line.
     []{ "Ctrl" + 'x' }
         [X]Cut selection.
         []If no selection, cut line.
