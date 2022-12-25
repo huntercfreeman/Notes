@@ -6,8 +6,8 @@ DATE: 2022-12-24
 
 []Make these keymap changes
     []{ "Ctrl" + 'd' }
-        []Duplicate selection.
-        []If no selection, duplicate line.
+        [X]Duplicate selection.
+        [X]If no selection, duplicate line.
     []{ "Ctrl" + 'c' }
         [X]Copy selection.
         []If no selection, copy line.
