@@ -30,6 +30,8 @@ DATE: 2022-12-25
         maps to a column index of 0. This scrolls the horizontal position to 0."
         []In this situation there is a bug wherein the virtualization will not be recalculated.
 
+[]Update the README.md for BlazorStudio
+
 }
 
 # Plan
