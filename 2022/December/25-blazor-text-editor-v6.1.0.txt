@@ -5,7 +5,7 @@ DATE: 2022-12-24
 {
 
 []Make these keymap changes
-    []{ "Ctrl" + 'd' }
+    [X]{ "Ctrl" + 'd' }
         [X]Duplicate selection.
         [X]If no selection, duplicate line.
     []{ "Ctrl" + 'c' }
