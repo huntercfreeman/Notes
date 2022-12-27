@@ -4,6 +4,17 @@ DATE: 2022-12-27
 # Goal
 {
 
+The Vertical Scroll 10px is suspicious
+
+    []The body is 
+        []width: calc(100% - WIDTH_OF_GUTTER)
+
+WIDTH_OF_GUTTER = TextEditorBase.RowCount.ToString().Length * WIDTH_OF_A_CHARACTER_IN_PIXELS
+
+WIDTH_OF_GUTTER = 3characters * WIDTH_OF_A_CHARACTER_IN_PIXELS
+
+WIDTH_OF_GUTTER += GUTTER_LEFT_PADDING + GUTTER_RIGHT_PADDING
+
 []Fix ScrollBar Components.
     []When scrolling vertically there appears to be a rounding error
         when transitioning from a scrollTop which is less than what is the maximum
