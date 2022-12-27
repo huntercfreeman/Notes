@@ -4,6 +4,8 @@ DATE: 2022-12-26
 # Goal
 {
 
+[]Need to put back the JavaScript IntersectionObserver code.
+
 [X]InputFileTreeViewKeymap.cs
 []SolutionExplorerTreeViewKeymap.cs
     []{ EnterKey } => 
