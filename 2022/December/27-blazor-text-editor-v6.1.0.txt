@@ -1,0 +1,106 @@
+DATE: 2022-12-27
+----------------
+
+# Goal
+{
+
+[]Fix ScrollBar Components.
+    []When scrolling vertically there appears to be a rounding error
+        when transitioning from a scrollTop which is less than what is the maximum
+        to a scrollTop which is equal or greater than the maximum.
+        []The behavior that occurs is that the vertical scrollbar will jump up
+            by some amount of pixels and keep the final line or final few lines from
+            ever being in view.
+[]Add Vertical ScrollHeight Margin
+[]Add Horizontal ScrollWidth Margin
+
+[]SolutionExplorerTreeViewKeymap.cs
+    []{ EnterKey } => 
+        []Create Model
+        []Create ViewModel
+        []Add ViewModel to BlazorStudio's TextEditorGroup
+        []Make ViewModel the active tab
+        []Set focus to the ViewModel
+    []{ SpaceKey } =>
+        []Create Model
+        []Create ViewModel
+        []Set the PreviewViewModel of the BlazorStudio's TextEditorGroup
+            to this ViewModel.
+        []Make PreviewViewModel the active tab
+    []{ Ctrl + Alt + l } =>
+        []Set focus to the SolutionExplorer
+
+[]Make these virtualization changes
+    []In general optimize when virtualization occurs.
+        []I am doing it too often in some cases, while also doing it not at all in others.
+    []Situation: "User has horizontal scroll > 0. They then click such that their 'relative coordinate'
+        maps to a column index of 0. This scrolls the horizontal position to 0."
+        []In this situation there is a bug wherein the virtualization will not be recalculated.
+
+[]Update the README.md for BlazorStudio
+
+}
+
+# Plan
+{
+
+[]#c8c8c8
+        
+}
+
+# Youtube thumbnail ideas
+{
+
+}
+
+# Youtube title ideas
+{
+
+}
+
+# Youtube video description
+{
+
+Email Me:
+    -hunterfreemandev@gmail.com
+
+GitHub repos
+    -BlazorStudio: https://github.com/huntercfreeman/BlazorStudio
+    -Blazor.Text.Editor: https://github.com/huntercfreeman/Blazor.Text.Editor
+    -Notes: https://github.com/huntercfreeman/Notes
+
+Demo Website (Runs WebAssembly so clear your cache if you see an old version)
+    -https://hunter-freeman-dev.azurewebsites.net/
+
+NuGet Packages
+    -Blazor.Text.Editor: https://www.nuget.org/packages/Blazor.Text.Editor/
+
+Text Editor from scratch with Blazor and C# youtube playlist:
+    -https://youtube.com/playlist?list=PLG4PTDe2qc0i0COivTxn_rjSN96Xq-_K1
+
+}
+
+# Checklist before recording a video in general
+{
+
+[]Font-size
+    []Rider
+        []Appearance
+            []Font-Family: Segoe UI;
+		    []Font-Size: 24px;
+        []Editor
+            []Font-Family: Consolas;
+		    []Font-Size: 32px;
+		    []Line Height: 1.1;
+    []Operating system
+        []Windows
+            []Settings > Accessibility > Text size
+                []Text size slider
+                    []200%
+    []Web Browser
+        []110%
+    []BlazorStudio itself
+    []Visual Studio Code
+        []14 font size
+
+}
