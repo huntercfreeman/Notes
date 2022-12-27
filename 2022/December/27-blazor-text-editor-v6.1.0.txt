@@ -11,6 +11,17 @@ DATE: 2022-12-27
         []The behavior that occurs is that the vertical scrollbar will jump up
             by some amount of pixels and keep the final line or final few lines from
             ever being in view.
+        []Take measurements of the ScrollBar components using dev inspect element tools
+            [].bte_scrollbar-section => 905.133 x 518.267 (looks correct)
+            [].bte_scrollbar-horizontal => 895 x 10 (looks correct)
+	            [].bte_scrollbar-slider => 0 x 10 (looks wrong)
+                    []NOTE: (looks wrong) because shouldn't the width of the slider should
+                        fill the width of the horizontal scrollbar as the page is fully displayed?
+                        []Or should the horizontal scrollbar be display: none entirely as there
+                            is nothing that can be horizontally scrolled.
+            [].bte_scrollbar-vertical => 10 x 508.267
+                [].bte_scrollbar-slider => 10 x 797.400
+
 []Add Vertical ScrollHeight Margin
 []Add Horizontal ScrollWidth Margin
 
@@ -87,16 +98,16 @@ Text Editor from scratch with Blazor and C# youtube playlist:
     []Rider
         []Appearance
             []Font-Family: Segoe UI;
-		    []Font-Size: 24px;
+		    []Font-Size: 24px; was 18
         []Editor
             []Font-Family: Consolas;
-		    []Font-Size: 32px;
+		    []Font-Size: 32px; was 23
 		    []Line Height: 1.1;
     []Operating system
         []Windows
             []Settings > Accessibility > Text size
                 []Text size slider
-                    []200%
+                    []200% was using 125% before change
     []Web Browser
         []110%
     []BlazorStudio itself
