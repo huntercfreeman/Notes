@@ -40,6 +40,14 @@ DATE: 2022-12-28
         []BlazorALaCarte.DialogNotification (v1.3.0)
         []Blazor.Text.Editor (v6.0.3)
 
+
+[]Update Documentation
+    []Blazor.Text.Editor
+    []BlazorStudio
+    []BlazorALaCarte.Shared
+    []BlazorALaCarte.TreeView
+    []BlazorALaCarte.DialogNotification
+
     
 
 
