@@ -22,26 +22,25 @@ DATE: 2022-12-29
             []Multiplier
                 []1 -> 1x
                 []2 -> 2x
-                []3 -> 3x
                 []....N -> Nx
                 []....(N + 1) -> (N + 1)x
                 []What is the minimum multiplier?
                 []What is the maximum multiplier?
-            []Valid Combinations of Keymap Grammar
-                []Motion
-                    []w
-                        []Go the remaining length of the current word
-                []Multiplier + Motion
-                    []3w
-                        []for (int i = 0; i < 3; i++)
-                            []Go the remaining length of the current word
-                []Command + Expansion + Motion
-                    []viw
-                        []Select
-                        []Expand
-                        []Word
-                            []So, select the text representing the 
-                                word the cursor is currently within
+        []Valid Combinations of Keymap Grammar
+            []Command First
+                []Expansion Second
+                    []Motion Third
+                        []Example: viw => { "Select", "ExpandInner", "Word" } => Select the text representing the word the cursor is currently within
+                []Motion Second
+                    []Example: dw => { "Delete", "Word" } => Delete the remaining text of the word the cursor is within.
+                []Multiplier Second
+            []Motion First
+                []w
+                    []Go the remaining length of the current word
+            []Multiplier First
+                []Motion Second
+                    []3w => { "for(0 excluding 3)", "Word" } => Repeat 3 times: Go the remaining length of the current word
+            
         []The main Modes of Vim (? what are the names of these I am unsure)
             []Normal
                 []Initial Mode
