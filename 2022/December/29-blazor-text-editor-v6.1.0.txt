@@ -5,6 +5,10 @@ DATE: 2022-12-29
 {
 
 []Implement as much of the Vim keymap today as possible
+    []Grammar.Command => "C"
+    []Grammar.Repeat => "R"
+    []Grammar.Motion => "M"
+    []Grammar.Expansion => "E"
     []Mostly focus on:
         []The general architecture of how changing ones keymap
             works.
@@ -19,28 +23,38 @@ DATE: 2022-12-29
             []Expansion
                 []i -> inner
                 []
-            []Multiplier
+            []Repeat
                 []1 -> 1x
                 []2 -> 2x
                 []....N -> Nx
                 []....(N + 1) -> (N + 1)x
-                []What is the minimum multiplier?
-                []What is the maximum multiplier?
-        []Valid Combinations of Keymap Grammar
+                []What is the minimum repeat?
+                []What is the maximum repeat?
+        []Valid Combinations of Keymap Grammar (Verbose Documentation)
             []Command First
                 []Expansion Second
                     []Motion Third
                         []Example: viw => { "Select", "ExpandInner", "Word" } => Select the text representing the word the cursor is currently within
                 []Motion Second
                     []Example: dw => { "Delete", "Word" } => Delete the remaining text of the word the cursor is within.
-                []Multiplier Second
+                []Repeat Second
+                    []Motion Third
             []Motion First
                 []w
                     []Go the remaining length of the current word
-            []Multiplier First
+            []Repeat First
                 []Motion Second
                     []3w => { "for(0 excluding 3)", "Word" } => Repeat 3 times: Go the remaining length of the current word
-            
+        []Valid Combinations of Keymap Grammar (Succinct Documentation)
+            []Command
+                []Expand
+                    []Motion
+                []Motion
+                []Repeat
+                    []Motion
+            []Motion
+            []Repeat
+                []Motion
         []The main Modes of Vim (? what are the names of these I am unsure)
             []Normal
                 []Initial Mode
