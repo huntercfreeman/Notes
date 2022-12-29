@@ -40,17 +40,36 @@ DATE: 2022-12-28
         []BlazorALaCarte.DialogNotification (v1.3.0)
         []Blazor.Text.Editor (v6.0.3)
 
-
 []Update Documentation
     []Blazor.Text.Editor
     []BlazorStudio
     []BlazorALaCarte.Shared
     []BlazorALaCarte.TreeView
     []BlazorALaCarte.DialogNotification
-
     
-
-
+[]Make a BlazorCrudApp and take note of what needs fixing/added
+    []Needs fixing
+        []New templated file for { ".razor", ".razor.cs" }
+    []Needs adding
+        []Syntactic Changes
+            []On { "EnterKey" } prepend to the newly inserted line
+                whatever whitespace exists on the line prior to { "EnterKey" } stroke
+                []How does this interact with the autoindentation?
+            []AutoIndentation level based on a constant.
+                []For example:
+                    []When finding '{' increment indentation
+                    []When finding '}' decrement indentation
+            []Method syntax highlighting
+            []Generic Syntactic ILexer. Input the language syntax and get syntactic
+                text editing features.
+        []Semantic Changes
+            []Semantic method call tips? Or is this syntactic / both
+        []Vim Emulation
+        []Multi-Cursor
+        []Text Manipulation Changes
+        []Brace matching
+        []Syntactic 
+        
 
 
 
