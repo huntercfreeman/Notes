@@ -79,7 +79,7 @@ DATE: 2022-12-29
     
 
 []Look into horizontal scrolling
-        
+    [X]Deleted the weird change but still look into horizontal scrolling
 
 
 
