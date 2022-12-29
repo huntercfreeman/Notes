@@ -4,6 +4,67 @@ DATE: 2022-12-29
 # Goal
 {
 
+[]Implement as much of the Vim keymap today as possible
+    []Mostly focus on:
+        []The general architecture of how changing ones keymap
+            works.
+        []The main grammar of Vim (? what are the names of these I am unsure)
+            []Commands
+                []d -> delete
+                []v -> select
+            []Motions
+                []w -> word
+                []e -> end
+                []
+            []Expansion
+                []i -> inner
+                []
+            []Multiplier
+                []1 -> 1x
+                []2 -> 2x
+                []3 -> 3x
+                []....N -> Nx
+                []....(N + 1) -> (N + 1)x
+                []What is the minimum multiplier?
+                []What is the maximum multiplier?
+            []Valid Combinations of Keymap Grammar
+                []Motion
+                    []w
+                        []Go the remaining length of the current word
+                []Multiplier + Motion
+                    []3w
+                        []for (int i = 0; i < 3; i++)
+                            []Go the remaining length of the current word
+                []Command + Expansion + Motion
+                    []viw
+                        []Select
+                        []Expand
+                        []Word
+                            []So, select the text representing the 
+                                word the cursor is currently within
+        []The main Modes of Vim (? what are the names of these I am unsure)
+            []Normal
+                []Initial Mode
+                []Uses Vim Grammar
+            []Insert
+                []Falls back to the default keymap unless
+                    an override is defined.
+                    []An example override would be the
+                        keyboard input: { "Escape" } which will
+                        change the user's active mode to "NormalMode"
+            []Visual
+                []Uses Vim Grammar
+                []Selection is more fine grained and can be
+                    part of a line.
+            []Visual-Block
+                []Uses Vim Grammar
+                []Selection is based on all or nothing selection of a line.
+            []Command
+
+
+
+    
+
 []Look into horizontal scrolling
         
 
