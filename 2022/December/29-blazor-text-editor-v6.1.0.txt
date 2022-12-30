@@ -75,7 +75,7 @@ DATE: 2022-12-29
             []Command
 
 
-
+[X]Deleted the weird change but still look into horizontal scrolling
     
 
 []Look into horizontal scrolling
