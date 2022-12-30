@@ -74,6 +74,15 @@ DATE: 2022-12-29
                 []Selection is based on all or nothing selection of a line.
             []Command
 
+[]Fix for need to use culture invariant .ToString() when interpolating float/decimal to css
+    []Aaa.ToString(System.Globalization.CultureInfo.InvariantCulture)
+    []Fix mobile
+    []Fix mobile
+    []Fix mobile
+    []Fix mobile
+    []Fix mobile
+    []Fix mobile
+    []Fix mobile
 
 [X]Deleted the weird change but still look into horizontal scrolling
     
