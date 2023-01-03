@@ -13,5 +13,15 @@ DATE: 2022-01-03
         []The typical vim motions should act on the selected text.
             []Example: 'w'
             []Example: 'j'
+        []{ "EscapeKey" } => Set VimMode to Normal Mode
+    []When in Visual Mode
+        []{ "v" } => Set VimMode to Normal Mode
+        []{ "V" } => Set VimMode to Visual Line Mode and expand
+            the selected text accordingly. (make them the start/end of a line)
+    []When in Visual Line Mode
+        []{ "V" } => Set VimMode to Normal Mode
+        []{ "v" } => Set VimMode to Visual Mode and alter the text selecting
+            ending position accordingly. (from start/end of a line to where the cursor is within
+            the current line.)
 
 }
