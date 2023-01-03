@@ -1,0 +1,60 @@
+DATE: 2022-01-02
+----------------
+
+# Goal
+{
+
+[]Implement the following Vim Modes
+    []Visual (v)
+        []There are three states to consider.
+            []Immediately upon hitting 'v'
+                []The selection anchor is
+                    where the cursor would be positioned if it were
+                    rendered as a Beam.
+                []The selection end is 1 greater than what the current
+                    position index of the cursor is.
+            []Following the immediate switch into Visual mode
+                the user might take one of two actions.
+                []Perform a movement that traverses the cursor
+                    deeper into the text document.
+                    []In this case, the anchor can be left unchanged.
+                        The selection end would need to be set to 1 greater
+                        than the position index of their cursor after the movement.
+                        []Note that out of bound array indexing checks would be needed
+                            here as one could go 1 character beyond the final character
+                            in the text. Ensure this does not break anything.
+                []Perform a movement that traverses the cursor
+                    towards the start of the text document.
+                    []In this case, the anchor should become the text selection upperbound.
+                        The selection end should be set as whatever the user's position index
+                        is of their cursor after the movement is performed.
+                        []Note that out of bound array indexing checks would be needed
+                            here as one could go 1 character beyond the final character
+                            in the text. Ensure this does not break anything.
+    []Visual Line (V)
+        []There are three states to consider.
+            []Immediately upon hitting 'V'
+                []The selection anchor at the start of the row which the cursor is on.
+                []The selection is at the exclusive ending position index for the
+                    row which the cursor is on.
+            []Following the immediate switch into Visual mode
+                the user might take one of two actions.
+                []Perform a movement that traverses the cursor
+                    deeper into the text document.
+                    []In this case, the anchor can be left unchanged.
+                        The selection end gets set as the exclusive ending position index for the
+                        row which the cursor is on.
+                        []Note that out of bound array indexing checks would be needed
+                            here as one could go 1 character beyond the final character
+                            in the text. Ensure this does not break anything.
+                []Perform a movement that traverses the cursor
+                    towards the start of the text document.
+                    []In this case, the anchor should become the text selection upperbound.
+                        The selection end should be set as the inclusive starting position index for the
+                        row which the cursor is on.
+                        []Note that out of bound array indexing checks would be needed
+                            here as one could go 1 character beyond the final character
+                            in the text. Ensure this does not break anything.
+    []Command (:)
+
+}
