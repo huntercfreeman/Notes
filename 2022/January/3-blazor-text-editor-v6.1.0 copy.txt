@@ -1,0 +1,14 @@
+DATE: 2022-01-03
+----------------
+
+# Goal
+{
+
+[]Vim Emulation:
+    []When in either Visual Mode or Visual Line Mode setup
+        the typical vim commands to act on the selected text.
+        []Example: 'd' should delete the selected text.
+        []Example: 'c' should delete the selected text and change
+            the Vim mode to Insert.
+
+}
