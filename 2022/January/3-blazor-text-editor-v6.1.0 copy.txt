@@ -6,22 +6,26 @@ DATE: 2022-01-03
 
 []Vim Emulation:
     []When in either Visual Mode or Visual Line Mode
-        []The typical vim commands should act on the selected text.
+        [X]The typical vim commands should act on the selected text.
             []Example: 'd' should delete the selected text.
             []Example: 'c' should delete the selected text and change
                 the Vim mode to Insert.
-        []The typical vim motions should act on the selected text.
+        [X]The typical vim motions should act on the selected text.
             []Example: 'w'
             []Example: 'j'
-        []{ "EscapeKey" } => Set VimMode to Normal Mode
+        [X]{ "EscapeKey" } => Set VimMode to Normal Mode
     []When in Visual Mode
-        []{ "v" } => Set VimMode to Normal Mode
+        [X]{ "v" } => Set VimMode to Normal Mode
         []{ "V" } => Set VimMode to Visual Line Mode and expand
             the selected text accordingly. (make them the start/end of a line)
     []When in Visual Line Mode
-        []{ "V" } => Set VimMode to Normal Mode
+        [X]{ "V" } => Set VimMode to Normal Mode
         []{ "v" } => Set VimMode to Visual Mode and alter the text selecting
             ending position accordingly. (from start/end of a line to where the cursor is within
             the current line.)
+[]Update README.md
+    []Blazor.Text.Editor
+    []BlazorStudio
+[]Change Blazor.Text.Editor C# Project to be v6.1.0
 
 }
