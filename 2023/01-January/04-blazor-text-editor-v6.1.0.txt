@@ -1,0 +1,12 @@
+DATE: 2023-01-04
+----------------
+
+# Goal
+{
+
+[]Update README.md
+    []Blazor.Text.Editor
+    []BlazorStudio
+[]Change Blazor.Text.Editor C# Project to be v6.1.0
+
+}
