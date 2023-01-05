@@ -5,6 +5,6 @@ DATE: 2023-01-04
 {
 
 []Add git integration to BlazorStudio
-[]Add diff view to Blazor.Text.Editor
+    []Add diff view to Blazor.Text.Editor
 
 }

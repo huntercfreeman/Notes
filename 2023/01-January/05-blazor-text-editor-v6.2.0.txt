@@ -4,6 +4,7 @@ DATE: 2023-01-05
 # Goal
 {
 
-[]Merge into dev branches any changes made while testing this on Ubuntu
+[]Add git integration to BlazorStudio
+    []Add diff view to Blazor.Text.Editor
 
 }
