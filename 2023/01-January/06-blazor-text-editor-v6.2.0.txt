@@ -4,6 +4,62 @@ DATE: 2023-01-06
 # Goal
 {
 
+[]List of the various sections of the IDE in regards to a top level layout
+    structuring.
+    []Left Panel
+        []The tabs for viewable panes in this panel extends height of
+            calc(
+                []100vh 
+                []- var(--HEIGHT_OF_TOP_HEADER)
+                []- var(--HEIGHT_OF_PANEL_TAB)
+                    []This functions exactly the same as how
+                        a vertical and horizontal scrollbar cannot go
+                        100% of the height or width. They both get stopped early
+                        by a 'scrollbar connector'.
+            )
+        []The viewable portion of this panel extends
+            calc(
+                []100vh 
+                []- var(--HEIGHT_OF_TOP_HEADER)
+                []- var(--HEIGHT_OF_PANEL_TAB)
+                    []This height of panel tab relates to the height taken
+                        by the bottom panel's tabs.
+                []- var(--HEIGHT_OF_BOTTOM_PANEL_VIEWABLE_SPACE)
+                    []The bottom panel viewable space might be 0 at times
+                        if the bottom panel is collapsed.
+                        []However the height of panel tabs which comes from
+                        the bottom panel will always be there.
+            )
+    []Bottom Panel
+    []Right Panel
+    []Top Header
+    []The Text-Editor section is sandwiched horiztonally
+        by the 'left panel' and 'right panel'
+    []The Text-Editor section is sandwiched vertically
+        by the 'bottom panel' and 'top header'
+
+[]Panels to replicate Visual Studio drag and drop
+    to move windows where one pleases and dock them.
+    []Break out sections of the IDE where panels can be viewed
+        exist
+        []Left
+        []Bottom
+        []Right
+        []
+    []Every panel display can be broken into two dropdownzones
+        []A vertical panel would have two vertical dropdzones, one on north end
+            one on the south end.
+    []Implementation
+        []Left
+            []Solution Explorer
+            []Folder Explorer
+            []Commit (Git Changes)
+            []
+        []Bottom
+        []Right
+
+
+
 []Add git integration to BlazorStudio
     []Add diff view to Blazor.Text.Editor
 
