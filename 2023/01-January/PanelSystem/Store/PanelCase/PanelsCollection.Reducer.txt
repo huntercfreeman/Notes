@@ -1,0 +1,25 @@
+public partial class PanelsCollection
+{
+    private class Reducer
+    {
+        [ReducerMethod]
+        public static PanelsCollection ReduceRegisterPanelAction(
+            PanelsCollection previousPanelsCollection,
+            ReduceRegisterPanelAction reduceRegisterPanelAction)
+        {
+            if (previousPanelsCollection.PanelModelsList.Any(
+                    x => x.PanelKey == reduceRegisterPanelAction.PanelModel.PanelKey))
+            {
+                return previousPanelsCollection;
+            }
+
+            var nextPanelsList = previousPanelsCollection.PanelModelsList.Add(
+                reduceRegisterPanelAction.PanelModel);
+
+            return previousPanelsCollection with
+            {
+                PanelModelsList = nextPanelsList
+            };
+        }
+    }
+}

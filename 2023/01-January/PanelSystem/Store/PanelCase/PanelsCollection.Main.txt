@@ -1,0 +1,10 @@
+[FeatureState]
+public partial class PanelsCollection
+{
+    public PanelsCollection()
+    {
+        PanelModelsList = ImmutableArray<PanelKey, PanelModel>.Empty;
+    }
+
+    public ImmutableArray<PanelKey, PanelModel> PanelModelsList { get; init; }
+}

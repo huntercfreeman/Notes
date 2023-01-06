@@ -1,0 +1,4 @@
+public partial class PanelsCollection
+{
+    public record RegisterPanelAction(PanelModel PanelModel);
+}

@@ -1,0 +1,9 @@
+public record PanelKey(Guid Guid)
+{
+    public static readonly PanelKey Empty = new PanelKey(Guid.Empty);
+
+    public static PanelKey NewPanelKey()
+    {
+        return new PanelKey(Guid.NewGuid());
+    }
+}

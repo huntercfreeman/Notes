@@ -1,0 +1,4 @@
+public class PanelModel
+{
+    public ElementDimensions ElementDimensions { get; } = new();
+}

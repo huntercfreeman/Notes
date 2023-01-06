@@ -4,6 +4,14 @@ DATE: 2023-01-06
 # Goal
 {
 
+[]Every one of the panels must be able to render out any dynamic component.
+[]Every tab must
+    []have a name associated with it.
+    []have an icon associated with it (even it this icon is blank?)
+[]In order to make this panel system work what C# classes are necessary?
+    []Right up every part of this panel system using only .txt files in the Folder
+        "./PanelSystem"
+
 []List of the various sections of the IDE in regards to a top level layout
     structuring.
     []Left Panel

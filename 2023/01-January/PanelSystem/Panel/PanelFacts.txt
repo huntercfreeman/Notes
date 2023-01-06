@@ -1,0 +1,6 @@
+public static class PanelFacts
+{
+    public PanelKey LeftPanelKey = PanelKey.NewPanelKey();
+    public PanelKey RightPanelKey = PanelKey.NewPanelKey();
+    public PanelKey BottomPanelKey = PanelKey.NewPanelKey();
+}
