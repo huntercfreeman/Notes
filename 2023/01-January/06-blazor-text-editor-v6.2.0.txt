@@ -9,9 +9,9 @@ DATE: 2023-01-06
     []Left Panel
         []The tabs container for viewable panes in this panel extends height of
             calc(
-                []100vh 
-                []- var(--HEIGHT_OF_TOP_HEADER)
-                []- var(--HEIGHT_OF_PANEL_TAB)
+                100vh 
+                - var(--HEIGHT_OF_TOP_HEADER)
+                - var(--HEIGHT_OF_PANEL_TAB)
                     []This functions exactly the same as how
                         a vertical and horizontal scrollbar cannot go
                         100% of the height or width. They both get stopped early
@@ -19,16 +19,16 @@ DATE: 2023-01-06
             )
         []The tabs container has a width of
             calc(
-                []- var(--HEIGHT_OF_PANEL_TAB)
+                - var(--HEIGHT_OF_PANEL_TAB)
             )
         []The active panes displayed in this panel extend height of
             calc(
-                []100vh
-                []- var(--HEIGHT_OF_TOP_HEADER)
-                []- var(--HEIGHT_OF_PANEL_TAB)
+                100vh
+                - var(--HEIGHT_OF_TOP_HEADER)
+                - var(--HEIGHT_OF_PANEL_TAB)
                     []This height of panel tab relates to the height taken
                         by the bottom panel's tabs.
-                []- var(--HEIGHT_OF_BOTTOM_PANEL_VIEWABLE_SPACE)
+                - var(--HEIGHT_OF_BOTTOM_PANEL_VIEWABLE_SPACE)
                     []The bottom panel viewable space might be 0 at times
                         if the bottom panel is collapsed.
                         []However the height of panel tabs which comes from
@@ -37,19 +37,19 @@ DATE: 2023-01-06
     []Bottom Panel
         []The tabs container for viewable panes in this panel extends height of
             calc(
-                []- var(--HEIGHT_OF_PANEL_TAB)
+                - var(--HEIGHT_OF_PANEL_TAB)
             )
         []The tabs container for viewable panes in this panel extends width of
             calc(
-                []100vw
-                []- var(--HEIGHT_OF_TOP_HEADER)
-                []- var(--HEIGHT_OF_PANEL_TAB)
+                100vw
+                - var(--HEIGHT_OF_TOP_HEADER)
+                - var(--HEIGHT_OF_PANEL_TAB)
                     []This functions exactly the same as how
                         a vertical and horizontal scrollbar cannot go
                         100% of the height or width. They both get stopped early
                         by a 'scrollbar connector'.
                     []This one is from the left panel connecting to the bottom panel
-                []- var(--HEIGHT_OF_PANEL_TAB)
+                - var(--HEIGHT_OF_PANEL_TAB)
                     []This functions exactly the same as how
                         a vertical and horizontal scrollbar cannot go
                         100% of the height or width. They both get stopped early
@@ -58,15 +58,15 @@ DATE: 2023-01-06
             )
         []The active panes displayed in this panel extend width of
             calc(
-                []100vw
-                []- var(--HEIGHT_OF_TOP_HEADER)
-                []- var(--HEIGHT_OF_PANEL_TAB)
+                100vw
+                - var(--HEIGHT_OF_TOP_HEADER)
+                - var(--HEIGHT_OF_PANEL_TAB)
                     []This functions exactly the same as how
                         a vertical and horizontal scrollbar cannot go
                         100% of the height or width. They both get stopped early
                         by a 'scrollbar connector'.
                     []This one is from the left panel connecting to the bottom panel
-                []- var(--HEIGHT_OF_PANEL_TAB)
+                - var(--HEIGHT_OF_PANEL_TAB)
                     []This functions exactly the same as how
                         a vertical and horizontal scrollbar cannot go
                         100% of the height or width. They both get stopped early
@@ -76,9 +76,9 @@ DATE: 2023-01-06
     []Right Panel
         []The tabs container for viewable panes in this panel extends height of
             calc(
-                []100vh
-                []- var(--HEIGHT_OF_TOP_HEADER)
-                []- var(--HEIGHT_OF_PANEL_TAB)
+                100vh
+                - var(--HEIGHT_OF_TOP_HEADER)
+                - var(--HEIGHT_OF_PANEL_TAB)
                     []This functions exactly the same as how
                         a vertical and horizontal scrollbar cannot go
                         100% of the height or width. They both get stopped early
@@ -86,16 +86,16 @@ DATE: 2023-01-06
             )
         []The tabs container has a width of
             calc(
-                []- var(--HEIGHT_OF_PANEL_TAB)
+                - var(--HEIGHT_OF_PANEL_TAB)
             )
         []The active panes displayed in this panel extend height of
             calc(
-                []100vh
-                []- var(--HEIGHT_OF_TOP_HEADER)
-                []- var(--HEIGHT_OF_PANEL_TAB)
+                100vh
+                - var(--HEIGHT_OF_TOP_HEADER)
+                - var(--HEIGHT_OF_PANEL_TAB)
                     []This height of panel tab relates to the height taken
                         by the bottom panel's tabs.
-                []- var(--HEIGHT_OF_BOTTOM_PANEL_VIEWABLE_SPACE)
+                - var(--HEIGHT_OF_BOTTOM_PANEL_VIEWABLE_SPACE)
                     []The bottom panel viewable space might be 0 at times
                         if the bottom panel is collapsed.
                         []However the height of panel tabs which comes from
@@ -107,10 +107,22 @@ DATE: 2023-01-06
             and can change at will they just need to be ANYTHING as of right now.
             []Width: 100vw;
             []Height: 5rem;
-    []The Text-Editor section is sandwiched horiztonally
-        by the 'left panel' and 'right panel'
-    []The Text-Editor section is sandwiched vertically
-        by the 'bottom panel' and 'top header'
+    []The TextEditor section
+        []is sandwiched horiztonally
+            by the 'left panel' and 'right panel'
+        []is sandwiched vertically
+            by the 'bottom panel' and 'top header'
+        []has width of
+            calc(
+                100vw
+                - var(--WIDTH_OF_LEFT_PANEL_VIEWABLE_SPACE)
+                - var(--WIDTH_OF_RIGHT_PANEL_VIEWABLE_SPACE)
+                - var(--HEIGHT_OF_PANEL_TAB)
+                    []Width of tab container for left panel
+                - var(--HEIGHT_OF_PANEL_TAB)
+                    []Width of tab container for right panel
+            )
+    
 
 []Panels to replicate Visual Studio drag and drop
     to move windows where one pleases and dock them.
