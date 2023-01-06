@@ -3,18 +3,18 @@ public partial class PanelsCollection
     private class Reducer
     {
         [ReducerMethod]
-        public static PanelsCollection ReduceRegisterPanelAction(
+        public static PanelsCollection ReduceRegisterPanelModelAction(
             PanelsCollection previousPanelsCollection,
-            ReduceRegisterPanelAction reduceRegisterPanelAction)
+            ReduceRegisterPanelModelAction reduceRegisterPanelModelAction)
         {
             if (previousPanelsCollection.PanelModelsList.Any(
-                    x => x.PanelModelKey == reduceRegisterPanelAction.PanelModel.PanelModelKey))
+                    x => x.PanelModelKey == reduceRegisterPanelModelAction.PanelModel.PanelModelKey))
             {
                 return previousPanelsCollection;
             }
 
             var nextPanelsList = previousPanelsCollection.PanelModelsList.Add(
-                reduceRegisterPanelAction.PanelModel);
+                reduceRegisterPanelModelAction.PanelModel);
 
             return previousPanelsCollection with
             {
@@ -23,18 +23,44 @@ public partial class PanelsCollection
         }
         
         [ReducerMethod]
-        public static PanelsCollection ReduceDisposePanelAction(
+        public static PanelsCollection ReduceDisposePanelModelAction(
             PanelsCollection previousPanelsCollection,
-            DisposePanelAction disposePanelAction)
+            DisposePanelModelAction disposePanelModelAction)
         {
-            var targetedPanel = previousPanelsCollection.PanelModelsList.FirstOrDefault(
-                    x => x.PanelModelKey == reduceRegisterPanelAction.PanelModel.PanelModelKey);
+            var targetedPanelModel = previousPanelsCollection.PanelModelsList.FirstOrDefault(
+                    x => x.PanelModelKey == disposePanelModelAction.PanelModel.PanelModelKey);
 
-            if (targetedPanel is null)
+            if (targetedPanelModel is null)
                 return previousPanelsCollection;
 
             var nextPanelsList = previousPanelsCollection.PanelModelsList.Remove(
-                targetedPanel);
+                targetedPanelModel);
+
+            return previousPanelsCollection with
+            {
+                PanelModelsList = nextPanelsList
+            };
+        }
+        
+        [ReducerMethod]
+        public static PanelsCollection ReduceSetActivePanelTabAction(
+            PanelsCollection previousPanelsCollection,
+            SetActivePanelTabAction setActivePanelTabAction)
+        {
+            var targetedPanelModel = previousPanelsCollection.PanelModelsList.FirstOrDefault(
+                    x => x.PanelModelKey == setActivePanelTabAction.PanelModelKey);
+
+            if (targetedPanelModel is null)
+                return previousPanelsCollection;
+
+            nextPanelModel = targetedPanelModel with
+            {
+                ActivePanelTabKey = setActivePanelTabAction.PanelTabKey
+            };
+
+            var nextPanelsList = previousPanelsCollection.PanelModelsList.Replace(
+                targetedPanelModel,
+                nextPanelModel);
 
             return previousPanelsCollection with
             {
