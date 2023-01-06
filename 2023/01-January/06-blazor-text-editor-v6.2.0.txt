@@ -74,7 +74,39 @@ DATE: 2023-01-06
                     []This one is from the right panel connecting to the bottom panel
             )
     []Right Panel
+        []The tabs container for viewable panes in this panel extends height of
+            calc(
+                []100vh
+                []- var(--HEIGHT_OF_TOP_HEADER)
+                []- var(--HEIGHT_OF_PANEL_TAB)
+                    []This functions exactly the same as how
+                        a vertical and horizontal scrollbar cannot go
+                        100% of the height or width. They both get stopped early
+                        by a 'scrollbar connector'.
+            )
+        []The tabs container has a width of
+            calc(
+                []- var(--HEIGHT_OF_PANEL_TAB)
+            )
+        []The active panes displayed in this panel extend height of
+            calc(
+                []100vh
+                []- var(--HEIGHT_OF_TOP_HEADER)
+                []- var(--HEIGHT_OF_PANEL_TAB)
+                    []This height of panel tab relates to the height taken
+                        by the bottom panel's tabs.
+                []- var(--HEIGHT_OF_BOTTOM_PANEL_VIEWABLE_SPACE)
+                    []The bottom panel viewable space might be 0 at times
+                        if the bottom panel is collapsed.
+                        []However the height of panel tabs which comes from
+                        the bottom panel will always be there.
+            )
     []Top Header
+        []The width and height of the header is solely needed to be placeholder
+            at this point as if written correctly the numbers here are irrelevent
+            and can change at will they just need to be ANYTHING as of right now.
+            []Width: 100vw;
+            []Height: 5rem;
     []The Text-Editor section is sandwiched horiztonally
         by the 'left panel' and 'right panel'
     []The Text-Editor section is sandwiched vertically
