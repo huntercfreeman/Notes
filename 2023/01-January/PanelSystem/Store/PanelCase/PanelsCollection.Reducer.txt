@@ -8,13 +8,33 @@ public partial class PanelsCollection
             ReduceRegisterPanelAction reduceRegisterPanelAction)
         {
             if (previousPanelsCollection.PanelModelsList.Any(
-                    x => x.PanelKey == reduceRegisterPanelAction.PanelModel.PanelKey))
+                    x => x.PanelModelKey == reduceRegisterPanelAction.PanelModel.PanelModelKey))
             {
                 return previousPanelsCollection;
             }
 
             var nextPanelsList = previousPanelsCollection.PanelModelsList.Add(
                 reduceRegisterPanelAction.PanelModel);
+
+            return previousPanelsCollection with
+            {
+                PanelModelsList = nextPanelsList
+            };
+        }
+        
+        [ReducerMethod]
+        public static PanelsCollection ReduceDisposePanelAction(
+            PanelsCollection previousPanelsCollection,
+            DisposePanelAction disposePanelAction)
+        {
+            var targetedPanel = previousPanelsCollection.PanelModelsList.FirstOrDefault(
+                    x => x.PanelModelKey == reduceRegisterPanelAction.PanelModel.PanelModelKey);
+
+            if (targetedPanel is null)
+                return previousPanelsCollection;
+
+            var nextPanelsList = previousPanelsCollection.PanelModelsList.Remove(
+                targetedPanel);
 
             return previousPanelsCollection with
             {

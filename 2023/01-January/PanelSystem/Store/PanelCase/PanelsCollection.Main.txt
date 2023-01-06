@@ -3,8 +3,8 @@ public partial class PanelsCollection
 {
     public PanelsCollection()
     {
-        PanelModelsList = ImmutableArray<PanelKey, PanelModel>.Empty;
+        PanelModelsList = ImmutableArray<PanelModel>.Empty;
     }
 
-    public ImmutableArray<PanelKey, PanelModel> PanelModelsList { get; init; }
+    public ImmutableArray<PanelModel> PanelModelsList { get; init; }
 }

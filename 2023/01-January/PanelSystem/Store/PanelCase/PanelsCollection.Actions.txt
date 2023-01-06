@@ -1,4 +1,7 @@
 public partial class PanelsCollection
 {
     public record RegisterPanelAction(PanelModel PanelModel);
+    public record DisposePanelAction(PanelModelKey PanelModelKey);
+
+    public record SetActivePanelTabAction(PanelModelKey PanelModelKey, PanelTabKey PanelTabKey);
 }
