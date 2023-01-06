@@ -7,7 +7,7 @@ DATE: 2023-01-06
 []List of the various sections of the IDE in regards to a top level layout
     structuring.
     []Left Panel
-        []The tabs for viewable panes in this panel extends height of
+        []The tabs container for viewable panes in this panel extends height of
             calc(
                 []100vh 
                 []- var(--HEIGHT_OF_TOP_HEADER)
@@ -17,9 +17,13 @@ DATE: 2023-01-06
                         100% of the height or width. They both get stopped early
                         by a 'scrollbar connector'.
             )
-        []The viewable portion of this panel extends
+        []The tabs container has a width of
             calc(
-                []100vh 
+                []- var(--HEIGHT_OF_PANEL_TAB)
+            )
+        []The active panes displayed in this panel extend height of
+            calc(
+                []100vh
                 []- var(--HEIGHT_OF_TOP_HEADER)
                 []- var(--HEIGHT_OF_PANEL_TAB)
                     []This height of panel tab relates to the height taken
@@ -31,6 +35,44 @@ DATE: 2023-01-06
                         the bottom panel will always be there.
             )
     []Bottom Panel
+        []The tabs container for viewable panes in this panel extends height of
+            calc(
+                []- var(--HEIGHT_OF_PANEL_TAB)
+            )
+        []The tabs container for viewable panes in this panel extends width of
+            calc(
+                []100vw
+                []- var(--HEIGHT_OF_TOP_HEADER)
+                []- var(--HEIGHT_OF_PANEL_TAB)
+                    []This functions exactly the same as how
+                        a vertical and horizontal scrollbar cannot go
+                        100% of the height or width. They both get stopped early
+                        by a 'scrollbar connector'.
+                    []This one is from the left panel connecting to the bottom panel
+                []- var(--HEIGHT_OF_PANEL_TAB)
+                    []This functions exactly the same as how
+                        a vertical and horizontal scrollbar cannot go
+                        100% of the height or width. They both get stopped early
+                        by a 'scrollbar connector'.
+                    []This one is from the right panel connecting to the bottom panel
+            )
+        []The active panes displayed in this panel extend width of
+            calc(
+                []100vw
+                []- var(--HEIGHT_OF_TOP_HEADER)
+                []- var(--HEIGHT_OF_PANEL_TAB)
+                    []This functions exactly the same as how
+                        a vertical and horizontal scrollbar cannot go
+                        100% of the height or width. They both get stopped early
+                        by a 'scrollbar connector'.
+                    []This one is from the left panel connecting to the bottom panel
+                []- var(--HEIGHT_OF_PANEL_TAB)
+                    []This functions exactly the same as how
+                        a vertical and horizontal scrollbar cannot go
+                        100% of the height or width. They both get stopped early
+                        by a 'scrollbar connector'.
+                    []This one is from the right panel connecting to the bottom panel
+            )
     []Right Panel
     []Top Header
     []The Text-Editor section is sandwiched horiztonally
