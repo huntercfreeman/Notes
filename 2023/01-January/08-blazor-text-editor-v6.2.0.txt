@@ -4,6 +4,22 @@ DATE: 2023-01-08
 # Goal
 {
 
+[]The left panels are:
+    []Solution Explorer
+    []Folder Explorer
+    []Git Changes
+
+[]The bottom panels are:
+    []Git in detail (graphs, branches, etc...)
+    []Build
+    []Terminal
+    []NuGet
+    []Unit Tests
+    []Problems
+
+[]The right panels are:
+    Notifications
+
 []Panels to replicate Visual Studio drag and drop
     to move windows where one pleases and dock them.
 
