@@ -3,8 +3,13 @@ DATE: 2023-01-09
 
 # Goal
 {
-    
+
 []Add git integration to BlazorStudio
     []Add diff view to Blazor.Text.Editor
 
+[]Youtube Video
+    []Links
+        []BlazorStudio Repository Source Code
+            []https://github.com/huntercfreeman/BlazorStudio
+        []
 }
