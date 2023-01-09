@@ -1,0 +1,10 @@
+DATE: 2023-01-09
+----------------
+
+# Goal
+{
+    
+[]Add git integration to BlazorStudio
+    []Add diff view to Blazor.Text.Editor
+
+}
