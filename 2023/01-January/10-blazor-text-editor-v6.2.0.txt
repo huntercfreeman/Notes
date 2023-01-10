@@ -1,0 +1,9 @@
+DATE: 2023-01-10
+----------------
+
+# Goal
+{
+
+[]Add API for getting the TextEditorBase as a string value.
+
+}
