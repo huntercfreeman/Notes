@@ -1,0 +1,75 @@
+<scheme name="Visual Studio Dark" version="142" parent_scheme="Visual Studio Dark">
+  <metaInfo>
+    <property name="created">2023-01-11T12:23:57</property>
+    <property name="ide">Rider</property>
+    <property name="ideVersion">2022.3.1.0.0</property>
+    <property name="modified">2023-01-11T12:24:20</property>
+    <property name="originalScheme">_@user_Visual Studio Dark</property>
+  </metaInfo>
+  <attributes>
+    <option name="DEFAULT_CLASS_REFERENCE">
+      <value>
+        <option name="FOREGROUND" value="4ec9b0" />
+      </value>
+    </option>
+    <option name="DEFAULT_FUNCTION_CALL">
+      <value>
+        <option name="FOREGROUND" value="d7d778" />
+      </value>
+    </option>
+    <option name="DEFAULT_FUNCTION_DECLARATION">
+      <value>
+        <option name="FOREGROUND" value="d7d778" />
+      </value>
+    </option>
+    <option name="DEFAULT_INSTANCE_METHOD" baseAttributes="DEFAULT_FUNCTION_DECLARATION" />
+    <option name="DEFAULT_INTERFACE_NAME">
+      <value>
+        <option name="FOREGROUND" value="4ec9b0" />
+      </value>
+    </option>
+    <option name="DEFAULT_STATIC_METHOD" baseAttributes="DEFAULT_FUNCTION_DECLARATION" />
+    <option name="DEFAULT_VALID_STRING_ESCAPE">
+      <value>
+        <option name="FOREGROUND" value="c446d9" />
+      </value>
+    </option>
+    <option name="HTML_ATTRIBUTE_VALUE" baseAttributes="DEFAULT_STRING" />
+    <option name="MATCHED_BRACE_ATTRIBUTES">
+      <value>
+        <option name="BACKGROUND" value="8c5a0e" />
+      </value>
+    </option>
+    <option name="NOT_USED_ELEMENT_ATTRIBUTES">
+      <value>
+        <option name="EFFECT_COLOR" value="b47828" />
+      </value>
+    </option>
+    <option name="ReSharper.ASP_NET_BLOCK_TAG">
+      <value>
+        <option name="FOREGROUND" value="d466ce" />
+      </value>
+    </option>
+    <option name="ReSharper.ASP_NET_RAZOR_TAG_HELPER_ATTRIBUTE">
+      <value>
+        <option name="FOREGROUND" value="8080" />
+      </value>
+    </option>
+    <option name="ReSharper.ASP_NET_RAZOR_TAG_HELPER_ELEMENT">
+      <value>
+        <option name="FOREGROUND" value="8080" />
+      </value>
+    </option>
+    <option name="ReSharper.CSHARP_ACCESSOR_IDENTIFIER" baseAttributes="ReSharper.CSHARP_METHOD_IDENTIFIER" />
+    <option name="ReSharper.CSHARP_EXTENSION_METHOD_IDENTIFIER" baseAttributes="ReSharper.CSHARP_METHOD_IDENTIFIER" />
+    <option name="ReSharper.ENUM_IDENTIFIER" baseAttributes="DEFAULT_CLASS_NAME" />
+    <option name="ReSharper.STRING_ESCAPE_CHARACTER_2">
+      <value>
+        <option name="FOREGROUND" value="1c7eff" />
+      </value>
+    </option>
+    <option name="TODO_DEFAULT_ATTRIBUTES">
+      <value />
+    </option>
+  </attributes>
+</scheme>
