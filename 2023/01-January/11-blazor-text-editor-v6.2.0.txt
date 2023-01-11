@@ -6,7 +6,86 @@ DATE: 2023-01-11
 
 []Finish refactoring
     []General Refactoring Across All Repos
-        []
+        []Regarding Fluxor
+            []Folder structure is:
+                []Store
+                    []{Foo}Case
+                        // NOTE: There are 3 separate files
+                        // NOTE: This example is for a state which is a collection of items.
+                        // NOTE: See the class "Foo.cs" as a sibling of the "[]Store" node.
+                        []FoosCollection.Actions.cs
+                            []
+                            public partial class FoosCollection
+                            {
+                                public  RegisterAction(Foo Foo);
+                                public  DisposeAction(FooKey FooKey);
+                            }
+                        []FoosCollection.Main.cs
+                            []
+                            /// <summary>
+                            /// Keep the <see cref="FoosCollection"/> as a class
+                            /// as to avoid  value comparisons when Fluxor checks
+                            /// if the <see cref="FeatureStateAttribute"/> has been replaced.
+                            /// </summary>
+                            [FeatureState]
+                            public partial class FoosCollection
+                            {
+                                public FoosCollection()
+                                {
+                                    FoosList = ImmutableList<Foo>.Empty;
+                                }
+
+                                public ImmutableList<Foo> FoosList { get; init; }
+                            }
+                        []FoosCollection.Reducer.cs
+                            []
+                            public partial class FoosCollection
+                            {
+                                private class Reducer
+                                {
+                                    [ReducerMethod]
+                                    public static FoosCollection ReduceRegisterAction(
+                                        FoosCollection inFoosCollection,
+                                        RegisterAction registerAction)
+                                    {
+                                        var existingEntry = inFoosCollection
+                                            .FirstOrDefault(x =>
+                                                x.FooKey == registerAction.Foo.FooKey);
+
+                                        if (existingEntry is not null)
+                                        {
+                                            return inFoosCollection;
+                                        }
+
+                                        var nextFoosList = inFoosCollection.FoosList
+                                            .Add(registerAction.Foo);
+
+                                        return new FoosCollection
+                                        {
+                                            FoosList = nextFoosList
+                                        };
+                                    }
+                                }
+                            }
+                    []{Bar}Case
+                        []
+                    []{Baz}Case
+                        []
+                []Foo
+                    []FooRecord.cs
+                        []
+                        public record FooRecord(FooKey FooKey);
+                    []FooKey.cs
+                        []
+                        public record FooKey(Guid Guid)
+                        {
+                            public static readonly FooKey Empty = new FooKey(Guid.Empty);
+
+                            public static FooKey NewFooKey()
+                            {
+                                return new FooKey(Guid.NewGuid());
+                            }
+                        }
     []BlazorALaCarte.Shared
     []BlazorALaCarte.TreeView
     []BlazorALaCarte.DialogNotification
