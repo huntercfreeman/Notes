@@ -1,0 +1,19 @@
+DATE: 2023-01-11
+----------------
+
+# Goal
+{
+
+[]Finish refactoring
+    []General Refactoring Across All Repos
+        []
+    []BlazorALaCarte.Shared
+    []BlazorALaCarte.TreeView
+    []BlazorALaCarte.DialogNotification
+    []Blazor.Text.Editor
+        []TextEditorModel.cs
+        []TextEditorViewModel.cs
+        []TextEditorGroup.cs
+    []BlazorStudio
+
+}
