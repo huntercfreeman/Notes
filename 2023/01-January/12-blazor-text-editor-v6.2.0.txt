@@ -1,0 +1,14 @@
+DATE: 2023-01-12
+----------------
+
+# Goal
+{
+
+[]BlazorStudio
+    [X]If the user has a .git folder display the absolute file path to the .git folder.
+    [X]Otherwise if they do not have a .git folder, provide a button which when clicked
+        will run "git init" in the user's terminal.
+    [X]Add a refresh button which runs "git status" in the user's terminal.
+    
+
+}
